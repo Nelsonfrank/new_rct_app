@@ -1,0 +1,412 @@
+0000000000000000000000000000000000000000 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605015298 +0300	commit (initial): Initialize project using Create React App
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1605016265 +0300	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605016265 +0300	Branch: renamed refs/heads/master to refs/heads/main
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1605016313 +0300	Branch: renamed refs/heads/main to refs/heads/master
+0000000000000000000000000000000000000000 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605016313 +0300	Branch: renamed refs/heads/main to refs/heads/master
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605016352 +0300	checkout: moving from master to develop
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605017671 +0300	checkout: moving from develop to feature/1
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 c63584cccfd7f00c90d195b6754c432cba2d98ef nelsonfrank <nelsonfr78@outlook.com> 1605020496 +0300	commit: feat:Configuring eslint, prettier, husky, pretty-quick #1
+c63584cccfd7f00c90d195b6754c432cba2d98ef a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605020805 +0300	checkout: moving from feature/1 to develop
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605020844 +0300	pull origin develop: Fast-forward
+8a26a08db602002331f5ca1ec0787120146dc83b 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605020931 +0300	checkout: moving from develop to feature/2
+8a26a08db602002331f5ca1ec0787120146dc83b 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605020945 +0300	checkout: moving from feature/2 to develop
+8a26a08db602002331f5ca1ec0787120146dc83b 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605020956 +0300	checkout: moving from develop to feature/2
+8a26a08db602002331f5ca1ec0787120146dc83b 534fc9bfd8ba52b76aa3e3e8a36bb75e3df37d95 nelsonfrank <nelsonfr78@outlook.com> 1605023476 +0300	commit: Initial Commit
+534fc9bfd8ba52b76aa3e3e8a36bb75e3df37d95 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605081572 +0300	reset: moving to 8a26a08
+8a26a08db602002331f5ca1ec0787120146dc83b 4086288453a4f7bdd8532dd38c2c67abf4a57b48 nelsonfrank <nelsonfr78@outlook.com> 1605084819 +0300	commit: feat: Add ant-design library #2
+4086288453a4f7bdd8532dd38c2c67abf4a57b48 8a26a08db602002331f5ca1ec0787120146dc83b nelsonfrank <nelsonfr78@outlook.com> 1605085024 +0300	checkout: moving from feature/2 to develop
+8a26a08db602002331f5ca1ec0787120146dc83b e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 nelsonfrank <nelsonfr78@outlook.com> 1605085046 +0300	pull origin develop: Fast-forward
+e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 nelsonfrank <nelsonfr78@outlook.com> 1605169397 +0300	checkout: moving from develop to feature/5
+e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 43f7f129f9ea6cc19d677fce491bb04727f58959 nelsonfrank <nelsonfr78@outlook.com> 1605184229 +0300	commit: feat: Add header #5
+43f7f129f9ea6cc19d677fce491bb04727f58959 e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 nelsonfrank <nelsonfr78@outlook.com> 1605184371 +0300	checkout: moving from feature/5 to develop
+e8f3ec8075af28b5d6475fea7f1afd8b972eaf62 01722cd056a465ede268acbd0626edb6c82045bb nelsonfrank <nelsonfr78@outlook.com> 1605184403 +0300	pull origin develop: Fast-forward
+01722cd056a465ede268acbd0626edb6c82045bb 01722cd056a465ede268acbd0626edb6c82045bb nelsonfrank <nelsonfr78@outlook.com> 1605184432 +0300	checkout: moving from develop to feature/6
+01722cd056a465ede268acbd0626edb6c82045bb 13c73e4a7aa5d4b97c54cd4f50473d904b765ae2 nelsonfrank <nelsonfr78@outlook.com> 1605334011 +0300	commit: feat: Add side bar #6
+13c73e4a7aa5d4b97c54cd4f50473d904b765ae2 01722cd056a465ede268acbd0626edb6c82045bb nelsonfrank <nelsonfr78@outlook.com> 1605334526 +0300	checkout: moving from feature/6 to develop
+01722cd056a465ede268acbd0626edb6c82045bb b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605334534 +0300	pull origin develop: Fast-forward
+b6d99d1dcdb223c202432a4da6e689626291e0c8 b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605336394 +0300	checkout: moving from develop to feature/9
+b6d99d1dcdb223c202432a4da6e689626291e0c8 902260ea3b3bc85456f8f69803712f512114506f nelsonfrank <nelsonfr78@outlook.com> 1605337303 +0300	commit: feat: Change site header #9
+902260ea3b3bc85456f8f69803712f512114506f 857c484474780a5bc321e1320420291966c01dfd nelsonfrank <nelsonfr78@outlook.com> 1605588819 +0300	commit: feat: Create layout wrapper #11
+857c484474780a5bc321e1320420291966c01dfd b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605588898 +0300	checkout: moving from feature/9 to develop
+b6d99d1dcdb223c202432a4da6e689626291e0c8 b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605588909 +0300	checkout: moving from develop to feature/11
+b6d99d1dcdb223c202432a4da6e689626291e0c8 857c484474780a5bc321e1320420291966c01dfd nelsonfrank <nelsonfr78@outlook.com> 1605589182 +0300	checkout: moving from feature/11 to feature/9
+857c484474780a5bc321e1320420291966c01dfd b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605589201 +0300	checkout: moving from feature/9 to feature/11
+b6d99d1dcdb223c202432a4da6e689626291e0c8 fede14e3113f2dd050e20b43e4acb1857502c7cc nelsonfrank <nelsonfr78@outlook.com> 1605589217 +0300	cherry-pick: feat: Create layout wrapper #11
+fede14e3113f2dd050e20b43e4acb1857502c7cc 1fb407cc45296905978d28bc1a157e9966246340 nelsonfrank <nelsonfr78@outlook.com> 1605590191 +0300	commit (amend): feat: Create layout wrapper #11
+1fb407cc45296905978d28bc1a157e9966246340 13431526580442fde7d75201de4e1b9d3979a1f8 nelsonfrank <nelsonfr78@outlook.com> 1605590399 +0300	commit (amend): feat: Create layout wrapper #11
+13431526580442fde7d75201de4e1b9d3979a1f8 fb7864a0ea7cd6fac641b65b22f78dcc06257135 nelsonfrank <nelsonfr78@outlook.com> 1605621911 +0300	commit: feat: Add dashboard card component #14
+fb7864a0ea7cd6fac641b65b22f78dcc06257135 b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605622021 +0300	checkout: moving from feature/11 to develop
+b6d99d1dcdb223c202432a4da6e689626291e0c8 b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605622057 +0300	checkout: moving from develop to feature/14
+b6d99d1dcdb223c202432a4da6e689626291e0c8 fb7864a0ea7cd6fac641b65b22f78dcc06257135 nelsonfrank <nelsonfr78@outlook.com> 1605622073 +0300	checkout: moving from feature/14 to feature/11
+fb7864a0ea7cd6fac641b65b22f78dcc06257135 b6d99d1dcdb223c202432a4da6e689626291e0c8 nelsonfrank <nelsonfr78@outlook.com> 1605622112 +0300	checkout: moving from feature/11 to develop
+b6d99d1dcdb223c202432a4da6e689626291e0c8 2df459d884223a1500a6a0355a5ab85975b8f734 nelsonfrank <nelsonfr78@outlook.com> 1605622121 +0300	pull origin develop: Fast-forward
+2df459d884223a1500a6a0355a5ab85975b8f734 2df459d884223a1500a6a0355a5ab85975b8f734 nelsonfrank <nelsonfr78@outlook.com> 1605622162 +0300	checkout: moving from develop to feature/14
+2df459d884223a1500a6a0355a5ab85975b8f734 1173b0d09ad90ba0088af204783ae2074da69337 nelsonfrank <nelsonfr78@outlook.com> 1605622185 +0300	cherry-pick: feat: Add dashboard card component #14
+1173b0d09ad90ba0088af204783ae2074da69337 2df459d884223a1500a6a0355a5ab85975b8f734 nelsonfrank <nelsonfr78@outlook.com> 1605624572 +0300	checkout: moving from feature/14 to develop
+2df459d884223a1500a6a0355a5ab85975b8f734 8d2f95e82aec3120e8ec4beed3316723068dbf41 nelsonfrank <nelsonfr78@outlook.com> 1605624642 +0300	pull origin develop: Fast-forward
+8d2f95e82aec3120e8ec4beed3316723068dbf41 8d2f95e82aec3120e8ec4beed3316723068dbf41 nelsonfrank <nelsonfr78@outlook.com> 1605634476 +0300	checkout: moving from develop to feature/17
+8d2f95e82aec3120e8ec4beed3316723068dbf41 69213bf6eeea1f1d6e2dd0e5d880130c47de46ff nelsonfrank <nelsonfr78@outlook.com> 1605700604 +0300	commit: Add Charts to dashboard Home #17
+69213bf6eeea1f1d6e2dd0e5d880130c47de46ff 8d2f95e82aec3120e8ec4beed3316723068dbf41 nelsonfrank <nelsonfr78@outlook.com> 1605700715 +0300	checkout: moving from feature/17 to develop
+8d2f95e82aec3120e8ec4beed3316723068dbf41 11adebebc835b792c81739d0838db981118a1d03 nelsonfrank <nelsonfr78@outlook.com> 1605700743 +0300	pull origin develop: Fast-forward
+11adebebc835b792c81739d0838db981118a1d03 11adebebc835b792c81739d0838db981118a1d03 nelsonfrank <nelsonfr78@outlook.com> 1605702379 +0300	checkout: moving from develop to feature/19
+11adebebc835b792c81739d0838db981118a1d03 1cb4776edca9e6a1ebb2f46cfcc4078146153787 nelsonfrank <nelsonfr78@outlook.com> 1605704565 +0300	commit: feat: Add price rate card #19
+1cb4776edca9e6a1ebb2f46cfcc4078146153787 11adebebc835b792c81739d0838db981118a1d03 nelsonfrank <nelsonfr78@outlook.com> 1605704678 +0300	checkout: moving from feature/19 to develop
+11adebebc835b792c81739d0838db981118a1d03 5cd177d75abb07a661a80181443fbbde7d6f578c nelsonfrank <nelsonfr78@outlook.com> 1605704687 +0300	pull origin develop: Fast-forward
+5cd177d75abb07a661a80181443fbbde7d6f578c 5cd177d75abb07a661a80181443fbbde7d6f578c nelsonfrank <nelsonfr78@outlook.com> 1605705199 +0300	checkout: moving from develop to feature/22
+5cd177d75abb07a661a80181443fbbde7d6f578c 6ef56c62196d10ce601ddc51dc98102eb5825ee8 nelsonfrank <nelsonfr78@outlook.com> 1605715119 +0300	commit: feat: Add Tender Table in Dashboard #22
+6ef56c62196d10ce601ddc51dc98102eb5825ee8 4f8193b3820eb254a4844c4586b30417c477494c nelsonfrank <nelsonfr78@outlook.com> 1605715548 +0300	commit (amend): feat: Add Tender Table in Dashboard #22
+4f8193b3820eb254a4844c4586b30417c477494c 5cd177d75abb07a661a80181443fbbde7d6f578c nelsonfrank <nelsonfr78@outlook.com> 1605716134 +0300	checkout: moving from feature/22 to develop
+5cd177d75abb07a661a80181443fbbde7d6f578c cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605716146 +0300	pull origin develop: Fast-forward
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605766125 +0300	checkout: moving from develop to feature/23
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605766132 +0300	checkout: moving from feature/23 to develop
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605766163 +0300	checkout: moving from develop to feature/23
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f 982be82e9d903afd1f4ba392755bdb5ad179af86 nelsonfrank <nelsonfr78@outlook.com> 1605767796 +0300	commit: fix: Make Header and sider fixed in long content content #23
+982be82e9d903afd1f4ba392755bdb5ad179af86 c0d64c7e2068bf161bab4500d64b3a9da2e8deee nelsonfrank <nelsonfr78@outlook.com> 1605772877 +0300	commit: fix: Add left margin to content to prevent to overflow
+c0d64c7e2068bf161bab4500d64b3a9da2e8deee cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605773168 +0300	checkout: moving from feature/23 to develop
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f c0d64c7e2068bf161bab4500d64b3a9da2e8deee nelsonfrank <nelsonfr78@outlook.com> 1605773179 +0300	checkout: moving from develop to feature/23
+c0d64c7e2068bf161bab4500d64b3a9da2e8deee cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605773197 +0300	checkout: moving from feature/23 to develop
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605773226 +0300	checkout: moving from develop to feature/27
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f 71fd06c84b087c3985434f536b758f152d5f38d9 nelsonfrank <nelsonfr78@outlook.com> 1605773288 +0300	commit (cherry-pick): fix: Add left margin to content to prevent to overflow
+71fd06c84b087c3985434f536b758f152d5f38d9 293b4ddba831fb8c71b77d243b7efa5ecf358a86 nelsonfrank <nelsonfr78@outlook.com> 1605773342 +0300	pull --rebase origin develop: checkout 293b4ddba831fb8c71b77d243b7efa5ecf358a86
+293b4ddba831fb8c71b77d243b7efa5ecf358a86 beeac3bd2b4b813f476505442b763a011ec3cb6c nelsonfrank <nelsonfr78@outlook.com> 1605773379 +0300	rebase: fix: Add left margin to content to prevent to overflow
+beeac3bd2b4b813f476505442b763a011ec3cb6c beeac3bd2b4b813f476505442b763a011ec3cb6c nelsonfrank <nelsonfr78@outlook.com> 1605773379 +0300	rebase finished: returning to refs/heads/feature/27
+beeac3bd2b4b813f476505442b763a011ec3cb6c cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605773434 +0300	checkout: moving from feature/27 to develop
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f e0c39ab521a326d87c64c547816641c2feee96dc nelsonfrank <nelsonfr78@outlook.com> 1605773454 +0300	pull origin develop: Fast-forward
+e0c39ab521a326d87c64c547816641c2feee96dc c0d64c7e2068bf161bab4500d64b3a9da2e8deee nelsonfrank <nelsonfr78@outlook.com> 1605773540 +0300	checkout: moving from develop to feature/23
+c0d64c7e2068bf161bab4500d64b3a9da2e8deee e0c39ab521a326d87c64c547816641c2feee96dc nelsonfrank <nelsonfr78@outlook.com> 1605773618 +0300	checkout: moving from feature/23 to develop
+e0c39ab521a326d87c64c547816641c2feee96dc ed84303d49f58ff27c38c2499889568f1345750b nelsonfrank <nelsonfr78@outlook.com> 1605773629 +0300	pull origin develop: Fast-forward
+ed84303d49f58ff27c38c2499889568f1345750b ed84303d49f58ff27c38c2499889568f1345750b nelsonfrank <nelsonfr78@outlook.com> 1605774409 +0300	checkout: moving from develop to feature/30
+ed84303d49f58ff27c38c2499889568f1345750b e6847059ca6c2413aa97d5f7a833c0b0019d2e74 nelsonfrank <nelsonfr78@outlook.com> 1605776069 +0300	commit: Correct table columns in tender table #30
+e6847059ca6c2413aa97d5f7a833c0b0019d2e74 ed84303d49f58ff27c38c2499889568f1345750b nelsonfrank <nelsonfr78@outlook.com> 1605778528 +0300	checkout: moving from feature/30 to develop
+ed84303d49f58ff27c38c2499889568f1345750b 1e793d643b7cbc64bb1dd2cd3d9084f09a842435 nelsonfrank <nelsonfr78@outlook.com> 1605778536 +0300	pull origin develop: Fast-forward
+1e793d643b7cbc64bb1dd2cd3d9084f09a842435 1e793d643b7cbc64bb1dd2cd3d9084f09a842435 nelsonfrank <nelsonfr78@outlook.com> 1605778597 +0300	checkout: moving from develop to feature/25
+1e793d643b7cbc64bb1dd2cd3d9084f09a842435 a8b96c647642906adb45f6fefacb4a4ef1f93457 nelsonfrank <nelsonfr78@outlook.com> 1605778759 +0300	commit: fix: Add view more button in price rate and tender table card #25
+a8b96c647642906adb45f6fefacb4a4ef1f93457 1e793d643b7cbc64bb1dd2cd3d9084f09a842435 nelsonfrank <nelsonfr78@outlook.com> 1605784649 +0300	checkout: moving from feature/25 to develop
+1e793d643b7cbc64bb1dd2cd3d9084f09a842435 ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 nelsonfrank <nelsonfr78@outlook.com> 1605784660 +0300	pull origin develop: Fast-forward
+ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 nelsonfrank <nelsonfr78@outlook.com> 1605784686 +0300	checkout: moving from develop to feature/33
+ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 fb77a1ae9490daff64fd6b9430d1459263afa1b6 nelsonfrank <nelsonfr78@outlook.com> 1605791011 +0300	commit: feat: Add seller page #33
+fb77a1ae9490daff64fd6b9430d1459263afa1b6 ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 nelsonfrank <nelsonfr78@outlook.com> 1605853786 +0300	checkout: moving from feature/33 to develop
+ba4a283e9e4b2b74dd2a3685bb7b72696f20bb75 5cb78893ab8f6bafa2174d9300dedd163df0648c nelsonfrank <nelsonfr78@outlook.com> 1605853794 +0300	pull origin develop: Fast-forward
+5cb78893ab8f6bafa2174d9300dedd163df0648c 5cb78893ab8f6bafa2174d9300dedd163df0648c nelsonfrank <nelsonfr78@outlook.com> 1605853831 +0300	checkout: moving from develop to feature/34
+5cb78893ab8f6bafa2174d9300dedd163df0648c 09b9149938b09ae3699bf6a8bc3b9fa480324b2f nelsonfrank <nelsonfr78@outlook.com> 1605855921 +0300	commit: feat: Add buyer page #34
+09b9149938b09ae3699bf6a8bc3b9fa480324b2f 5cb78893ab8f6bafa2174d9300dedd163df0648c nelsonfrank <nelsonfr78@outlook.com> 1605856082 +0300	checkout: moving from feature/34 to develop
+5cb78893ab8f6bafa2174d9300dedd163df0648c 141691c4fb2db1a9d5561123ed6cf213248cefa5 nelsonfrank <nelsonfr78@outlook.com> 1605856093 +0300	pull origin develop: Fast-forward
+141691c4fb2db1a9d5561123ed6cf213248cefa5 141691c4fb2db1a9d5561123ed6cf213248cefa5 nelsonfrank <nelsonfr78@outlook.com> 1605856128 +0300	checkout: moving from develop to feature/35
+141691c4fb2db1a9d5561123ed6cf213248cefa5 165ca730eae9b8b817d54f31056f51e62599afed nelsonfrank <nelsonfr78@outlook.com> 1605857337 +0300	commit: feat: Add Leader page #35
+165ca730eae9b8b817d54f31056f51e62599afed 141691c4fb2db1a9d5561123ed6cf213248cefa5 nelsonfrank <nelsonfr78@outlook.com> 1605857439 +0300	checkout: moving from feature/35 to develop
+141691c4fb2db1a9d5561123ed6cf213248cefa5 46519710b33a4fd54d90f1ba82f1bc716d4b37bc nelsonfrank <nelsonfr78@outlook.com> 1605857457 +0300	pull origin develop: Fast-forward
+46519710b33a4fd54d90f1ba82f1bc716d4b37bc 46519710b33a4fd54d90f1ba82f1bc716d4b37bc nelsonfrank <nelsonfr78@outlook.com> 1605860587 +0300	checkout: moving from develop to feature/40
+46519710b33a4fd54d90f1ba82f1bc716d4b37bc f340f2d1f51c5ca3d7fc45c3a6eaddd2bb9fec7d nelsonfrank <nelsonfr78@outlook.com> 1605869501 +0300	commit: feat: Add navigation for end-user app #40
+f340f2d1f51c5ca3d7fc45c3a6eaddd2bb9fec7d 874bf63c99c0e33bfeb747df5e458e61b8ad6615 nelsonfrank <nelsonfr78@outlook.com> 1606130731 +0300	commit (amend): feat: Add navigation for end-user app #40
+874bf63c99c0e33bfeb747df5e458e61b8ad6615 46519710b33a4fd54d90f1ba82f1bc716d4b37bc nelsonfrank <nelsonfr78@outlook.com> 1606130886 +0300	checkout: moving from feature/40 to develop
+46519710b33a4fd54d90f1ba82f1bc716d4b37bc 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606130995 +0300	pull origin develop: Fast-forward
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606131039 +0300	checkout: moving from develop to feature/41
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606135971 +0300	checkout: moving from feature/41 to develop
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab 26d091b5e874855b3e22388436b2ead5c04ad5a3 nelsonfrank <nelsonfr78@outlook.com> 1606136016 +0300	commit: fix: Quick fix
+26d091b5e874855b3e22388436b2ead5c04ad5a3 26d091b5e874855b3e22388436b2ead5c04ad5a3 nelsonfrank <nelsonfr78@outlook.com> 1606136081 +0300	reset: moving to 26d091b
+26d091b5e874855b3e22388436b2ead5c04ad5a3 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606136100 +0300	reset: moving to 3d7696a
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606136116 +0300	checkout: moving from develop to feature/41
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab 24e73107b31455efea6733d67cef434a9a2fd9c3 nelsonfrank <nelsonfr78@outlook.com> 1606159725 +0300	commit: feat: Add Bottom navigation #41
+24e73107b31455efea6733d67cef434a9a2fd9c3 3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab nelsonfrank <nelsonfr78@outlook.com> 1606159802 +0300	checkout: moving from feature/41 to develop
+3d7696af6dcc800f1422bd64aa0fd70d70a4c1ab f3c92613d29d68737ee8b8451150140ccb479262 nelsonfrank <nelsonfr78@outlook.com> 1606159847 +0300	pull origin develop: Fast-forward
+f3c92613d29d68737ee8b8451150140ccb479262 f3c92613d29d68737ee8b8451150140ccb479262 nelsonfrank <nelsonfr78@outlook.com> 1606159965 +0300	checkout: moving from develop to feature/42
+f3c92613d29d68737ee8b8451150140ccb479262 834f8ab8468d978c3f728e3b5baa357af0a2d701 nelsonfrank <nelsonfr78@outlook.com> 1606161693 +0300	commit: feat: Add price rate and change language buttons #42
+834f8ab8468d978c3f728e3b5baa357af0a2d701 f3c92613d29d68737ee8b8451150140ccb479262 nelsonfrank <nelsonfr78@outlook.com> 1606161841 +0300	checkout: moving from feature/42 to develop
+f3c92613d29d68737ee8b8451150140ccb479262 485754b02ea234c0d1c6b9591c51f09bf77191d9 nelsonfrank <nelsonfr78@outlook.com> 1606161850 +0300	pull origin develop: Fast-forward
+485754b02ea234c0d1c6b9591c51f09bf77191d9 485754b02ea234c0d1c6b9591c51f09bf77191d9 nelsonfrank <nelsonfr78@outlook.com> 1606161927 +0300	checkout: moving from develop to feature/43
+485754b02ea234c0d1c6b9591c51f09bf77191d9 3c094f810dae6291c6873c1aae42254a8d28fce2 nelsonfrank <nelsonfr78@outlook.com> 1606212151 +0300	commit: feat: Add header component #43
+3c094f810dae6291c6873c1aae42254a8d28fce2 a4d475d06e2fbfcfb9220594d5315e62b9b0739d nelsonfrank <nelsonfr78@outlook.com> 1606212349 +0300	commit (amend): feat: Add header component #43
+a4d475d06e2fbfcfb9220594d5315e62b9b0739d 485754b02ea234c0d1c6b9591c51f09bf77191d9 nelsonfrank <nelsonfr78@outlook.com> 1606212999 +0300	checkout: moving from feature/43 to develop
+485754b02ea234c0d1c6b9591c51f09bf77191d9 2114734bab97fbfaa882d6d69d846b3e8f1b8369 nelsonfrank <nelsonfr78@outlook.com> 1606213076 +0300	commit: fix: Quick fix
+2114734bab97fbfaa882d6d69d846b3e8f1b8369 bcc5e0bacbbcea477e98d111e2c044cd5128b205 nelsonfrank <nelsonfr78@outlook.com> 1606214568 +0300	pull origin develop: Fast-forward
+bcc5e0bacbbcea477e98d111e2c044cd5128b205 86f39891e7b836d1a42e361c2bc5e990cb124439 nelsonfrank <nelsonfr78@outlook.com> 1606217140 +0300	commit: fix: Quick fix #51
+86f39891e7b836d1a42e361c2bc5e990cb124439 86f39891e7b836d1a42e361c2bc5e990cb124439 nelsonfrank <nelsonfr78@outlook.com> 1606217295 +0300	checkout: moving from develop to feature/44
+86f39891e7b836d1a42e361c2bc5e990cb124439 22b268c8dd571e69093a6906340497c9fffd0f45 nelsonfrank <nelsonfr78@outlook.com> 1606227314 +0300	commit: feat: Add render request section component #44
+22b268c8dd571e69093a6906340497c9fffd0f45 7065ff8b264e9987f8a86dc2d4839d4a89f1d3c9 nelsonfrank <nelsonfr78@outlook.com> 1606227389 +0300	commit (amend): feat: Add render request section component #44
+7065ff8b264e9987f8a86dc2d4839d4a89f1d3c9 86f39891e7b836d1a42e361c2bc5e990cb124439 nelsonfrank <nelsonfr78@outlook.com> 1606228766 +0300	checkout: moving from feature/44 to develop
+86f39891e7b836d1a42e361c2bc5e990cb124439 02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec nelsonfrank <nelsonfr78@outlook.com> 1606228777 +0300	pull origin develop: Fast-forward
+02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec 02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec nelsonfrank <nelsonfr78@outlook.com> 1606228808 +0300	checkout: moving from develop to feature/45
+02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec 1b9fe5ee953409a5d71e77a4e7d6dbb328920b15 nelsonfrank <nelsonfr78@outlook.com> 1606288260 +0300	commit: feat: Add shop by seller section #45
+1b9fe5ee953409a5d71e77a4e7d6dbb328920b15 02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec nelsonfrank <nelsonfr78@outlook.com> 1606288883 +0300	checkout: moving from feature/45 to develop
+02f38e4ae16fcd8af29cacfe43fdd46dd05df4ec a403178b2673f8af6be1a24c19c1b95077d8ab03 nelsonfrank <nelsonfr78@outlook.com> 1606288891 +0300	pull origin develop: Fast-forward
+a403178b2673f8af6be1a24c19c1b95077d8ab03 a403178b2673f8af6be1a24c19c1b95077d8ab03 nelsonfrank <nelsonfr78@outlook.com> 1606288944 +0300	checkout: moving from develop to feature/52
+a403178b2673f8af6be1a24c19c1b95077d8ab03 3711f29b1b0737fa2b798f8824bd293741e0cc7e nelsonfrank <nelsonfr78@outlook.com> 1606291557 +0300	commit: fix: Fix Top and Bottom navigation component #52
+3711f29b1b0737fa2b798f8824bd293741e0cc7e a403178b2673f8af6be1a24c19c1b95077d8ab03 nelsonfrank <nelsonfr78@outlook.com> 1606291650 +0300	checkout: moving from feature/52 to develop
+a403178b2673f8af6be1a24c19c1b95077d8ab03 b802aa935bc30ab873be21080e8e969504a969f5 nelsonfrank <nelsonfr78@outlook.com> 1606291660 +0300	pull origin develop: Fast-forward
+b802aa935bc30ab873be21080e8e969504a969f5 b802aa935bc30ab873be21080e8e969504a969f5 nelsonfrank <nelsonfr78@outlook.com> 1606292429 +0300	checkout: moving from develop to feature/56
+b802aa935bc30ab873be21080e8e969504a969f5 db6e090a84ffcf9eaa400c2459b3e81564dcae58 nelsonfrank <nelsonfr78@outlook.com> 1606545728 +0300	commit: feat(component): change navigation component design #56
+db6e090a84ffcf9eaa400c2459b3e81564dcae58 be947e0b67694f842b85645643cce7a9881e125c nelsonfrank <nelsonfr78@outlook.com> 1606545784 +0300	commit (amend): feat(component): change navigation component design #56
+be947e0b67694f842b85645643cce7a9881e125c 674fec58dc801cbee79cad35b7887e4e78667707 nelsonfrank <nelsonfr78@outlook.com> 1606546231 +0300	commit (amend): feat(component): change navigation component design #56
+674fec58dc801cbee79cad35b7887e4e78667707 210b921689b9004b0660d5fc21396c3af9e886e8 nelsonfrank <nelsonfr78@outlook.com> 1606546536 +0300	commit (amend): feat(component): change navigation component design #56
+210b921689b9004b0660d5fc21396c3af9e886e8 b802aa935bc30ab873be21080e8e969504a969f5 nelsonfrank <nelsonfr78@outlook.com> 1606546634 +0300	checkout: moving from feature/56 to develop
+b802aa935bc30ab873be21080e8e969504a969f5 a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 nelsonfrank <nelsonfr78@outlook.com> 1606546642 +0300	pull origin develop: Fast-forward
+a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 nelsonfrank <nelsonfr78@outlook.com> 1606546718 +0300	checkout: moving from develop to feature/58
+a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 948f8c301ea77b246698d4d78f2a1933a37b6992 nelsonfrank <nelsonfr78@outlook.com> 1606549827 +0300	commit: fix(component): change header design
+948f8c301ea77b246698d4d78f2a1933a37b6992 d22fdbf81ae80a7fd2de92dab55cc5b4a06733ab nelsonfrank <nelsonfr78@outlook.com> 1606549848 +0300	commit (amend): fix(component): change header design
+d22fdbf81ae80a7fd2de92dab55cc5b4a06733ab a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 nelsonfrank <nelsonfr78@outlook.com> 1606549993 +0300	checkout: moving from feature/58 to develop
+a40df7a3497e42027aefa0255ed6c7ca2f6f4ba3 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606550000 +0300	pull origin develop: Fast-forward
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606550092 +0300	checkout: moving from develop to feature/60
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606554772 +0300	checkout: moving from feature/60 to develop
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606554888 +0300	checkout: moving from develop to feature/61
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 56c61883c66653a4e1488a67d7a4ba89706b52b0 nelsonfrank <nelsonfr78@outlook.com> 1606558889 +0300	commit: feat(component): add description card
+56c61883c66653a4e1488a67d7a4ba89706b52b0 474afdbb4fcc66ed762e4cf642a4e9d498e74dad nelsonfrank <nelsonfr78@outlook.com> 1606559208 +0300	commit (amend): feat(component): add description card
+474afdbb4fcc66ed762e4cf642a4e9d498e74dad 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606559486 +0300	checkout: moving from feature/61 to develop
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606559499 +0300	checkout: moving from develop to feature/62
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1606660935 +0300	Branch: renamed refs/heads/feature/62 to refs/heads/feature/46
+0000000000000000000000000000000000000000 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606660935 +0300	Branch: renamed refs/heads/feature/62 to refs/heads/feature/46
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 796cc574e774ea81139dd312eaeaead1399a83e6 nelsonfrank <nelsonfr78@outlook.com> 1606661010 +0300	commit: feat(component): add shop by platform section
+796cc574e774ea81139dd312eaeaead1399a83e6 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606661096 +0300	checkout: moving from feature/46 to develop
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606661128 +0300	checkout: moving from develop to feature/60
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1606661209 +0300	Branch: renamed refs/heads/feature/60 to refs/heads/feature/62
+0000000000000000000000000000000000000000 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606661209 +0300	Branch: renamed refs/heads/feature/60 to refs/heads/feature/62
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606661328 +0300	checkout: moving from feature/62 to develop
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 d22fdbf81ae80a7fd2de92dab55cc5b4a06733ab nelsonfrank <nelsonfr78@outlook.com> 1606661387 +0300	checkout: moving from develop to feature/58
+d22fdbf81ae80a7fd2de92dab55cc5b4a06733ab 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606661543 +0300	checkout: moving from feature/58 to develop
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 17f1c1abd222e133fa84f62e8a9f8530f297f59c nelsonfrank <nelsonfr78@outlook.com> 1606661557 +0300	pull origin develop: Fast-forward
+17f1c1abd222e133fa84f62e8a9f8530f297f59c 474afdbb4fcc66ed762e4cf642a4e9d498e74dad nelsonfrank <nelsonfr78@outlook.com> 1606661666 +0300	checkout: moving from develop to feature/61
+474afdbb4fcc66ed762e4cf642a4e9d498e74dad 17f1c1abd222e133fa84f62e8a9f8530f297f59c nelsonfrank <nelsonfr78@outlook.com> 1606661720 +0300	pull --rebase origin develop: checkout 17f1c1abd222e133fa84f62e8a9f8530f297f59c
+17f1c1abd222e133fa84f62e8a9f8530f297f59c b5c936837c205a462a6ced7088bb4e9d8de08541 nelsonfrank <nelsonfr78@outlook.com> 1606662435 +0300	rebase: feat(component): add description card
+b5c936837c205a462a6ced7088bb4e9d8de08541 b5c936837c205a462a6ced7088bb4e9d8de08541 nelsonfrank <nelsonfr78@outlook.com> 1606662435 +0300	rebase finished: returning to refs/heads/feature/61
+b5c936837c205a462a6ced7088bb4e9d8de08541 17f1c1abd222e133fa84f62e8a9f8530f297f59c nelsonfrank <nelsonfr78@outlook.com> 1606662685 +0300	checkout: moving from feature/61 to develop
+17f1c1abd222e133fa84f62e8a9f8530f297f59c 6dfc78c02eee184a050f451f2bf8b7ec911d4e24 nelsonfrank <nelsonfr78@outlook.com> 1606662757 +0300	pull origin develop: Fast-forward
+6dfc78c02eee184a050f451f2bf8b7ec911d4e24 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606663318 +0300	checkout: moving from develop to feature/62
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 b5c936837c205a462a6ced7088bb4e9d8de08541 nelsonfrank <nelsonfr78@outlook.com> 1606663329 +0300	checkout: moving from feature/62 to feature/61
+b5c936837c205a462a6ced7088bb4e9d8de08541 67c976a738484dd5940b154f3f6251cd25908848 nelsonfrank <nelsonfr78@outlook.com> 1606665098 +0300	commit: fix(file): quick fix
+67c976a738484dd5940b154f3f6251cd25908848 b01c47a263005399ef8595e35b6a0f9901dda4ba nelsonfrank <nelsonfr78@outlook.com> 1606665120 +0300	commit (amend): fix(file): Quick fix
+b01c47a263005399ef8595e35b6a0f9901dda4ba 6dfc78c02eee184a050f451f2bf8b7ec911d4e24 nelsonfrank <nelsonfr78@outlook.com> 1606665162 +0300	checkout: moving from feature/61 to develop
+6dfc78c02eee184a050f451f2bf8b7ec911d4e24 f8b7e4cd00ef3920eb38d7424faf90bee9e18a73 nelsonfrank <nelsonfr78@outlook.com> 1606665176 +0300	cherry-pick: fix(file): Quick fix
+f8b7e4cd00ef3920eb38d7424faf90bee9e18a73 79df43a9eb0ce78617d059069dea9baad34b3edd nelsonfrank <nelsonfr78@outlook.com> 1606667475 +0300	commit: fix(file): quick fix
+79df43a9eb0ce78617d059069dea9baad34b3edd 79df43a9eb0ce78617d059069dea9baad34b3edd nelsonfrank <nelsonfr78@outlook.com> 1607417192 +0300	checkout: moving from develop to feature/63
+79df43a9eb0ce78617d059069dea9baad34b3edd 7594a6ab967cfd997d2ad381ba05031126a5f6a6 nelsonfrank <nelsonfr78@outlook.com> 1607417233 +0300	commit: feat: Add footer
+7594a6ab967cfd997d2ad381ba05031126a5f6a6 79df43a9eb0ce78617d059069dea9baad34b3edd nelsonfrank <nelsonfr78@outlook.com> 1607417303 +0300	checkout: moving from feature/63 to develop
+79df43a9eb0ce78617d059069dea9baad34b3edd c1920d75aae0b767fd4e4a4de7435667b0d76952 nelsonfrank <nelsonfr78@outlook.com> 1607417313 +0300	pull origin develop: Fast-forward
+c1920d75aae0b767fd4e4a4de7435667b0d76952 c1920d75aae0b767fd4e4a4de7435667b0d76952 nelsonfrank <nelsonfr78@outlook.com> 1607417366 +0300	checkout: moving from develop to feature/60
+c1920d75aae0b767fd4e4a4de7435667b0d76952 0fd92dc1250d5e5a133d41102ee212ba3fa1f561 nelsonfrank <nelsonfr78@outlook.com> 1607418042 +0300	commit: feat: Change picture format to webp
+0fd92dc1250d5e5a133d41102ee212ba3fa1f561 c1920d75aae0b767fd4e4a4de7435667b0d76952 nelsonfrank <nelsonfr78@outlook.com> 1607418120 +0300	checkout: moving from feature/60 to develop
+c1920d75aae0b767fd4e4a4de7435667b0d76952 f1f7c582f7fac04b44b06359fd40e1049de03883 nelsonfrank <nelsonfr78@outlook.com> 1607418183 +0300	pull origin develop: Fast-forward
+f1f7c582f7fac04b44b06359fd40e1049de03883 f1f7c582f7fac04b44b06359fd40e1049de03883 nelsonfrank <nelsonfr78@outlook.com> 1607418226 +0300	checkout: moving from develop to feature/67
+f1f7c582f7fac04b44b06359fd40e1049de03883 a9def36e30a6e000937f4d02a4bee63a1ad5ecd9 nelsonfrank <nelsonfr78@outlook.com> 1607419589 +0300	commit: fix: Make footer responsive
+a9def36e30a6e000937f4d02a4bee63a1ad5ecd9 f1f7c582f7fac04b44b06359fd40e1049de03883 nelsonfrank <nelsonfr78@outlook.com> 1607419692 +0300	checkout: moving from feature/67 to develop
+f1f7c582f7fac04b44b06359fd40e1049de03883 86b7e296ac4698320a8add3ad6e5338a08507022 nelsonfrank <nelsonfr78@outlook.com> 1607419698 +0300	pull origin develop: Fast-forward
+86b7e296ac4698320a8add3ad6e5338a08507022 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607419943 +0300	commit: fix: Quick fix
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607421439 +0300	checkout: moving from develop to feature/69
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607421455 +0300	checkout: moving from feature/69 to develop
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607421457 +0300	checkout: moving from develop to feature/69
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 305cee021b5d9dd4f90c3ab5ae7107be8d98890c nelsonfrank <nelsonfr78@outlook.com> 1607433548 +0300	commit: feat: Add user profile
+305cee021b5d9dd4f90c3ab5ae7107be8d98890c e298109b2f53318f851cd29c31d3aa78e4059378 nelsonfrank <nelsonfr78@outlook.com> 1607433707 +0300	commit (amend): feat: Add user profile
+e298109b2f53318f851cd29c31d3aa78e4059378 5bde8b46ea79ee5339c755127eedc892e4919c7b nelsonfrank <nelsonfr78@outlook.com> 1607509061 +0300	commit: feat: Add list component
+5bde8b46ea79ee5339c755127eedc892e4919c7b fa77351e8d104aaefac71bee037bd75071ddc865 nelsonfrank <nelsonfr78@outlook.com> 1607628752 +0300	commit: Fix: Improve List component
+fa77351e8d104aaefac71bee037bd75071ddc865 efe0cba0e389dc527f2fa3e0772d150d7dc6a11b nelsonfrank <nelsonfr78@outlook.com> 1607629368 +0300	commit: fix: Position footer at the bottom of page
+efe0cba0e389dc527f2fa3e0772d150d7dc6a11b 49862eab1fff47a1dff9a2ffd57b023a6b3a0e6b nelsonfrank <nelsonfr78@outlook.com> 1607635564 +0300	commit: feat: Add Give Tender component
+49862eab1fff47a1dff9a2ffd57b023a6b3a0e6b e78f4d695c2a64138a532dd83a3443aca41a978e nelsonfrank <nelsonfr78@outlook.com> 1607656545 +0300	commit: feat: Add post tender component
+e78f4d695c2a64138a532dd83a3443aca41a978e 94d1780a6967c88c001d5543cdcfa7b61b53d068 nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: checkout 94d1780a6967c88c001d5543cdcfa7b61b53d068
+94d1780a6967c88c001d5543cdcfa7b61b53d068 47170c8bde16946a0bc33a873df51df54f78ae5a nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: feat: Add list component
+47170c8bde16946a0bc33a873df51df54f78ae5a 3676d13d3763dc1a747a4b02ec24442d25cab59d nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: Fix: Improve List component
+3676d13d3763dc1a747a4b02ec24442d25cab59d 0a4f8e9d57f74cf0ef84960d8814777797149a6d nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: fix: Position footer at the bottom of page
+0a4f8e9d57f74cf0ef84960d8814777797149a6d 902ccd4c0fa5fb2c0cd0ee5d30e51e23902a116a nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: feat: Add Give Tender component
+902ccd4c0fa5fb2c0cd0ee5d30e51e23902a116a ebefe5c6c9f7a954792d4f5569928f5df3f76427 nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	pull --rebase origin develop: feat: Add post tender component
+ebefe5c6c9f7a954792d4f5569928f5df3f76427 ebefe5c6c9f7a954792d4f5569928f5df3f76427 nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	rebase finished: returning to refs/heads/feature/69
+ebefe5c6c9f7a954792d4f5569928f5df3f76427 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607673311 +0300	checkout: moving from feature/69 to develop
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 e8841bfcf07d3981d006d6ef80e17788592d2c21 nelsonfrank <nelsonfr78@outlook.com> 1607673325 +0300	pull origin develop: Fast-forward
+e8841bfcf07d3981d006d6ef80e17788592d2c21 dcb30ddc515e28f5b2e87fff6d820da16a76e338 nelsonfrank <nelsonfr78@outlook.com> 1607674426 +0300	commit (amend): Add user profile, list, give and post tender forms components (#71)
+dcb30ddc515e28f5b2e87fff6d820da16a76e338 dcb30ddc515e28f5b2e87fff6d820da16a76e338 nelsonfrank <nelsonfr78@outlook.com> 1607675262 +0300	checkout: moving from develop to feature/71
+dcb30ddc515e28f5b2e87fff6d820da16a76e338 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1607675309 +0300	Branch: renamed refs/heads/feature/71 to refs/heads/feature/73
+0000000000000000000000000000000000000000 dcb30ddc515e28f5b2e87fff6d820da16a76e338 nelsonfrank <nelsonfr78@outlook.com> 1607675309 +0300	Branch: renamed refs/heads/feature/71 to refs/heads/feature/73
+dcb30ddc515e28f5b2e87fff6d820da16a76e338 d859b1354eee3a120531619dff30476fd6f4bffa nelsonfrank <nelsonfr78@outlook.com> 1607681851 +0300	commit: feat: Add signup page
+d859b1354eee3a120531619dff30476fd6f4bffa dcb30ddc515e28f5b2e87fff6d820da16a76e338 nelsonfrank <nelsonfr78@outlook.com> 1607681979 +0300	checkout: moving from feature/73 to develop
+dcb30ddc515e28f5b2e87fff6d820da16a76e338 cf38019e25afc276dc36cd61bfd87cfa5d53b6ed nelsonfrank <nelsonfr78@outlook.com> 1607682020 +0300	pull origin develop: Fast-forward
+cf38019e25afc276dc36cd61bfd87cfa5d53b6ed d859b1354eee3a120531619dff30476fd6f4bffa nelsonfrank <nelsonfr78@outlook.com> 1607682078 +0300	checkout: moving from develop to feature/73
+d859b1354eee3a120531619dff30476fd6f4bffa 0000000000000000000000000000000000000000 nelsonfrank <nelsonfr78@outlook.com> 1607682149 +0300	Branch: renamed refs/heads/feature/73 to refs/heads/feature/72
+0000000000000000000000000000000000000000 d859b1354eee3a120531619dff30476fd6f4bffa nelsonfrank <nelsonfr78@outlook.com> 1607682149 +0300	Branch: renamed refs/heads/feature/73 to refs/heads/feature/72
+d859b1354eee3a120531619dff30476fd6f4bffa cf38019e25afc276dc36cd61bfd87cfa5d53b6ed nelsonfrank <nelsonfr78@outlook.com> 1607682176 +0300	checkout: moving from feature/72 to develop
+cf38019e25afc276dc36cd61bfd87cfa5d53b6ed cf38019e25afc276dc36cd61bfd87cfa5d53b6ed nelsonfrank <nelsonfr78@outlook.com> 1607682182 +0300	checkout: moving from develop to feature/73
+cf38019e25afc276dc36cd61bfd87cfa5d53b6ed 07d17e53f8d0c818d2a6ce9bfbc13fd8c8939736 nelsonfrank <nelsonfr78@outlook.com> 1607684495 +0300	commit: feat: Add signin form page
+07d17e53f8d0c818d2a6ce9bfbc13fd8c8939736 cf38019e25afc276dc36cd61bfd87cfa5d53b6ed nelsonfrank <nelsonfr78@outlook.com> 1607685075 +0300	checkout: moving from feature/73 to develop
+cf38019e25afc276dc36cd61bfd87cfa5d53b6ed 9b139ced0c61bf610549cafbf1ac9e26bcd6c0a3 nelsonfrank <nelsonfr78@outlook.com> 1607685088 +0300	pull origin develop: Fast-forward
+9b139ced0c61bf610549cafbf1ac9e26bcd6c0a3 7ae791375e0c7ee303de8ae3d2c214555d26ef7d nelsonfrank <nelsonfr78@outlook.com> 1607788978 +0300	commit: feat: Add routing in app
+7ae791375e0c7ee303de8ae3d2c214555d26ef7d 930daa0ddddbc0c75746263b02c96389759267b6 nelsonfrank <nelsonfr78@outlook.com> 1607803590 +0300	commit: feat: Change header images
+930daa0ddddbc0c75746263b02c96389759267b6 ede81c7b3ece042866389743a0613cc627fea51b nelsonfrank <nelsonfr78@outlook.com> 1607830916 +0300	commit: Fix: Optimize performance
+ede81c7b3ece042866389743a0613cc627fea51b 3ee93e22e304b878516cb5b9bf10b104e8e78586 nelsonfrank <nelsonfr78@outlook.com> 1607831101 +0300	commit (amend): Fix: Optimize performance
+3ee93e22e304b878516cb5b9bf10b104e8e78586 e8c1dbc1578f0c3aab516a74caf7c70040b98827 nelsonfrank <nelsonfr78@outlook.com> 1607836375 +0300	commit: fix: make section card list responsive
+e8c1dbc1578f0c3aab516a74caf7c70040b98827 3ef034fc2650e1e913831ea30d02d8d82a3d15b2 nelsonfrank <nelsonfr78@outlook.com> 1607852833 +0300	commit: feat: Enable select all in list
+3ef034fc2650e1e913831ea30d02d8d82a3d15b2 8777ae213ba9997389207b5430fbd21f70acea06 nelsonfrank <nelsonfr78@outlook.com> 1607879493 +0300	commit: feat: Add tender action button
+8777ae213ba9997389207b5430fbd21f70acea06 7a5a28cb83756feab8cfec7650fb8327c4f4bb55 nelsonfrank <nelsonfr78@outlook.com> 1607881889 +0300	commit: feat: Modify desciption cards
+7a5a28cb83756feab8cfec7650fb8327c4f4bb55 7c13954988c9d72d1d7df011b400b7cdf83aedef nelsonfrank <nelsonfr78@outlook.com> 1607887765 +0300	commit: feat: Add profile component route
+7c13954988c9d72d1d7df011b400b7cdf83aedef 98eecac03a98c3f4fffc9b595f11e743dc8a2d5a nelsonfrank <nelsonfr78@outlook.com> 1607887946 +0300	commit (amend): feat: Add profile component route
+98eecac03a98c3f4fffc9b595f11e743dc8a2d5a e9afffa079304b65f4d25f0179815878eea9ec09 nelsonfrank <nelsonfr78@outlook.com> 1607928849 +0300	commit: Feat: Change profile pictures
+e9afffa079304b65f4d25f0179815878eea9ec09 e7d8994171840f36ee583b2e6401de5d847d19cc nelsonfrank <nelsonfr78@outlook.com> 1607930911 +0300	commit: feat: Add routing link in login and signup
+e7d8994171840f36ee583b2e6401de5d847d19cc da9cee01c0ad5c34c84a391f3c0d224af61c66ba nelsonfrank <nelsonfr78@outlook.com> 1607931227 +0300	commit: fix: Unhide navigation in large screen
+da9cee01c0ad5c34c84a391f3c0d224af61c66ba be00efb84db547646e99cdea34d00979182bca8a nelsonfrank <nelsonfr78@outlook.com> 1607940220 +0300	commit: feat: Improve profile component
+be00efb84db547646e99cdea34d00979182bca8a 22a718ab686f53c94ed99aa43bbfadb5740d8575 nelsonfrank <nelsonfr78@outlook.com> 1607941651 +0300	commit: feat: Change images in list
+22a718ab686f53c94ed99aa43bbfadb5740d8575 0bd4b43ec40a7a24dfc3c25390205bacdd38b39b nelsonfrank <nelsonfr78@outlook.com> 1607943522 +0300	commit: feat: Change section images
+0bd4b43ec40a7a24dfc3c25390205bacdd38b39b 4fd55e8810e0da628fcac39d392a3661369b32ac nelsonfrank <nelsonfr78@outlook.com> 1607943691 +0300	commit (amend): feat: Change section images
+4fd55e8810e0da628fcac39d392a3661369b32ac 825543ddbd362b50df542305e7f891b727d42b2c nelsonfrank <nelsonfr78@outlook.com> 1607943696 +0300	commit (amend): feat: Change section images
+825543ddbd362b50df542305e7f891b727d42b2c 8eb1a65d723b24312fb4bd542e5204a0f14314ac nelsonfrank <nelsonfr78@outlook.com> 1607943972 +0300	commit (amend): feat: Change section images
+8eb1a65d723b24312fb4bd542e5204a0f14314ac 8e1f0c7096067cb39c0b24ddca02ef8af990136a nelsonfrank <nelsonfr78@outlook.com> 1607944050 +0300	commit (amend): feat: Change section images
+8e1f0c7096067cb39c0b24ddca02ef8af990136a b6f570ff82d6ade24431097732c77c8bc48f6910 nelsonfrank <nelsonfr78@outlook.com> 1607944426 +0300	commit: feat: Add route on click card
+b6f570ff82d6ade24431097732c77c8bc48f6910 2716e5102b27714c039ce23c8b1ec9735e444ab4 nelsonfrank <nelsonfr78@outlook.com> 1607944680 +0300	commit: feat: Add routing in give tenderbutton in user profile
+2716e5102b27714c039ce23c8b1ec9735e444ab4 4be5f6afdc5b92d762282083f1f63014a33a4633 nelsonfrank <nelsonfr78@outlook.com> 1608133454 +0300	commit: feat: Add platform list ui
+4be5f6afdc5b92d762282083f1f63014a33a4633 5a64c1f698ed45d7175bea7b3167f6347056a4d0 nelsonfrank <nelsonfr78@outlook.com> 1608139112 +0300	commit: feat: Add create platform form
+5a64c1f698ed45d7175bea7b3167f6347056a4d0 004eb3814d1f7600e16d189eb6eaa56605a148fe nelsonfrank <nelsonfr78@outlook.com> 1608144176 +0300	commit: feat: Add price-rate component
+004eb3814d1f7600e16d189eb6eaa56605a148fe 49e1c42e29b6b72573e13905102a4b0ac64edb12 nelsonfrank <nelsonfr78@outlook.com> 1608145171 +0300	commit: feat: Add logs component
+49e1c42e29b6b72573e13905102a4b0ac64edb12 06fcf565f548d3ea0492d9138df37e88f2510a5b nelsonfrank <nelsonfr78@outlook.com> 1608189798 +0300	commit: fix: Modify form input layout
+06fcf565f548d3ea0492d9138df37e88f2510a5b d41a1c69d02f4ecd34e9fb8a0c558d387c86355c nelsonfrank <nelsonfr78@outlook.com> 1608195297 +0300	commit: feat: Add upload-images component
+d41a1c69d02f4ecd34e9fb8a0c558d387c86355c a77025ff2bff4c7dd6902de386471ec005cede12 nelsonfrank <nelsonfr78@outlook.com> 1608208729 +0300	commit: feat: Add dynamic data to list component
+a77025ff2bff4c7dd6902de386471ec005cede12 45c712a4f85d09feca47bbc1252bb4f531994a97 nelsonfrank <nelsonfr78@outlook.com> 1608215299 +0300	commit: feat: Add dynamic data to section-card-list component
+45c712a4f85d09feca47bbc1252bb4f531994a97 7db36c9bdd05658a903992e107675cbbb64c3666 nelsonfrank <nelsonfr78@outlook.com> 1608245501 +0300	commit: feat: Make profile component reusable
+7db36c9bdd05658a903992e107675cbbb64c3666 06d6b12a929f36f4dc0ce17f215571bbe0673fbd nelsonfrank <nelsonfr78@outlook.com> 1608488035 +0300	commit: fix: Enable scroll to the top of page
+06d6b12a929f36f4dc0ce17f215571bbe0673fbd 44387dc590bc98c2fd2b30d655184c0bf69b83c9 nelsonfrank <nelsonfr78@outlook.com> 1608488450 +0300	commit (amend): fix: Enable scroll to the top of page
+44387dc590bc98c2fd2b30d655184c0bf69b83c9 82025bf846a2ce010a7fe51f9e9b772473cd1166 nelsonfrank <nelsonfr78@outlook.com> 1608492366 +0300	commit: feat: Configure redux in app
+82025bf846a2ce010a7fe51f9e9b772473cd1166 50b543defe08e46a65ea554bde1505032ec2ee22 nelsonfrank <nelsonfr78@outlook.com> 1608578136 +0300	commit: feat: Add profile for small devices
+50b543defe08e46a65ea554bde1505032ec2ee22 07dfbd9bf9f94a4bd68d9717dda5b1085ff81bea nelsonfrank <nelsonfr78@outlook.com> 1608581717 +0300	commit: feat: Add platform list
+07dfbd9bf9f94a4bd68d9717dda5b1085ff81bea b42c862beed6e23f7b7c408a741fa19a5674818b nelsonfrank <nelsonfr78@outlook.com> 1608598813 +0300	commit: feat: Add market info page
+b42c862beed6e23f7b7c408a741fa19a5674818b d4c51328ee3d378fb1285347f01b4c6cbd48a66b nelsonfrank <nelsonfr78@outlook.com> 1608874137 +0300	commit: feat: New Feature implemented
+d4c51328ee3d378fb1285347f01b4c6cbd48a66b d4c51328ee3d378fb1285347f01b4c6cbd48a66b nelsonfrank <nelsonfr78@outlook.com> 1608874387 +0300	checkout: moving from develop to feature/74
+d4c51328ee3d378fb1285347f01b4c6cbd48a66b 775586051195edbe9db8d31602bf1d4548e58045 nelsonfrank <nelsonfr78@outlook.com> 1608909131 +0300	commit: fix: Improve seller table and add seller form
+775586051195edbe9db8d31602bf1d4548e58045 a70a4f0fe589b4a039eb159d62f121d1cbb0318f nelsonfrank <nelsonfr78@outlook.com> 1608910896 +0300	commit: docs: update README file
+a70a4f0fe589b4a039eb159d62f121d1cbb0318f 909abc4d1569df308e2872ab63f3d56796a95832 nelsonfrank <nelsonfr78@outlook.com> 1608911431 +0300	commit: fix: eslint react version doesn't detected
+909abc4d1569df308e2872ab63f3d56796a95832 f58558ada41303afcfe8c785abac86a66124ed39 nelsonfrank <nelsonfr78@outlook.com> 1608965254 +0300	commit: feat: Add variety list and variety form components
+f58558ada41303afcfe8c785abac86a66124ed39 277a0ac532e6b9d4689f2dd7d4635f70d6bf4a18 nelsonfrank <nelsonfr78@outlook.com> 1608965353 +0300	commit: docs: update README
+277a0ac532e6b9d4689f2dd7d4635f70d6bf4a18 090d61d79e95c7bb7dcc66eab6743affaba45c81 nelsonfrank <nelsonfr78@outlook.com> 1608967447 +0300	commit: fix: Add action column in buyer list column
+090d61d79e95c7bb7dcc66eab6743affaba45c81 b1a049f1e37bba4c4bf6a02e95ee464ae17a6064 nelsonfrank <nelsonfr78@outlook.com> 1608969990 +0300	commit: fix: Quick fix
+b1a049f1e37bba4c4bf6a02e95ee464ae17a6064 84567b0e8b89a93104d953d6c30799bd3bad8854 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: checkout 84567b0e8b89a93104d953d6c30799bd3bad8854
+84567b0e8b89a93104d953d6c30799bd3bad8854 405b1958b02df9cb405697863a9464aa608a1d37 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: fix: eslint react version doesn't detected
+405b1958b02df9cb405697863a9464aa608a1d37 f92387fb841dc03fc4ce7f478ec8ee58238a127e nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: feat: Add variety list and variety form components
+f92387fb841dc03fc4ce7f478ec8ee58238a127e f22f70ad863fdcd4c17e66cc938db0c93a0cb93f nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: docs: update README
+f22f70ad863fdcd4c17e66cc938db0c93a0cb93f fa08cb89e254c76d654f8ec00406fd8710d941f1 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: fix: Add action column in buyer list column
+fa08cb89e254c76d654f8ec00406fd8710d941f1 46d228b7635ee1bf6d7906f047b928522e76b6d8 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	pull --rebase origin develop: fix: Quick fix
+46d228b7635ee1bf6d7906f047b928522e76b6d8 46d228b7635ee1bf6d7906f047b928522e76b6d8 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	rebase finished: returning to refs/heads/feature/74
+46d228b7635ee1bf6d7906f047b928522e76b6d8 45e9f2585a4acdf573c7a9f7298f6a691ef3b7b6 nelsonfrank <nelsonfr78@outlook.com> 1608970259 +0300	pull --rebase origin develop: checkout 45e9f2585a4acdf573c7a9f7298f6a691ef3b7b6
+45e9f2585a4acdf573c7a9f7298f6a691ef3b7b6 46d228b7635ee1bf6d7906f047b928522e76b6d8 nelsonfrank <nelsonfr78@outlook.com> 1608970272 +0300	rebase: updating HEAD
+46d228b7635ee1bf6d7906f047b928522e76b6d8 d4c51328ee3d378fb1285347f01b4c6cbd48a66b nelsonfrank <nelsonfr78@outlook.com> 1608970276 +0300	checkout: moving from feature/74 to develop
+d4c51328ee3d378fb1285347f01b4c6cbd48a66b 45e9f2585a4acdf573c7a9f7298f6a691ef3b7b6 nelsonfrank <nelsonfr78@outlook.com> 1608970285 +0300	pull origin develop: Fast-forward
+45e9f2585a4acdf573c7a9f7298f6a691ef3b7b6 d47102c2659404f99f7f5e6d47a0b4eef018e30d nelsonfrank <nelsonfr78@outlook.com> 1608970627 +0300	commit: fix: change action to icons
+d47102c2659404f99f7f5e6d47a0b4eef018e30d 788adf242a0380cd2d4ef5966df045835bb76e65 nelsonfrank <nelsonfr78@outlook.com> 1608970753 +0300	commit (amend): fix: change action to icons
+788adf242a0380cd2d4ef5966df045835bb76e65 47df2d43bc5777c7da92b80aedbb12768e6f57d5 nelsonfrank <nelsonfr78@outlook.com> 1608971686 +0300	commit: feat: Modify leader list table column
+47df2d43bc5777c7da92b80aedbb12768e6f57d5 24985b220f6b552eabb9d7537ba88c0eb28b246b nelsonfrank <nelsonfr78@outlook.com> 1608971869 +0300	commit: fix: Add Edit action on seller list action column
+24985b220f6b552eabb9d7537ba88c0eb28b246b 61beb991f1eec07f515348a7b5232874bd9d5782 nelsonfrank <nelsonfr78@outlook.com> 1608974529 +0300	commit: fix: Improve UI in both price rate form and list
+61beb991f1eec07f515348a7b5232874bd9d5782 66de8fb7cfd0aac0b9ad09e3b514a3bc477d41f7 nelsonfrank <nelsonfr78@outlook.com> 1608978334 +0300	commit: feat: Add tender request list page
+66de8fb7cfd0aac0b9ad09e3b514a3bc477d41f7 84735c9ce77ce7dbc91d6a6bac219650d0b5b4a1 nelsonfrank <nelsonfr78@outlook.com> 1608980049 +0300	commit: feat: Add Tender Given page
+84735c9ce77ce7dbc91d6a6bac219650d0b5b4a1 5ed61c70cb6c761a521560fa6415a4263369d0d0 nelsonfrank <nelsonfr78@outlook.com> 1608980580 +0300	commit: fix: Modify tender request header and clean up
+5ed61c70cb6c761a521560fa6415a4263369d0d0 fe28e26a0f740ec644347b9f719bae6990630e3c nelsonfrank <nelsonfr78@outlook.com> 1608983158 +0300	commit: fix: Modify logs list table
+fe28e26a0f740ec644347b9f719bae6990630e3c 31ff5d57556baa288e6ad0c2d8c0de230de67c9d nelsonfrank <nelsonfr78@outlook.com> 1608992619 +0300	commit: feat: Add tender request view page
+31ff5d57556baa288e6ad0c2d8c0de230de67c9d ae4efbe1c377018d848192cf7535303e2d105fd2 nelsonfrank <nelsonfr78@outlook.com> 1608997881 +0300	commit: feat: Add Tender given view page
+ae4efbe1c377018d848192cf7535303e2d105fd2 e40c5957b5dfd891cebeb7a05203667f158d85c1 nelsonfrank <nelsonfr78@outlook.com> 1609006891 +0300	commit: feat: Improve UI in tender-request table
+e40c5957b5dfd891cebeb7a05203667f158d85c1 2d49b9856892297fcec3218c5188c8817e426dd1 nelsonfrank <nelsonfr78@outlook.com> 1609053601 +0300	commit (amend): feat: Improve UI in tender-request table
+2d49b9856892297fcec3218c5188c8817e426dd1 5e90785429a3989bbf938d849a0f9521e0478857 nelsonfrank <nelsonfr78@outlook.com> 1609061667 +0300	commit: fix: Make profile list responsive
+5e90785429a3989bbf938d849a0f9521e0478857 85a19c523b0649f29f3a4980f43795571e7411db nelsonfrank <nelsonfr78@outlook.com> 1609062084 +0300	commit (amend): fix: Make profile list responsive
+85a19c523b0649f29f3a4980f43795571e7411db 8c1f62fd71302a7abbc6c60145e91fd7ad9d698c nelsonfrank <nelsonfr78@outlook.com> 1609062573 +0300	commit (amend): fix: Make profile list responsive
+8c1f62fd71302a7abbc6c60145e91fd7ad9d698c 771d89fb34b3e5d65dcbaf838328d98385a9b7bb nelsonfrank <nelsonfr78@outlook.com> 1609062618 +0300	commit (amend): fix: Make profile list responsive
+771d89fb34b3e5d65dcbaf838328d98385a9b7bb 72c429f3e3565b9024c3113e68ce4d42d371754c nelsonfrank <nelsonfr78@outlook.com> 1609158785 +0300	commit: fix: Modify variety and price rate components
+72c429f3e3565b9024c3113e68ce4d42d371754c 5a955fcdd14f5e9ee95a28ac10a5000daf5042ec nelsonfrank <nelsonfr78@outlook.com> 1609159620 +0300	commit: fix: Modify buyer and leader list table colunms
+5a955fcdd14f5e9ee95a28ac10a5000daf5042ec 530d4d2aadaaa233c5c8ec006f67d12a79b99862 nelsonfrank <nelsonfr78@outlook.com> 1609169590 +0300	commit: feat: Modify create platform component
+530d4d2aadaaa233c5c8ec006f67d12a79b99862 44a9a2f9e06643f35b8037e9471571200c069e59 nelsonfrank <nelsonfr78@outlook.com> 1609236666 +0300	commit: feat: Add TBS certificate and Identification File inputs
+44a9a2f9e06643f35b8037e9471571200c069e59 e8a01a1e4b7c7134736faa4d7a21d2fbbfaf48cb nelsonfrank <nelsonfr78@outlook.com> 1609236832 +0300	commit: fix(price-rate form): quick fix
+e8a01a1e4b7c7134736faa4d7a21d2fbbfaf48cb 7d0cf41a22f3e6fcad83faa00541b8db9097c322 nelsonfrank <nelsonfr78@outlook.com> 1609238156 +0300	commit: fix: Change platform list form card to table
+7d0cf41a22f3e6fcad83faa00541b8db9097c322 6d708648b04db70af02d5615541c2800669bfe7d nelsonfrank <nelsonfr78@outlook.com> 1609239268 +0300	commit: feat: Add price history component
+6d708648b04db70af02d5615541c2800669bfe7d abb3ce2acd3fc10d4d6535f90e2fb57bdb19d155 nelsonfrank <nelsonfr78@outlook.com> 1609239342 +0300	commit (amend): feat: Add price history component
+abb3ce2acd3fc10d4d6535f90e2fb57bdb19d155 26e4cd7e5b47a37f3d4c1431e7a1b9cfc8728086 nelsonfrank <nelsonfr78@outlook.com> 1609239948 +0300	commit: fix: Modify platform list and form components
+26e4cd7e5b47a37f3d4c1431e7a1b9cfc8728086 2523a4d1760ec4d59fe0879a8cb0d4d0fc8e9678 nelsonfrank <nelsonfr78@outlook.com> 1609240829 +0300	commit (amend): fix: Modify platform list and form components
+2523a4d1760ec4d59fe0879a8cb0d4d0fc8e9678 9152dd48cb11452b0a5714e4b9255a43d589391d nelsonfrank <nelsonfr78@outlook.com> 1609241838 +0300	commit: fix: Remame surname placeholder
+9152dd48cb11452b0a5714e4b9255a43d589391d 65d00d4409cac53f16e6d07a3081cce2d61aede9 nelsonfrank <nelsonfr78@outlook.com> 1609249613 +0300	commit: feat: Add route to tender given and request from dshboard
+65d00d4409cac53f16e6d07a3081cce2d61aede9 34003e39532c30a55e2034fed7301a2a916caed2 nelsonfrank <nelsonfr78@outlook.com> 1609250853 +0300	commit: fix: Add routes in dashboard components
+34003e39532c30a55e2034fed7301a2a916caed2 7422ac0fa18d3a7fd8b0c989b78a284bf2cc36c8 nelsonfrank <nelsonfr78@outlook.com> 1609251110 +0300	commit: fix: Change logo image
+7422ac0fa18d3a7fd8b0c989b78a284bf2cc36c8 be38ee0f411d0abe1cd2e02ab5a45c9449048e31 nelsonfrank <nelsonfr78@outlook.com> 1609251345 +0300	commit: fix; Change price data type from number to striing
+be38ee0f411d0abe1cd2e02ab5a45c9449048e31 d19c23e57d2cef50cc7c2fda21b1a6a310ae98d8 nelsonfrank <nelsonfr78@outlook.com> 1609251889 +0300	commit: fix: Remove notification and message icon from dashboard header
+d19c23e57d2cef50cc7c2fda21b1a6a310ae98d8 cc74d99b7db36c354dbb47df2585a654cbacdc5b nelsonfrank <nelsonfr78@outlook.com> 1609253769 +0300	commit: fix: Quick fix
+cc74d99b7db36c354dbb47df2585a654cbacdc5b 2249f136c1cd99a60d3277e01564f54fbb552b15 nelsonfrank <nelsonfr78@outlook.com> 1609254307 +0300	commit: fix: Add navigation to price rate history
+2249f136c1cd99a60d3277e01564f54fbb552b15 9f5b2b181d38a0f43e4d53467436f751b566107a nelsonfrank <nelsonfr78@outlook.com> 1609254386 +0300	commit: fix: Quick fix
+9f5b2b181d38a0f43e4d53467436f751b566107a 051f8dc5306fce608e296210797655521f7da076 nelsonfrank <nelsonfr78@outlook.com> 1609265972 +0300	commit: fix: Side marginin layout component
+051f8dc5306fce608e296210797655521f7da076 090eabaae44824e35ad55fbd8d83000601d9bcf0 nelsonfrank <nelsonfr78@outlook.com> 1609266017 +0300	commit: fix: Change route to price rate
+090eabaae44824e35ad55fbd8d83000601d9bcf0 14d445ca3c71ab89739294a3096d3713fa2e4e1d nelsonfrank <nelsonfr78@outlook.com> 1609320584 +0300	commit: fix: Quick fix
+14d445ca3c71ab89739294a3096d3713fa2e4e1d 2b01356195f9558670a5c0659870c6a569af45b3 nelsonfrank <nelsonfr78@outlook.com> 1609323358 +0300	commit: feat: Add price rate component in dashboard
+2b01356195f9558670a5c0659870c6a569af45b3 e9380f8f578a0ea4123afc0561179fca8d1901c6 nelsonfrank <nelsonfr78@outlook.com> 1609602834 +0300	commit: fix(refactor): Clean dashboard component and make it responsive in small device
+e9380f8f578a0ea4123afc0561179fca8d1901c6 5cf5c5fa43aa5bad8f7aec4306e0ad6874cb406f nelsonfrank <nelsonfr78@outlook.com> 1609607782 +0300	commit: feat: Add navigation on small devices
+5cf5c5fa43aa5bad8f7aec4306e0ad6874cb406f ccf5f22e385b6bc7f948c23293a282e041789110 nelsonfrank <nelsonfr78@outlook.com> 1609612862 +0300	commit: fix: Modify navigation option layout
+ccf5f22e385b6bc7f948c23293a282e041789110 14d98891be291cd4b8fdab84d98a1d9029d5edd7 nelsonfrank <nelsonfr78@outlook.com> 1609613530 +0300	commit (amend): fix: Modify navigation option layout
+14d98891be291cd4b8fdab84d98a1d9029d5edd7 dcf1b5fe455a7a11a83d6d3bf25b2c4f4a20a5d6 nelsonfrank <nelsonfr78@outlook.com> 1609675090 +0300	commit: fix(perf): Make dashboard page responsive
+dcf1b5fe455a7a11a83d6d3bf25b2c4f4a20a5d6 dc51db5db8bf8958607720d33dd222c3e5e57e04 nelsonfrank <nelsonfr78@outlook.com> 1609675890 +0300	commit: fix(perf): Make list responsive in small devices
+dc51db5db8bf8958607720d33dd222c3e5e57e04 9ff579123db465c831c4f43804d228fc9ca415ee nelsonfrank <nelsonfr78@outlook.com> 1609691322 +0300	commit: feat: Add back button in variety form
+9ff579123db465c831c4f43804d228fc9ca415ee 781420467c72382aa131a4e501779378c1bf7e1b nelsonfrank <nelsonfr78@outlook.com> 1609704137 +0300	commit: feat: Add user profile popover
+781420467c72382aa131a4e501779378c1bf7e1b 86c5f7eeff1a9c5e9a93b1d7f0776943df03185d nelsonfrank <nelsonfr78@outlook.com> 1609704961 +0300	commit: fix: Quick fix
+86c5f7eeff1a9c5e9a93b1d7f0776943df03185d 440d1f5b960aee463703d0bcb9e87ddaf6fc6ea0 nelsonfrank <nelsonfr78@outlook.com> 1609781516 +0300	commit: feat: Add back button in card component and use it in tender given view page
+440d1f5b960aee463703d0bcb9e87ddaf6fc6ea0 ad8ca06b9dfc374687aa9b190ac742c89ce581cd nelsonfrank <nelsonfr78@outlook.com> 1609781720 +0300	commit: feat: Add back button in tender request view page
+ad8ca06b9dfc374687aa9b190ac742c89ce581cd 84033a1792afc4e5ef067246cf52d8046378627a nelsonfrank <nelsonfr78@outlook.com> 1609782309 +0300	commit: feat: Add back button component
+84033a1792afc4e5ef067246cf52d8046378627a 453ee960849ac04d410d6d01aee32a0a1e940a0c nelsonfrank <nelsonfr78@outlook.com> 1609782346 +0300	commit (amend): feat: Add back button component and use it in price rate form component
+453ee960849ac04d410d6d01aee32a0a1e940a0c 6bef7d047dbad7f2bb5d443f01c19f9d46bc308a nelsonfrank <nelsonfr78@outlook.com> 1609782423 +0300	commit (amend): feat: Add back button component and use it in price rate form component
+6bef7d047dbad7f2bb5d443f01c19f9d46bc308a 3881879e87fcd5235dc0761e9ad2efa3fcafa0ac nelsonfrank <nelsonfr78@outlook.com> 1609782589 +0300	commit: feat: Route in previous page using back button
+3881879e87fcd5235dc0761e9ad2efa3fcafa0ac ef9000035be13a87cbaf1334bc8d6a404b3d5e9a nelsonfrank <nelsonfr78@outlook.com> 1609782891 +0300	commit: fix(refactor): Replace back button with component
+ef9000035be13a87cbaf1334bc8d6a404b3d5e9a 9f6ac8e2668ae9816c87a78fd8446fca9202fac7 nelsonfrank <nelsonfr78@outlook.com> 1609783967 +0300	commit: feat: Add back button in price-history table component
+9f6ac8e2668ae9816c87a78fd8446fca9202fac7 c980fa1bba028f8ad12cdb72417dc8c64dcad725 nelsonfrank <nelsonfr78@outlook.com> 1609807852 +0300	commit: feat: Add sellers viewer page
+c980fa1bba028f8ad12cdb72417dc8c64dcad725 e0e823f71fd1bfe0a09d3aeb08a94319517c92a8 nelsonfrank <nelsonfr78@outlook.com> 1609834543 +0300	commit: fix(docs): Update README file
+e0e823f71fd1bfe0a09d3aeb08a94319517c92a8 9513f6245a843d50e42ceb5972ec92201ebe5e51 nelsonfrank <nelsonfr78@outlook.com> 1609978892 +0300	commit: feat: Integrate login with api
+9513f6245a843d50e42ceb5972ec92201ebe5e51 39271e6bc8257556d3bd877ebd19f51c0b749091 nelsonfrank <nelsonfr78@outlook.com> 1610080109 +0300	commit: feat: Add Management signin component
+39271e6bc8257556d3bd877ebd19f51c0b749091 46508861244d342661a859eb1deca0089ef7a605 nelsonfrank <nelsonfr78@outlook.com> 1610080152 +0300	commit (amend): feat: Add Management signin component
+46508861244d342661a859eb1deca0089ef7a605 eccf9f41dde04e3189924c2399edd45899f01ef8 nelsonfrank <nelsonfr78@outlook.com> 1610080169 +0300	commit (amend): feat: Add Management signin component
+eccf9f41dde04e3189924c2399edd45899f01ef8 3535e92c6c53840773c185bb9944c62d3f6df0a0 nelsonfrank <nelsonfr78@outlook.com> 1610080179 +0300	commit (amend): feat: Add Management signin component and RBAC
+3535e92c6c53840773c185bb9944c62d3f6df0a0 01dda86f6e2e065085da2edd833bead1e8558e07 nelsonfrank <nelsonfr78@outlook.com> 1610080241 +0300	commit (amend): feat: Add Management signin component and RBAC
+01dda86f6e2e065085da2edd833bead1e8558e07 99b5a136135749219fab5b76c86840f9792e8bac nelsonfrank <nelsonfr78@outlook.com> 1610080250 +0300	commit (amend): feat: Add Management signin component and RBAC
+99b5a136135749219fab5b76c86840f9792e8bac 4f1159f3cd0b0c4448c8ea52c9d2e739632d4a20 nelsonfrank <nelsonfr78@outlook.com> 1610080368 +0300	commit (amend): feat: Add Management signin component and RBAC
+4f1159f3cd0b0c4448c8ea52c9d2e739632d4a20 3924d5ff43fd4a01041640056bf340ff4c41aa80 nelsonfrank <nelsonfr78@outlook.com> 1610095720 +0300	commit: feat: Modify initial routing of the app
+3924d5ff43fd4a01041640056bf340ff4c41aa80 0a46b798377acbe7b868e82a1ee075fa9d23eb98 nelsonfrank <nelsonfr78@outlook.com> 1610101498 +0300	commit: feat: Add auth in login of both user and management staffs
+0a46b798377acbe7b868e82a1ee075fa9d23eb98 e37ee49722c66b2f75c80cfeaa0733010dbabf0a nelsonfrank <nelsonfr78@outlook.com> 1610102326 +0300	commit: fix: Modify route params in header and other navigation link
+e37ee49722c66b2f75c80cfeaa0733010dbabf0a ffe0114ef054492dcc1ac818508baabfcb4ebf67 nelsonfrank <nelsonfr78@outlook.com> 1610109109 +0300	commit: feat: integrate admin dashboard with login API
+ffe0114ef054492dcc1ac818508baabfcb4ebf67 b423a917174a405bfe7b82bde4f04878349bfad5 nelsonfrank <nelsonfr78@outlook.com> 1610193916 +0300	commit: fix: Quick fix
+b423a917174a405bfe7b82bde4f04878349bfad5 48967984821122da67953b232a0fb3390c5809fa nelsonfrank <nelsonfr78@outlook.com> 1610194553 +0300	commit: fix: Remove country selection in management sign in form
+48967984821122da67953b232a0fb3390c5809fa 7c96184e8d7479952ad087a327caec020b3696c2 nelsonfrank <nelsonfr78@outlook.com> 1610446193 +0300	commit: feat: Intergrate add seller api
+7c96184e8d7479952ad087a327caec020b3696c2 f7b4a736f3daeca09af43189cbb9dcac8b8cc5d6 nelsonfrank <nelsonfr78@outlook.com> 1610481091 +0300	commit: fix: Quick fix
+f7b4a736f3daeca09af43189cbb9dcac8b8cc5d6 f1b6c86f9e5ee0f18fa11f7823afc1ea330d1421 nelsonfrank <nelsonfr78@outlook.com> 1610483926 +0300	commit: fix: Enforce browser to make insecure api call
+f1b6c86f9e5ee0f18fa11f7823afc1ea330d1421 9a2abe2be6827793ec60cf42e2e97729b9513b13 nelsonfrank <nelsonfr78@outlook.com> 1610484733 +0300	commit: fix: remove insecure http request
+9a2abe2be6827793ec60cf42e2e97729b9513b13 581876751fc5afd5dc89964c16c40909baeb09fb nelsonfrank <nelsonfr78@outlook.com> 1610579610 +0300	commit: feat: Integrate platform API in dashboard
+581876751fc5afd5dc89964c16c40909baeb09fb f010193156bd1ec9c25d6745ea62fa6115b47218 nelsonfrank <nelsonfr78@outlook.com> 1610616097 +0300	commit: feat: Add Validation to seller form
+f010193156bd1ec9c25d6745ea62fa6115b47218 ca29a1be3cfeb1182770fbcc09cdb34e2ebc20d8 nelsonfrank <nelsonfr78@outlook.com> 1610628492 +0300	commit: fix: Add navigate to previous route value to navigate fx
+ca29a1be3cfeb1182770fbcc09cdb34e2ebc20d8 2dda2d27548e11ea9ad5100cbef5a7ab21fc405f nelsonfrank <nelsonfr78@outlook.com> 1610642917 +0300	commit: feat: Add modal on view sellers
+2dda2d27548e11ea9ad5100cbef5a7ab21fc405f 7bf13e75b5ae0b169942c5f8ef797000516e20db nelsonfrank <nelsonfr78@outlook.com> 1610644359 +0300	commit: fix(docs): Modify README file
+7bf13e75b5ae0b169942c5f8ef797000516e20db 1ea478dc4227951aee1632ee05babf21cf373b7f nelsonfrank <nelsonfr78@outlook.com> 1610969440 +0300	commit: fix: Modify create seller and leader payload
+1ea478dc4227951aee1632ee05babf21cf373b7f c75fca151598982248afde706979a0a4aebf1314 nelsonfrank <nelsonfr78@outlook.com> 1610972861 +0300	commit: feat: Handle error in login
+c75fca151598982248afde706979a0a4aebf1314 3dc6c8cbbd143ea4538eb122e646d75a4d0fc2d2 nelsonfrank <nelsonfr78@outlook.com> 1610995104 +0300	commit: fix(doc): Update README file
+3dc6c8cbbd143ea4538eb122e646d75a4d0fc2d2 0a1f9feacff9e21e309275e613b9513d4bafe2f2 nelsonfrank <nelsonfr78@outlook.com> 1610995609 +0300	commit: fix: Add refresh token
+0a1f9feacff9e21e309275e613b9513d4bafe2f2 0a1f9feacff9e21e309275e613b9513d4bafe2f2 nelsonfrank <nelsonfr78@outlook.com> 1611171190 +0300	checkout: moving from develop to feature/deployment
+0a1f9feacff9e21e309275e613b9513d4bafe2f2 0a1f9feacff9e21e309275e613b9513d4bafe2f2 nelsonfrank <nelsonfr78@outlook.com> 1611171510 +0300	reset: moving to HEAD
+0a1f9feacff9e21e309275e613b9513d4bafe2f2 0a1f9feacff9e21e309275e613b9513d4bafe2f2 nelsonfrank <nelsonfr78@outlook.com> 1611172630 +0300	reset: moving to 0a1f9fe
+0a1f9feacff9e21e309275e613b9513d4bafe2f2 0a1f9feacff9e21e309275e613b9513d4bafe2f2 nelsonfrank <nelsonfr78@outlook.com> 1611208146 +0300	checkout: moving from feature/deployment to develop
+0a1f9feacff9e21e309275e613b9513d4bafe2f2 aab0ff6d9f55555c2c9034103f9d39faa0c819a1 nelsonfrank <nelsonfr78@outlook.com> 1611315385 +0300	commit: fix: Modify ui and data passed
+aab0ff6d9f55555c2c9034103f9d39faa0c819a1 e1942531326a21216e60306d6d60bce9f1e8f9ab nelsonfrank <nelsonfr78@outlook.com> 1611315737 +0300	commit (amend): fix: Modify ui and data passed
+e1942531326a21216e60306d6d60bce9f1e8f9ab 505fcd229cb3facf20bbce49db59171f5ec7c4b8 nelsonfrank <nelsonfr78@outlook.com> 1611326694 +0300	commit: fix: Handle api response
+505fcd229cb3facf20bbce49db59171f5ec7c4b8 2935172a64a10af28c69c2017b1a722b7c7e88fd nelsonfrank <nelsonfr78@outlook.com> 1611342138 +0300	commit: feat: Add chat component
+2935172a64a10af28c69c2017b1a722b7c7e88fd 8a5484d60e5adc3f0027f769581d2269aae7245b nelsonfrank <nelsonfr78@outlook.com> 1611343102 +0300	commit: feat: Add user profile icon in header component
+8a5484d60e5adc3f0027f769581d2269aae7245b 9e998d766bf6b5247125f7049bcd92872d8546b2 nelsonfrank <nelsonfr78@outlook.com> 1611346870 +0300	commit (amend): feat: Add user profile icon in header component
+9e998d766bf6b5247125f7049bcd92872d8546b2 70cf6d684839fc9b15710440b000e314dce0fa74 nelsonfrank <nelsonfr78@outlook.com> 1611418426 +0300	commit: fix: Modify Seller and buyer login
+70cf6d684839fc9b15710440b000e314dce0fa74 3e25f8eeaaebc99634fd45f306e86939fde1e2fc nelsonfrank <nelsonfr78@outlook.com> 1611425622 +0300	commit: feat: Redirect user to page based on his or her role
+3e25f8eeaaebc99634fd45f306e86939fde1e2fc f5958e4b6e5cf33d90200c33980ab7b90165107b nelsonfrank <nelsonfr78@outlook.com> 1611427097 +0300	commit: feat: Modify create platform post request function
+f5958e4b6e5cf33d90200c33980ab7b90165107b 4cfbee39d5cc9341e15a11f762f842e1d3d2d5ad nelsonfrank <nelsonfr78@outlook.com> 1611434580 +0300	commit: feat: List all sender from an api
+4cfbee39d5cc9341e15a11f762f842e1d3d2d5ad fe73f711a0809c8c306f05869a4730c0e9f345ed nelsonfrank <nelsonfr78@outlook.com> 1611438280 +0300	commit: feat: List leaders from an api
+fe73f711a0809c8c306f05869a4730c0e9f345ed 23851d450835be70914e111f7502df91820066f3 nelsonfrank <nelsonfr78@outlook.com> 1611439343 +0300	commit: fix: Modify fetchAllSeller Api
+23851d450835be70914e111f7502df91820066f3 0befb4159a6e84e4fd6265e31732575ab43361d3 nelsonfrank <nelsonfr78@outlook.com> 1611442345 +0300	commit: feat: Integrate add variety with api
+0befb4159a6e84e4fd6265e31732575ab43361d3 807d87749558b8425b950ef1240ae2540b92bd2b nelsonfrank <nelsonfr78@outlook.com> 1611442399 +0300	commit (amend): feat: Integrate add variety with api
+807d87749558b8425b950ef1240ae2540b92bd2b 8bae19006c9d59e2bc8d19791a6332f6097bec0a nelsonfrank <nelsonfr78@outlook.com> 1611442416 +0300	commit: fix: Add error description
+8bae19006c9d59e2bc8d19791a6332f6097bec0a 031850d77404353d6a32ddcc6c1a8cd934ea1281 nelsonfrank <nelsonfr78@outlook.com> 1611442556 +0300	commit (amend): fix: Add error description
+031850d77404353d6a32ddcc6c1a8cd934ea1281 7272dcc935b8650f9997a3d50bdf5d8cf4bab222 nelsonfrank <nelsonfr78@outlook.com> 1611443827 +0300	commit: fix: Remove placeholder data
+7272dcc935b8650f9997a3d50bdf5d8cf4bab222 630a4ac0a77c8192ddc6415b23b30ade1df32f0a nelsonfrank <nelsonfr78@outlook.com> 1611466114 +0300	commit: feat: List all price rate from api
+630a4ac0a77c8192ddc6415b23b30ade1df32f0a fd8c8a47671379ba01b6e0020cc34afee596c1de nelsonfrank <nelsonfr78@outlook.com> 1611466148 +0300	commit: feat: Persist management user after login
+fd8c8a47671379ba01b6e0020cc34afee596c1de b25acf447a5e19ff793cbde8e7eb52d2b1a51c4b nelsonfrank <nelsonfr78@outlook.com> 1611471741 +0300	commit: fix: Quick fix
+b25acf447a5e19ff793cbde8e7eb52d2b1a51c4b 9804c800402669b9d1ab53627a3e217a0e3d28da nelsonfrank <nelsonfr78@outlook.com> 1611493124 +0300	commit: fix: Make tender request form responsive
+9804c800402669b9d1ab53627a3e217a0e3d28da 28c69cfec62a0ba2a56706257a97fe60fcc43941 nelsonfrank <nelsonfr78@outlook.com> 1611493355 +0300	commit: fix: Render header options dynamically
+28c69cfec62a0ba2a56706257a97fe60fcc43941 a3a30f0959a13371c9eea2a9de32e19b0f126cef nelsonfrank <nelsonfr78@outlook.com> 1611496204 +0300	commit: fix: Quick fix
+a3a30f0959a13371c9eea2a9de32e19b0f126cef 93a8d9759ff4af79ddadd22ab9e4841537fdbdec nelsonfrank <nelsonfr78@outlook.com> 1611810316 +0300	commit: fix: Replace localstorage with sessionstorage on management user login
+93a8d9759ff4af79ddadd22ab9e4841537fdbdec 9f7773067fbe6cf23a3def7dcdd0895e254a1ea1 nelsonfrank <nelsonfr78@outlook.com> 1611810520 +0300	commit (amend): fix: Replace localstorage with sessionstorage on management user login
+9f7773067fbe6cf23a3def7dcdd0895e254a1ea1 fb1910b76ae7bee87f4293585faeb06a445ae8a7 nelsonfrank <nelsonfr78@outlook.com> 1611810851 +0300	commit (amend): fix: Replace localstorage with sessionstorage on management user login
+fb1910b76ae7bee87f4293585faeb06a445ae8a7 ef0b15aa7d7d916e9fb485295074eaa91e317271 nelsonfrank <nelsonfr78@outlook.com> 1611811527 +0300	commit: feat: Add side bar options
+ef0b15aa7d7d916e9fb485295074eaa91e317271 c2ea671bf8b620362ae3b367872feed5f1cb6373 nelsonfrank <nelsonfr78@outlook.com> 1611847792 +0300	commit: feat: Modify user authentications
+c2ea671bf8b620362ae3b367872feed5f1cb6373 aaba87713b6a093f8b5b84e36d9093e6fdd5c09d nelsonfrank <nelsonfr78@outlook.com> 1611848110 +0300	commit: fix: Change logout function on dashboard
+aaba87713b6a093f8b5b84e36d9093e6fdd5c09d cffe30f6256cc9afcf60e6eaa8b8248d29372272 nelsonfrank <nelsonfr78@outlook.com> 1611848185 +0300	commit (amend): fix: Change logout function on dashboard
+cffe30f6256cc9afcf60e6eaa8b8248d29372272 30cfec4ec479722f0fd131dd41b9a549b329c564 nelsonfrank <nelsonfr78@outlook.com> 1611849902 +0300	commit (amend): fix: Change logout function on dashboard
+30cfec4ec479722f0fd131dd41b9a549b329c564 8e964de3c4f982bd6ae9cefd31dd779bccae06f7 nelsonfrank <nelsonfr78@outlook.com> 1611864056 +0300	commit: fix: Modify seller, platform and auth
+8e964de3c4f982bd6ae9cefd31dd779bccae06f7 71635e5a40067cf274e894cfb3a176d62560dd0b nelsonfrank <nelsonfr78@outlook.com> 1611864179 +0300	commit (amend): fix: Modify seller, platform and auth
+71635e5a40067cf274e894cfb3a176d62560dd0b 1a8a29190765dafb7fff70b50084a60e32a6d930 nelsonfrank <nelsonfr78@outlook.com> 1611869599 +0300	commit: fix: Update platfrom section in platform
+1a8a29190765dafb7fff70b50084a60e32a6d930 0adec9f196fc9950a3a03b33b038dbe4f5f072ef nelsonfrank <nelsonfr78@outlook.com> 1611897747 +0300	commit: Quick fix
+0adec9f196fc9950a3a03b33b038dbe4f5f072ef b053a00173df0fb522de3fcba0145b3a2023e388 nelsonfrank <nelsonfr78@outlook.com> 1611996339 +0300	commit: feat: Integrate dashboard cards with an api
+b053a00173df0fb522de3fcba0145b3a2023e388 93222d9ec80f53a8a62d8ae0cae737e4b4948572 nelsonfrank <nelsonfr78@outlook.com> 1611997899 +0300	commit: feat: Integrate dashboard price rate with api
+93222d9ec80f53a8a62d8ae0cae737e4b4948572 8c0e227ca02fc89b3ce4f127ee6a8a33508aeb73 nelsonfrank <nelsonfr78@outlook.com> 1612018135 +0300	commit: fix: Quick changes
+8c0e227ca02fc89b3ce4f127ee6a8a33508aeb73 920a6b60bb4f7121cc6f2d0e79b35aeba5bf3a7f nelsonfrank <nelsonfr78@outlook.com> 1612018375 +0300	commit (amend): fix: Quick changes
+920a6b60bb4f7121cc6f2d0e79b35aeba5bf3a7f 691c6ddd98b7f6a6f6e4c3fdc55676b1dd0786fc nelsonfrank <nelsonfr78@outlook.com> 1612024762 +0300	commit: fix: Quick fix

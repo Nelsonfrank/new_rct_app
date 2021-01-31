@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 d4c51328ee3d378fb1285347f01b4c6cbd48a66b nelsonfrank <nelsonfr78@outlook.com> 1608874387 +0300	branch: Created from HEAD
+d4c51328ee3d378fb1285347f01b4c6cbd48a66b 775586051195edbe9db8d31602bf1d4548e58045 nelsonfrank <nelsonfr78@outlook.com> 1608909131 +0300	commit: fix: Improve seller table and add seller form
+775586051195edbe9db8d31602bf1d4548e58045 a70a4f0fe589b4a039eb159d62f121d1cbb0318f nelsonfrank <nelsonfr78@outlook.com> 1608910896 +0300	commit: docs: update README file
+a70a4f0fe589b4a039eb159d62f121d1cbb0318f 909abc4d1569df308e2872ab63f3d56796a95832 nelsonfrank <nelsonfr78@outlook.com> 1608911431 +0300	commit: fix: eslint react version doesn't detected
+909abc4d1569df308e2872ab63f3d56796a95832 f58558ada41303afcfe8c785abac86a66124ed39 nelsonfrank <nelsonfr78@outlook.com> 1608965254 +0300	commit: feat: Add variety list and variety form components
+f58558ada41303afcfe8c785abac86a66124ed39 277a0ac532e6b9d4689f2dd7d4635f70d6bf4a18 nelsonfrank <nelsonfr78@outlook.com> 1608965353 +0300	commit: docs: update README
+277a0ac532e6b9d4689f2dd7d4635f70d6bf4a18 090d61d79e95c7bb7dcc66eab6743affaba45c81 nelsonfrank <nelsonfr78@outlook.com> 1608967447 +0300	commit: fix: Add action column in buyer list column
+090d61d79e95c7bb7dcc66eab6743affaba45c81 b1a049f1e37bba4c4bf6a02e95ee464ae17a6064 nelsonfrank <nelsonfr78@outlook.com> 1608969990 +0300	commit: fix: Quick fix
+b1a049f1e37bba4c4bf6a02e95ee464ae17a6064 46d228b7635ee1bf6d7906f047b928522e76b6d8 nelsonfrank <nelsonfr78@outlook.com> 1608970065 +0300	rebase finished: returning to refs/heads/feature/74

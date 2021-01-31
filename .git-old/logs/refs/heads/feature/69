@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 nelsonfrank <nelsonfr78@outlook.com> 1607421439 +0300	branch: Created from HEAD
+d2f97f9b4cd18f91a3abf5c4410efcdfd67dbff4 305cee021b5d9dd4f90c3ab5ae7107be8d98890c nelsonfrank <nelsonfr78@outlook.com> 1607433548 +0300	commit: feat: Add user profile
+305cee021b5d9dd4f90c3ab5ae7107be8d98890c e298109b2f53318f851cd29c31d3aa78e4059378 nelsonfrank <nelsonfr78@outlook.com> 1607433707 +0300	commit (amend): feat: Add user profile
+e298109b2f53318f851cd29c31d3aa78e4059378 5bde8b46ea79ee5339c755127eedc892e4919c7b nelsonfrank <nelsonfr78@outlook.com> 1607509061 +0300	commit: feat: Add list component
+5bde8b46ea79ee5339c755127eedc892e4919c7b fa77351e8d104aaefac71bee037bd75071ddc865 nelsonfrank <nelsonfr78@outlook.com> 1607628752 +0300	commit: Fix: Improve List component
+fa77351e8d104aaefac71bee037bd75071ddc865 efe0cba0e389dc527f2fa3e0772d150d7dc6a11b nelsonfrank <nelsonfr78@outlook.com> 1607629368 +0300	commit: fix: Position footer at the bottom of page
+efe0cba0e389dc527f2fa3e0772d150d7dc6a11b 49862eab1fff47a1dff9a2ffd57b023a6b3a0e6b nelsonfrank <nelsonfr78@outlook.com> 1607635564 +0300	commit: feat: Add Give Tender component
+49862eab1fff47a1dff9a2ffd57b023a6b3a0e6b e78f4d695c2a64138a532dd83a3443aca41a978e nelsonfrank <nelsonfr78@outlook.com> 1607656545 +0300	commit: feat: Add post tender component
+e78f4d695c2a64138a532dd83a3443aca41a978e ebefe5c6c9f7a954792d4f5569928f5df3f76427 nelsonfrank <nelsonfr78@outlook.com> 1607673078 +0300	rebase finished: returning to refs/heads/feature/69

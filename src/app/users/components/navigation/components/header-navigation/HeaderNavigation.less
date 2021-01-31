@@ -1,0 +1,206 @@
+.navigation--user {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navigation--user_closed {
+  display: none;
+}
+
+.user--app {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.profile {
+  margin: 0.5rem 0px 0.5rem 1rem;
+}
+
+.profile--shape {
+  border-radius: 50%;
+  // background-color: green;
+  padding: 0 0.5rem;
+}
+
+.user--name {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0rem;
+}
+
+.navigation--menu {
+  display: flex;
+  align-items: center;
+  padding-right: 1.25rem;
+  padding-left: 1rem;
+  // We Hide Navigation button here
+  // display: none;
+}
+
+.search--input {
+  display: none;
+}
+.app--logo {
+  display: none;
+  align-items: center;
+}
+.navigation--user_action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 1rem;
+  width: 90%;
+}
+
+// Navigation options Container
+.nav--list {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav--list_closed {
+  display: none;
+}
+// Navigation Close Button
+.nav-close {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .nav--close_btn {
+    margin: 1rem 0.5rem;
+  }
+  .nav--close_btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// Navigation list Options
+.user--nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+
+  .nav--option {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav--option > li {
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+}
+
+.option-list_hide {
+  display: none !important;
+}
+
+.option--group {
+  display: none;
+}
+
+.register--welcome {
+  display: none;
+}
+
+.registry-container {
+  width: 70%;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 514px) {
+  .app--logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+
+    h2 {
+      font-size: 1.25rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation--user {
+    height: 80px;
+    max-width: 970px;
+  }
+  .app--logo {
+    display: flex;
+    align-items: center;
+  }
+  .humbergerIcon {
+    display: none;
+  }
+  .option--group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .option--item__lgscreen {
+    margin-right: 3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+  }
+  .options-lgscreen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 970px;
+    margin: 1rem auto;
+    padding: 0 2.25rem 0 1rem;
+  }
+  .register--welcome {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18;
+    font-weight: 500;
+    padding-right: 10px;
+  }
+  .search--input {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    width: 100%;
+  }
+
+  .registry-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .navigation--user_action {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .navigation--user {
+    max-width: 1200px;
+  }
+
+  .options-lgscreen {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 8df62727757a083e03fdd48b5fbff6f58b2d2e01 nelsonfrank <nelsonfr78@outlook.com> 1606554888 +0300	branch: Created from HEAD
+8df62727757a083e03fdd48b5fbff6f58b2d2e01 56c61883c66653a4e1488a67d7a4ba89706b52b0 nelsonfrank <nelsonfr78@outlook.com> 1606558889 +0300	commit: feat(component): add description card
+56c61883c66653a4e1488a67d7a4ba89706b52b0 474afdbb4fcc66ed762e4cf642a4e9d498e74dad nelsonfrank <nelsonfr78@outlook.com> 1606559208 +0300	commit (amend): feat(component): add description card
+474afdbb4fcc66ed762e4cf642a4e9d498e74dad b5c936837c205a462a6ced7088bb4e9d8de08541 nelsonfrank <nelsonfr78@outlook.com> 1606662435 +0300	rebase finished: returning to refs/heads/feature/61
+b5c936837c205a462a6ced7088bb4e9d8de08541 67c976a738484dd5940b154f3f6251cd25908848 nelsonfrank <nelsonfr78@outlook.com> 1606665098 +0300	commit: fix(file): quick fix
+67c976a738484dd5940b154f3f6251cd25908848 b01c47a263005399ef8595e35b6a0f9901dda4ba nelsonfrank <nelsonfr78@outlook.com> 1606665120 +0300	commit (amend): fix(file): Quick fix

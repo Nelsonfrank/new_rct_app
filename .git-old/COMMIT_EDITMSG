@@ -1,0 +1,19 @@
+fix: Quick fix
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch develop
+# Changes to be committed:
+#	modified:   src/app/Management/pages/platform/components/platform-lists/PlatformLists.tsx
+#	modified:   src/app/Management/pages/users/components/sellers/components/sellers-table/SellersTable.tsx
+#	modified:   src/app/components/signup/Signup.tsx
+#	modified:   src/app/components/verify-phone/VerifyPhone.tsx
+#	modified:   src/app/users/UsersRoutes.tsx
+#	modified:   src/app/users/buyers/BuyerRoutes.tsx
+#	modified:   src/app/users/buyers/components/user-list/UserList.tsx
+#	modified:   src/app/users/components/navigation/components/header-navigation/HeaderNavigation.less
+#	modified:   src/app/users/components/navigation/components/header-navigation/HeaderNavigation.tsx
+#
+# Changes not staged for commit:
+#	modified:   src/app/users/buyers/components/TenderRequestForm/TenderRequestForm.tsx
+#

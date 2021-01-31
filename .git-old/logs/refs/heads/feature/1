@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 nelsonfrank <nelsonfr78@outlook.com> 1605017671 +0300	branch: Created from HEAD
+a8a9259e7acae9b68fa9c5d2d54bab0443ee28c6 c63584cccfd7f00c90d195b6754c432cba2d98ef nelsonfrank <nelsonfr78@outlook.com> 1605020496 +0300	commit: feat:Configuring eslint, prettier, husky, pretty-quick #1

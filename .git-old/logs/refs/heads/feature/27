@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 cffc292e7424bd3c36c8227e8d3442cf944c6e5f nelsonfrank <nelsonfr78@outlook.com> 1605773226 +0300	branch: Created from HEAD
+cffc292e7424bd3c36c8227e8d3442cf944c6e5f 71fd06c84b087c3985434f536b758f152d5f38d9 nelsonfrank <nelsonfr78@outlook.com> 1605773288 +0300	commit (cherry-pick): fix: Add left margin to content to prevent to overflow
+71fd06c84b087c3985434f536b758f152d5f38d9 beeac3bd2b4b813f476505442b763a011ec3cb6c nelsonfrank <nelsonfr78@outlook.com> 1605773379 +0300	rebase finished: returning to refs/heads/feature/27
