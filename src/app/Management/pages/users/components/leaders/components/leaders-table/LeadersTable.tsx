@@ -17,11 +17,11 @@ import { Auth } from '../../../../../../../../auth/AuthContext';
 
 const LeadersTable: React.FC = () => {
   const [leader, setLeader] = useState([]);
-  const { userAccessToken } = useContext(Auth);
+  const { adminAccessToken } = useContext(Auth);
 
   useEffect(() => {
     const fetchAllLeader = async () => {
-      const leaderResponse = await GetAllLeader(userAccessToken).then(
+      const leaderResponse = await GetAllLeader(adminAccessToken).then(
         (response) => response,
       );
       if (leaderResponse.status === 200) {
@@ -32,7 +32,7 @@ const LeadersTable: React.FC = () => {
               name: item.name,
               platform: item.platform_name,
               region: item.platform_region,
-              phone_number: item.phone_number,
+              phone_number: `0${item.phone_number}`,
             };
           })
           .filter((item: any) => {

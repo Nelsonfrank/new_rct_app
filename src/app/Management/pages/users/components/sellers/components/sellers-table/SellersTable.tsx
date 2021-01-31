@@ -84,7 +84,7 @@ const SellersTable: React.FC = () => {
           keys: item.id,
           firstName: item.full_name && item.full_name.split(' ')[0],
           lastName: item.full_name && item.full_name.split(' ')[1],
-          phone: item.phone_number,
+          phone: `0${item.phone_number}`,
           platform: item.platform_name,
           leader: item.platform_leader,
           location: item.location,

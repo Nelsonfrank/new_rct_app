@@ -17,6 +17,7 @@ import {
   AddSeller,
   GetAllPlatform,
   RefreshToken,
+  // GetPlatformByLeaderId,
 } from '../../../../../../../../API';
 // styles
 import './AddSellersForm.less';
@@ -27,6 +28,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
   const [TBSFileList, setTBSFileState] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const [allPlatform, setAllPlatform] = useState([]);
+  // const [platform, setPlatformId] = useState('');
 
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
@@ -40,6 +42,15 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
       console.log(result);
     };
     getAllPlatform();
+
+    // const getPlatformById = async () => {
+    //   const result = await GetPlatformByLeaderId(userInfo.id).then(
+    //     (response) => response,
+    //   );
+    //   console.log(result);
+    // };
+    // getPlatformById();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -52,12 +63,12 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
     register('scale_status', { required: true });
     register('address', { required: true });
     register('website');
-    register('tbs_certificate_num');
-    register('tbs_certificate_img');
+    register('tbs_certificate_num', { required: isTbsCertified });
+    register('tbs_certificate_img', { required: isTbsCertified });
     register('id_type', { required: true });
     register('id_num', { required: true });
     register('idImage', { required: true });
-  }, [register]);
+  }, [isTbsCertified, register]);
 
   const handleFirstNameChange = (e: any) => {
     setValue('firstname', e.target.value);
@@ -178,7 +189,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
   };
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data.platform);
+    console.log(data);
     const value = {
       user: {
         dial_code: '+255',
@@ -204,7 +215,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
     };
 
     setLoading(true);
-    console.log(userInfo);
+    // console.log(userInfo);
     const createSellerAccount = async () => {
       const result = await AddSeller(
         value,
@@ -252,7 +263,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
         setLoading(false);
       }
     };
-    createSellerAccount();
+    // createSellerAccount();
   };
 
   return (
@@ -420,6 +431,9 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               disabled={!isTbsCertified}
               onChange={handleTBSCertifNumChange}
             />
+            <span style={{ fontSize: '1rem', color: 'red' }}>
+              {errors.tbs_certificate_num && 'Certificate Number is required'}
+            </span>
           </div>
           <div className="add-sellers-name_item">
             <Upload
@@ -437,6 +451,9 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
                 Attach TBS Certificate Image
               </Button>
             </Upload>
+            <span style={{ fontSize: '1rem', color: 'red' }}>
+              {errors.tbs_certificate_img && 'Platform Image is required'}
+            </span>
           </div>
         </div>
         <div className="add-seller-input">

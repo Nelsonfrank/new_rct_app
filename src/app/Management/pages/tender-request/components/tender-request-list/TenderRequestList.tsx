@@ -1,39 +1,36 @@
 /* eslint-disable react/display-name */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
 //Components
 import { Table, Space, Divider, Tooltip, Tag } from 'antd';
 import { EyeOutlined, StopOutlined, DeleteOutlined } from '@ant-design/icons';
 import Card from '../../../../../components/card';
 import { navigate, RouteComponentProps } from '@reach/router';
+import Notification from '../../../../../components/notification';
+import { Auth } from '../../../../../../auth/AuthContext';
+// API
+import { GetAllTenderRequest } from '../../../../../../API';
 // Props Types
 // export interface TenderRequestsListProps {}
 
-// placeholder data
-const dataSource = [
-  {
-    key: '1',
-    quantity: '1000',
-    grade: '1',
-    variety: 'Super Kyela',
-    pickupLocation: 'Mbeya Mjini',
-    price: '2000/=',
-    tags: ['TBS Certified', 'RCT Approved'],
-  },
-  {
-    key: '2',
-    quantity: '3000',
-    grade: '1',
-    variety: 'Super Ifakara',
-    pickupLocation: 'Ifakara',
-    price: '2000/=',
-    tags: ['TBS Certified', 'RCT Approved'],
-  },
-];
-
 const TenderRequestsList: React.FC<RouteComponentProps> = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const [allTenderRequest, setAllTenderRequest] = useState([]);
 
+  const { adminAccessToken } = useContext(Auth);
+  useEffect(() => {
+    const getAllTenderRequest = async () => {
+      const response = await GetAllTenderRequest(adminAccessToken).then(
+        (response) => response,
+      );
+      if (response.status === 200) {
+        setAllTenderRequest(response.data.data.requestTenderList);
+      } else {
+        Notification(true, 'Failed to Fetch Tender Request', response.message);
+      }
+    };
+    getAllTenderRequest();
+  }, []);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSelectChange = (selectedRowKeys: any) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
@@ -148,7 +145,7 @@ const TenderRequestsList: React.FC<RouteComponentProps> = () => {
       <Divider />
       <Table
         rowSelection={rowSelection}
-        dataSource={dataSource}
+        dataSource={allTenderRequest}
         columns={columns}
       />
     </Card>

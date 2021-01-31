@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 //Components
 import { Table, Space, Divider, Tooltip } from 'antd';
@@ -11,26 +11,13 @@ import { RouteComponentProps, navigate } from '@reach/router';
 // export interface TenderGivenListProps {}
 
 // placeholder data
-const dataSource = [
-  {
-    key: '1',
-    quantity: '1000',
-    grade: '1',
-    variety: 'Super Kyela',
-    destination: 'Mbeya Mjini',
-  },
-  {
-    key: '2',
-    quantity: '3000',
-    grade: '1',
-    variety: 'Super Ifakara',
-    destination: 'Ifakara',
-  },
-];
+// const dataSource = [];
 
 const TenderGivenList: React.FC<RouteComponentProps> = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
+  // useEffect(() => {
+  // }, []);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSelectChange = (selectedRowKeys: any) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
@@ -114,11 +101,7 @@ const TenderGivenList: React.FC<RouteComponentProps> = () => {
       styles={{ minHeight: '90vh', overflowY: 'auto' }}
     >
       <Divider />
-      <Table
-        rowSelection={rowSelection}
-        dataSource={dataSource}
-        columns={columns}
-      />
+      <Table rowSelection={rowSelection} dataSource={[]} columns={columns} />
     </Card>
   );
 };

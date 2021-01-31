@@ -4,6 +4,7 @@ import { Table } from 'antd';
 import Card from '../../../../../components/card';
 import { GetPriceRate } from '../../../../../../API';
 import Notification from '../../../../../components/notification';
+import moment from 'moment';
 export interface PriceRateProps {
   style?: React.CSSProperties;
 }
@@ -16,13 +17,13 @@ const PriceRate: React.FC<PriceRateProps> = (props: PriceRateProps) => {
     const fetchPriceRate = async () => {
       const response = await GetPriceRate().then((response) => response);
       if (response.status === 200) {
-        const data = response.data.data.map((item: any) => {
+        const data = response.data.data.map((item: any, index: number) => {
           return {
-            key: item.id,
+            id: index + 1,
             variety: item.variety,
             price: item.price_rate,
             region: item.region,
-            effectiveDate: item.date,
+            effectiveDate: moment(item.date).format('Do MMMM YYYY'),
           };
         });
         setPriceRate(data);
