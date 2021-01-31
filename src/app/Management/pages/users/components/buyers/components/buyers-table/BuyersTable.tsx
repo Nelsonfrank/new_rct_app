@@ -35,7 +35,7 @@ const BuyersTable: React.FC = () => {
   useEffect(() => {
     const getAllBuyer = async () => {
       const response = await GetAllBuyers().then((response) => response);
-      console.log(response.data.data);
+      console.log(response);
     };
     getAllBuyer();
   }, []);

@@ -14,7 +14,7 @@ import {
   UpSquareOutlined,
   AppstoreAddOutlined,
   // ControlOutlined,
-  // PlayCircleOutlined,
+  PlayCircleOutlined,
 } from '@ant-design/icons';
 import { Link } from '@reach/router';
 //Logo
@@ -99,11 +99,11 @@ const Navigation: React.FC<NavigationProps> = (props: NavigationProps) => {
         </Menu.Item>
         {/* <Menu.Item key="10" icon={<ControlOutlined />}>
           <Link to="dashboard">Admins</Link>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="11" icon={<PlayCircleOutlined />}>
-          <Link to="dashboard">Bunners</Link>
+          <Link to="banner">Bunners</Link>
         </Menu.Item>
-        <Menu.Item key="12" icon={<MessageOutlined />}>
+        {/*  <Menu.Item key="12" icon={<MessageOutlined />}>
           <Link to="dashboard">Feedback</Link>
         </Menu.Item> */}
         <Menu.Item key="13" icon={<FileOutlined />}>
