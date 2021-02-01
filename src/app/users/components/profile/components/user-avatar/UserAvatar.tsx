@@ -2,16 +2,16 @@ import React from 'react';
 
 export interface UserAvatarProps {
   profileImage: string;
-  recentTenders: {
-    id: number;
-    tenderImg: string;
-    title: string;
-    descript: string;
-  }[];
+  // recentTenders: {
+  //   id: number;
+  //   tenderImg: string;
+  //   title: string;
+  //   descript: string;
+  // }[];
 }
 
 const UserAvatar: React.FC<UserAvatarProps> = (props: UserAvatarProps) => {
-  const { profileImage, recentTenders } = props;
+  const { profileImage } = props;
   return (
     <div className="profile-sidebar">
       <div className="profile-image_container">
@@ -27,7 +27,7 @@ const UserAvatar: React.FC<UserAvatarProps> = (props: UserAvatarProps) => {
             <h2>Recent Work</h2>
           </div>
           <div className="recent-work">
-            {recentTenders.map((item) => (
+            {/* {recentTenders.map((item) => (
               <div className="recent-work_item" key={item.id}>
                 <img
                   src={item.tenderImg}
@@ -35,7 +35,7 @@ const UserAvatar: React.FC<UserAvatarProps> = (props: UserAvatarProps) => {
                   className="recent-work_picture"
                 />
               </div>
-            ))}
+            ))} */}
           </div>
           <div className="recent-work_linkContainer ">
             <span>

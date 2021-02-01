@@ -2,6 +2,7 @@ import React from 'react';
 
 //Components
 import Card from '../../../../../components/card';
+import Avatar from '../../../../../../assets/images/2.png';
 
 //Style
 import './RecentTender.less';
@@ -23,7 +24,7 @@ const RecentWork: React.FC<RecentTendersProps> = (
       <div>
         <h2>Recent Tender</h2>
         <div className="sells-lists">
-          {tenderItem.map((item) => (
+          {/* {tenderItem.map((item) => (
             <Card
               key={item.id}
               className="card-sells_container"
@@ -32,7 +33,7 @@ const RecentWork: React.FC<RecentTendersProps> = (
               imgDescrip={item.descript}
               styles={{ maxWidth: '300px' }}
             ></Card>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

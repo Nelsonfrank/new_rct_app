@@ -11,11 +11,7 @@ import { ListDataPlaceholder } from './TenderBidData';
 const TenderBids: React.FC<RouteComponentProps> = () => {
   return (
     <>
-      <List
-        btnTitle="Request Tender"
-        routes="tender-bid-form"
-        itemData={ListDataPlaceholder}
-      />
+      <List routes="tender-bid-form" itemData={ListDataPlaceholder} />
     </>
   );
 };
