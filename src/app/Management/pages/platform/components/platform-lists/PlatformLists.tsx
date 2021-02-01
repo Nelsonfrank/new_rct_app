@@ -13,7 +13,7 @@ import {
 } from '../../../../../../API';
 import Notification from '../../../../../components/notification';
 import { Auth } from '../../../../../../auth/AuthContext';
-
+import moment from 'moment';
 // Props Types
 // export interface PlatformListProps {}
 
@@ -62,7 +62,18 @@ const PlatformList: React.FC<RouteComponentProps> = () => {
   const getAllPlatform = async () => {
     const result = await GetAllPlatform().then((response) => response);
     if (result.status === 200) {
-      setPlatforms(result.data.data.platform);
+      const data = result.data.data.platform.map((item: any) => {
+        return {
+          platform_name: item.platform_name,
+          country: item.country,
+          platform_region: item.platform_region,
+          phone_number: `0${item.phone_number}`,
+          leader_name: item.leader_name,
+          number_of_members: item.number_of_members,
+        };
+      });
+
+      setPlatforms(data);
     } else {
       Notification(false, 'Failed to fetch Platform');
     }

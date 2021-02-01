@@ -55,7 +55,7 @@ const InfoCards: React.FC = () => {
       />
       <Card
         className="dashboard-card"
-        title="432,578"
+        title={(counts.buyer && counts.buyer.toString()) || '0'}
         subtitle="Total Buyers"
         actionBtn="View More"
         actionBtnRoute="dashboard/users/buyers"

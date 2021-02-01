@@ -11,6 +11,7 @@ import {
 import Card from '../../../../../components/card';
 import { RouteComponentProps, navigate } from '@reach/router';
 import Notification from '../../../../../components/notification';
+import moment from 'moment';
 //Styles
 import './PriceRateTable.less';
 
@@ -108,7 +109,7 @@ const PriceRateTable: React.FC<RouteComponentProps> = () => {
             variety: item.variety,
             price: item.price_rate,
             region: item.region,
-            effectiveDate: item.date,
+            effectiveDate: moment(item.date).format('Do MMMM YYYY'),
           };
         });
         setPriceRate(data);

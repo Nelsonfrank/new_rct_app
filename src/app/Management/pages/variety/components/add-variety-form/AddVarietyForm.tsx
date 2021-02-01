@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 
 // dependencies
 import { Input, Button } from 'antd';
@@ -14,16 +14,29 @@ import { Auth } from '../../../../../../auth/AuthContext';
 import './AddVarietyForm.less';
 
 // API
-import { AddVariety } from '../../../../../../API';
+import { AddVariety, GetPlatformByLeaderId } from '../../../../../../API';
 // Props Types
 // export interface PriceRateFormProps {}
 
 const AddVarietyForm: React.FC<RouteComponentProps> = () => {
+  // const [platform, setPlatformId] = useState('');
+
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
   });
 
-  const { userAccessToken } = useContext(Auth);
+  const { adminAccessToken, userInfo } = useContext(Auth);
+
+  useEffect(() => {
+    const getPlatformById = async () => {
+      const result = await GetPlatformByLeaderId(adminAccessToken).then(
+        (response) => response,
+      );
+      console.log(result);
+    };
+    getPlatformById();
+  }, [adminAccessToken]);
+
   useEffect(() => {
     register('variety_name', { required: true });
   }, [register]);
@@ -42,9 +55,10 @@ const AddVarietyForm: React.FC<RouteComponentProps> = () => {
     };
 
     const addVariety = async () => {
-      const varietyResponse = await AddVariety(payload, userAccessToken).then(
+      const varietyResponse = await AddVariety(payload, adminAccessToken).then(
         (response) => response,
       );
+      console.log(varietyResponse);
       if (varietyResponse.status === 200) {
         Notification(
           true,

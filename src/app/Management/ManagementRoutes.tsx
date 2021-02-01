@@ -16,6 +16,7 @@ import Variety from './pages/variety';
 import TenderRequest from './pages/tender-request';
 import TenderGiven from './pages/tender-given';
 import ManagementSignin from './pages/management-signin';
+import Banner from './pages/banner';
 import { AuthConsumer } from '../../auth/AuthContext';
 
 // Props Types
@@ -38,6 +39,7 @@ const ManagementRoutes: React.FC<RouteComponentProps> = () => {
               <TenderGiven path="tender-given/*" />
               <Variety path="variety/*" />
               <Logs path="logs" />
+              <Banner path="banner" />
             </Layout>
           </Router>
         ) : (

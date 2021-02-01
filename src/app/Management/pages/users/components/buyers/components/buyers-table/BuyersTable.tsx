@@ -1,12 +1,14 @@
 /* eslint-disable react/display-name */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
 //Components
 import { Table, Space, Divider, Tooltip } from 'antd';
 import { StopOutlined, DeleteOutlined } from '@ant-design/icons';
+import Notification from '../../../../../../../components/notification';
 
 // API
 import { GetAllBuyers } from '../../../../../../../../API';
+import { Auth } from '../../../../../../../../auth/AuthContext';
 // Props Types
 // export interface BuyersTableProps {}
 
@@ -31,14 +33,31 @@ const dataSource = [
 const BuyersTable: React.FC = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [toggleDisable, setToggleDisable] = useState(false);
-
+  const [buyers, setBuyers] = useState([]);
+  const { adminAccessToken } = useContext(Auth);
   useEffect(() => {
     const getAllBuyer = async () => {
-      const response = await GetAllBuyers().then((response) => response);
-      console.log(response.data.data);
+      const response = await GetAllBuyers(adminAccessToken).then(
+        (response) => response,
+      );
+      console.log(response);
+      if (response.status === 200) {
+        const data = response.data.data.map((data: any) => {
+          return {
+            firstName: data.name && data.name.split(' ')[0],
+            lastName: data.name && data.name.split(' ')[1],
+            phoneNumber: `0${data.phone_number}`,
+            country: data.countryName,
+          };
+        });
+        // console.log(data);
+        setBuyers(data);
+      } else {
+        Notification(false, 'Failed to Fetch Buyer', response.message);
+      }
     };
     getAllBuyer();
-  }, []);
+  }, [adminAccessToken]);
 
   const handleSelectChange = (selectedRowKeys: any) => {
     console.log('selectedRowKeys changed: ', selectedRowKeys);
@@ -110,11 +129,7 @@ const BuyersTable: React.FC = () => {
     },
   ];
   return (
-    <Table
-      rowSelection={rowSelection}
-      dataSource={dataSource}
-      columns={columns}
-    />
+    <Table rowSelection={rowSelection} dataSource={buyers} columns={columns} />
   );
 };
 

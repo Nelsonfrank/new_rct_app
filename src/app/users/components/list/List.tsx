@@ -13,7 +13,7 @@ import { Auth } from '../../../../auth/AuthContext';
 
 export interface FilterSortProps {
   itemSelected: boolean;
-  title: string;
+  title?: string;
   route: string;
   checkedItems: { ownerName: string; id: number }[];
 }
@@ -84,16 +84,20 @@ const FilterSort = ({
           </Select>
         </div>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', marginTop: '1rem' }}>
-        <Button
-          disabled={itemSelected}
-          danger
-          onClick={giveTender}
-          style={{ textTransform: 'uppercase' }}
+      {title && (
+        <div
+          style={{ display: 'flex', alignItems: 'center', marginTop: '1rem' }}
         >
-          {title}
-        </Button>
-      </div>
+          <Button
+            disabled={itemSelected}
+            danger
+            onClick={giveTender}
+            style={{ textTransform: 'uppercase' }}
+          >
+            {title}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
@@ -137,7 +141,7 @@ export interface ListItemProps {
 }
 export interface ListProps extends ListItemProps {
   listType?: string;
-  btnTitle: string;
+  btnTitle?: string;
   routes: string;
 }
 const List: React.FC<ListProps> = ({

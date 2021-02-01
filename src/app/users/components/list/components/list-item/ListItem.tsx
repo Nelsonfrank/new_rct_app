@@ -5,7 +5,7 @@ import { RightOutlined } from '@ant-design/icons';
 import { Button, Checkbox } from 'antd';
 // Styles
 import './ListItem.less';
-import { navigate } from '@reach/router';
+import { navigate, useLocation } from '@reach/router';
 
 export interface ListItemProps {
   id: number;
@@ -45,13 +45,16 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
 
   const [isChecked, setIsChecked] = React.useState(false);
 
+  const location = useLocation();
   const toggleCheckBox = () => {
     setIsChecked(!isChecked);
     isChecked ? removeCheckedItem(id) : addCheckedItem({ ownerName, id });
   };
 
   const handleMoreDetails = () => {
-    navigate('profile');
+    location.pathname.includes('tender-bids')
+      ? navigate('profile', { state: { data: 'quote_tender' } })
+      : navigate('profile');
   };
   return (
     <>

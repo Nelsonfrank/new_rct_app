@@ -15,13 +15,65 @@ export const Counter = () => {
 };
 
 /**
+ * Fetch Tender Request
+ * @function
+ * @name TenderRequest
+ */
+export const GetAllTenderRequest = (userToken: string) => {
+  return axios
+    .get(`/api/v1/seller/tender/offset/0`, {
+      headers: {
+        Authorization: `Bearer ${userToken}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
+ * Fetch Tender Given
+ * @function
+ * @name TenderGiven
+ */
+export const GetAllTenderGiven = (userToken: string) => {
+  return axios
+    .get(`/api/v1/seller/tender/offset/0`, {
+      headers: {
+        Authorization: `Bearer ${userToken}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
  * Fetch list of all Buyers
  * @function
  * @name GetAllBuyers
  */
-export const GetAllBuyers = () => {
+export const GetAllBuyers = (token: string) => {
   return axios
-    .get(`/api/v1/buyer/all-buyer`)
+    .get(`/api/v1/buyer/all-buyer`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
+ * Fetch Platfrom  by Leader id
+ * @function
+ * @name GetPlatformByLeaderId
+ */
+export const GetPlatformByLeaderId = (leaderToken: string) => {
+  return axios
+    .get(`/api/v1/leader/leader-platform`, {
+      headers: {
+        Authorization: `Bearer ${leaderToken}`,
+      },
+    })
     .then((response) => response)
     .catch((error) => error);
 };
