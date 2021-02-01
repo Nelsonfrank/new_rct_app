@@ -8,6 +8,7 @@ import TenderBids from './components/tender-bids';
 import TenderBidForm from './components/tender-bid-form';
 import UploadPictures from './components/upload-images';
 import SellerProfile from './components/seller-profile';
+import GiveQuoteForm from './components/quote-form';
 
 // import { AuthConsumer } from '../../../auth/AuthContext';
 
@@ -22,6 +23,7 @@ const SellersRoutes: React.FC = () => {
       <TenderBids path="tender-bids" />
       <UploadPictures path="upload-images" />
       <SellerProfile path="profile" />
+      <GiveQuoteForm path="quote-form" />
     </Router>
   );
 };

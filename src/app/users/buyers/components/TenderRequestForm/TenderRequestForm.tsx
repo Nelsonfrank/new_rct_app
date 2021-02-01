@@ -4,11 +4,19 @@ import React, { useEffect, useState } from 'react';
 import { Input, Select, Button } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
+import Notification from '../../../../components/notification';
+// API
+import { GetAllVariety, GiveTender } from '../../../../../API';
 //Styles
 import './TenderRequestForm.less';
 // export interface TenderRequestProps {}
-
+type varietyProps = {
+  key: string;
+  name: string;
+  platform: string;
+  region: string;
+  added_by: string;
+}[];
 const TenderRequest: React.FC<RouteComponentProps> = () => {
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
@@ -17,16 +25,40 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
   const { Option } = Select;
 
   const [loading, setLoading] = useState(false);
+  const [variety, setVariety] = useState<varietyProps>([]);
+
+  useEffect(() => {
+    const getAllVariety = async () => {
+      const varietyResponse = await GetAllVariety().then(
+        (response) => response,
+      );
+
+      if (varietyResponse.status === 200) {
+        const data = varietyResponse.data.data.map((item: any) => {
+          return {
+            key: item.id,
+            name: item.variety_name,
+          };
+        });
+        setVariety(data);
+        // console.log(data);
+      } else {
+        Notification(false, 'Fail to Fetch Variety');
+      }
+    };
+    getAllVariety();
+  }, []);
+
   useEffect(() => {
     register('amount', { required: true });
     register('grade', { required: true });
     register('variety', { required: true });
     register('description');
   }, [register]);
+
   type FormValues = {
     variety_name: string;
   };
-
   const handleQuantityChange = (event: any) => {
     setValue('amount', event.target.value);
   };
@@ -43,12 +75,25 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
     setValue('description', event.target.value);
   };
   const onSubmit: SubmitHandler<FormValues> = (data: any) => {
-    setLoading(true);
+    const selectedSellers = JSON.parse(
+      sessionStorage.getItem('selectedItems') || '[]',
+    );
 
-    console.log(data);
-    setTimeout(() => {
-      setLoading(false);
-    }, 10000);
+    const sellersId = selectedSellers.map((item: any) => {
+      return {
+        id: item.id,
+      };
+    });
+    const payload = {
+      quantity: data.amount,
+      grade: data.grade,
+      pickup_location: data.description,
+      variety: data.variety,
+      seller_selection: {
+        seller_id: sellersId,
+      },
+    };
+    console.log(payload);
   };
   return (
     <div>
@@ -103,9 +148,11 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
               onChange={handleVarietyChange}
             >
               <Option value="variety">Select Variety</Option>
-              <Option value="kyela">Kyela</Option>
-              <Option value="mbeya">Mbeya</Option>
-              <Option value="shinyanga">Shinyanga</Option>
+              {variety.map((item) => (
+                <Option key={item.key} value={item.name}>
+                  {item.name}
+                </Option>
+              ))}
             </Select>
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.variety && 'Variety is required'}
@@ -126,7 +173,7 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
             htmlType="submit"
             loading={loading}
           >
-            Request Tender
+            Give Tender
           </Button>
         </div>
       </form>

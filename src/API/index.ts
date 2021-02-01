@@ -63,6 +63,21 @@ export const GetAllBuyers = (token: string) => {
 };
 
 /**
+ * Give Tender
+ * @function
+ * @name GiveTender
+ */
+export const GiveTender = (token: string, payload: any, buyerId: any) => {
+  return axios
+    .post(`/api/v1/buyer/give-tender/${buyerId}`, payload, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+/**
  * Fetch Platfrom  by Leader id
  * @function
  * @name GetPlatformByLeaderId

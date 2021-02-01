@@ -93,7 +93,7 @@ const UserInfo: React.FC<UserInfoProps> = (props: UserInfoProps) => {
                     color="#f50"
                     style={{ padding: '0.2rem 0.5rem', fontSize: '14px' }}
                   >
-                    {'TBS CERTIFIED'}
+                    {'Tbs Certic'}
                   </Tag>
                 </div>
               </div>
@@ -101,7 +101,6 @@ const UserInfo: React.FC<UserInfoProps> = (props: UserInfoProps) => {
 
             <hr />
           </div>
-          {/* <div>{true ? <AvailableStock /> : <StockRequired />}</div> */}
           <div>
             <h3 style={{ fontSize: '1.125rem', fontWeight: 600 }}>Action</h3>
             <Button

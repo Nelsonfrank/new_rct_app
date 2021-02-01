@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 // Component
-import {
-  Input,
-  Select,
-  Button,
-  InputNumber,
-  Divider,
-  Radio,
-  Upload,
-} from 'antd';
+import { Input, Select, Button, InputNumber, Divider, Radio } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { UploadOutlined } from '@ant-design/icons';
 import { GetAllVariety } from '../../../../../API';
 import Notification from '../../../../components/notification';
 //Styles
-import './TenderBidForm.less';
+import './QuoteForm.less';
 
 // export interface TenderBidProps {}
 type varietyProps = {
@@ -27,9 +18,8 @@ type varietyProps = {
   added_by: string;
 }[];
 
-const TenderBid: React.FC<RouteComponentProps> = () => {
+const QuoteForm: React.FC<RouteComponentProps> = () => {
   const [variety, setVariety] = useState<varietyProps>([]);
-  const [TBSFileList, setTBSFileState] = useState<any>([]);
 
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
@@ -62,7 +52,6 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
     register('grade');
     register('tbs_certificate');
     register('batch_number');
-    register('batch_img');
     register('pickup_location');
     register('description');
   }, [register]);
@@ -80,47 +69,19 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
   };
 
   const handleCertifChangee = (event: any) => {
-    setValue('certificate_no', event.target.value);
+    setValue('certificate_no', event);
+  };
+
+  const handleBatchChange = (event: any) => {
+    setValue('batch_no', event);
   };
 
   const handlePickupLocation = (event: any) => {
-    setValue('pickup_location', event.target.value);
+    setValue('pickup_location', event);
   };
 
   const handleDetailsChange = (event: any) => {
-    setValue('description', event.target.value);
-  };
-  const BatchUploadProps = {
-    name: 'file',
-    onRemove: (file: any) => {
-      const index = TBSFileList.indexOf(file);
-      const newFileList = TBSFileList.slice();
-      newFileList.splice(index, 1);
-      setTBSFileState(newFileList);
-    },
-    beforeUpload: (file: any) => {
-      setTBSFileState([...TBSFileList, file]);
-      return false;
-    },
-    TBSFileList,
-  };
-
-  const handleBatchImageChange = (event: any) => {
-    console.log(event);
-    const file = event.file;
-    const reader = new FileReader();
-    reader.onload = (e: any) => {
-      setValue('batch_img', e.target.result);
-    };
-    if (file && file.type.match('image.*')) {
-      reader.readAsDataURL(file);
-    } else {
-      console.log(file.type);
-    }
-  };
-
-  const openCoverFile = () => {
-    document.querySelectorAll('input')[0].click();
+    setValue('description', event);
   };
 
   type FormValues = {
@@ -172,7 +133,7 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
           <h3>Variety</h3>
           <Select
             size="large"
-            placeholder="variety"
+            defaultValue="variety"
             style={{ width: '100%' }}
             onChange={handleVarietyChange}
           >
@@ -196,13 +157,14 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
           <div className="option-select_bid">
             <Select
               size="large"
-              placeholder="grade"
+              defaultValue="grade"
               style={{ width: '100%' }}
               onClick={handleGradeChange}
             >
-              <Select.Option value="1">1</Select.Option>
-              <Select.Option value="2">2</Select.Option>
-              <Select.Option value="3">3</Select.Option>
+              <Select.Option value="grade">Select Grade</Select.Option>
+              <Select.Option value="one">One</Select.Option>
+              <Select.Option value="two">Two</Select.Option>
+              <Select.Option value="three">Three</Select.Option>
             </Select>
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.grade && 'Grade is required'}
@@ -229,20 +191,13 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
 
           <div style={{ marginTop: '1rem' }}>
             <h3>Add Batch Certificate</h3>
-            <Upload
-              {...BatchUploadProps}
-              listType="picture"
+            <Input
+              type="file"
+              size="large"
+              placeholder="Add Batch Certified Number"
               style={{ width: '100%' }}
-              onChange={handleBatchImageChange}
-            >
-              <Button
-                icon={<UploadOutlined />}
-                size="large"
-                onClick={openCoverFile}
-              >
-                Batch Certificate
-              </Button>
-            </Upload>
+              onChange={handleBatchChange}
+            />
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.batch_number && 'Batch Certificate is required'}
             </span>
@@ -278,4 +233,4 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
   );
 };
 
-export default TenderBid;
+export default QuoteForm;
