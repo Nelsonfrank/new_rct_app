@@ -12,24 +12,6 @@ import { Auth } from '../../../../../../../../auth/AuthContext';
 // Props Types
 // export interface BuyersTableProps {}
 
-// placeholder data
-const dataSource = [
-  {
-    key: '1',
-    firstName: 'Mike',
-    lastName: 'Johnson',
-    phoneNumber: '+255689300100',
-    country: 'Tanzania',
-  },
-  {
-    key: '2',
-    firstName: 'John',
-    lastName: 'Doe',
-    phoneNumber: '+255689101300',
-    country: 'Kenya',
-  },
-];
-
 const BuyersTable: React.FC = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [toggleDisable, setToggleDisable] = useState(false);

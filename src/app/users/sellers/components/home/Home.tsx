@@ -1,19 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
 // Components
 import Header from '../../../components/header';
 import CardSection from '../../../components/section-card-list';
 import Card from '../../../../components/card';
 import { RouteComponentProps } from '@reach/router';
-
+import { Auth } from '../../../../../auth/AuthContext';
+import { GetAllBuyers } from '../../../../../API';
+import Notification from '../../../../components/notification';
+import User1 from '../../../../../assets/images/10.jpg';
 // placeholder data
-import { ShopByBuyerData, TenderBidsData } from './SellerSectionData';
+import { TenderBidsData } from './SellerSectionData';
 //Styles
 import './Home.less';
 
 // export interface HomeProps {}
 
 const Home: React.FC<RouteComponentProps> = () => {
+  const [buyers, setBuyers] = useState([]);
+
+  const { userAccessToken } = useContext(Auth);
+
+  useEffect(() => {
+    const getAllBuyer = async () => {
+      const response = await GetAllBuyers(userAccessToken).then(
+        (response) => response,
+      );
+      console.log(response);
+      if (response.status === 200) {
+        const data = response.data.data
+          .map((data: any) => {
+            return {
+              id: data.id,
+              img: User1,
+              title: data.name,
+              cardDescrip: data.countryName,
+              routes: 'sellers/profile',
+            };
+          })
+          .filter((item: any) => {
+            return item.title !== null;
+          });
+        // console.log(data);
+        const input = data.slice(0, 4);
+
+        setBuyers(input);
+      } else {
+        Notification(false, 'Failed to Fetch Buyer', response.message);
+      }
+    };
+    getAllBuyer();
+  }, []);
   return (
     <>
       <Header />
@@ -72,7 +109,7 @@ const Home: React.FC<RouteComponentProps> = () => {
         <CardSection
           title="Rice Buyers"
           route="sellers/buyers-list"
-          listItems={ShopByBuyerData}
+          listItems={buyers}
           users
         />
       </div>

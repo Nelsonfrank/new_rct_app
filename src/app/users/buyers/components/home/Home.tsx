@@ -6,7 +6,12 @@ import CardSection from '../../../components/section-card-list';
 import Card from '../../../../components/card';
 import { navigate, RouteComponentProps } from '@reach/router';
 import { Modal, Checkbox } from 'antd';
-import { GetAllPlatform, GetAllUsers, BASEURL } from '../../../../../API';
+import {
+  GetAllPlatform,
+  GetAllUsers,
+  GetAllVariety,
+  BASEURL,
+} from '../../../../../API';
 import Notification from '../../../../components/notification';
 import Platform1 from '../../../../../assets/images/slider-1.jpg';
 
@@ -23,10 +28,19 @@ type platformPropsType = {
   routes: string;
 }[];
 
+type varietyProps = {
+  key: string;
+  name: string;
+  platform: string;
+  region: string;
+  added_by: string;
+}[];
+
 const BuyerHome: React.FC<RouteComponentProps> = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [platforms, setPlatforms] = useState<platformPropsType>();
+  const [platforms, setPlatforms] = useState<platformPropsType>([]);
   const [sellers, setSellers] = useState<platformPropsType>([]);
+  const [variety, setVariety] = useState<varietyProps>([]);
 
   const handleOpenModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -72,15 +86,28 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
       Notification(false, 'Failed to fetch sellers', result.messages);
     }
   };
+
+  const getAllVariety = async () => {
+    const varietyResponse = await GetAllVariety().then((response) => response);
+
+    if (varietyResponse.status === 200) {
+      const data = varietyResponse.data.data.map((item: any) => {
+        return {
+          key: item.id,
+          name: item.variety_name,
+        };
+      });
+      setVariety(data);
+      // console.log(data);
+    } else {
+      Notification(false, 'Fail to Fetch Variety');
+    }
+  };
   useEffect(() => {
+    getAllVariety();
     getAllPlatform();
     getSellers();
   }, []);
-  const options = [
-    { label: 'Grade 1', value: '1' },
-    { label: 'Grade 2', value: '2' },
-    { label: 'Grade 3', value: '3' },
-  ];
 
   function handleGradeChange(checkedValues: any) {
     console.log('checked = ', checkedValues);
@@ -161,23 +188,15 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
         }}
         onCancel={() => setIsModalOpen(!isModalOpen)}
       >
-        <h3>Choose grade</h3>
-        <div style={{ marginBottom: '1.25rem' }}>
-          <Checkbox.Group options={options} onChange={handleGradeChange} />
-        </div>
-
         <h3>Choose Variety</h3>
         <div>
           <Checkbox.Group onChange={handleVarietyChange}>
-            <div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <Checkbox value="kyela" style={{ marginLeft: '8px' }}>
-                  kyela
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {variety.map((item) => (
+                <Checkbox key={item.key} value={item.name}>
+                  {item.name}
                 </Checkbox>
-                <Checkbox value="Shinyanga">Shinyanga</Checkbox>
-                <Checkbox value="Magugu">Magugu</Checkbox>
-                <Checkbox value="Mbeya">Mbeya</Checkbox>
-              </div>
+              ))}
             </div>
           </Checkbox.Group>
         </div>

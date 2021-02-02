@@ -5,6 +5,8 @@ import SectionHeader from './components/section-header';
 import Card from '../../../components/card';
 import { Button } from 'antd';
 import { navigate } from '@reach/router';
+import { Empty } from 'antd';
+
 // Styles
 import './SectionCardList.less';
 
@@ -14,16 +16,14 @@ export interface SectionCardListProps {
   route?: string;
   users?: boolean;
   tenderRequest?: boolean;
-  listItems:
-    | {
-        id: number;
-        img: string;
-        title: string;
-        cardDescrip: string;
-        routes: string;
-        state?: { data: { platform: string } };
-      }[]
-    | undefined;
+  listItems: {
+    id: number;
+    img: string;
+    title: string;
+    cardDescrip: string;
+    routes: string;
+    state?: { data: { platform: string } };
+  }[];
   cardStyles?: React.CSSProperties;
   viewAllAction?: () => void;
 }
@@ -43,22 +43,33 @@ const SectionCardList: React.FC<SectionCardListProps> = (
         route={route}
         handleViewAllAction={viewAllAction}
       />
-      <div className="card--list_group">
-        {listItems
-          ? listItems.map((item) => (
-              <Card
-                key={item.id}
-                styles={{ margin: '0 10px', ...cardStyles }}
-                className="card-section_container"
-                img={item.img}
-                imgTitle={item.title}
-                imgDescrip={item.cardDescrip}
-                isHoverable
-                onClick={() => navigate(item.routes, { state: item.state })}
-              ></Card>
-            ))
-          : null}
-      </div>
+      {listItems.length !== 0 ? (
+        <div className="card--list_group">
+          {listItems.map((item) => (
+            <Card
+              key={item.id}
+              styles={{ margin: '0 10px', ...cardStyles }}
+              className="card-section_container"
+              img={item.img}
+              imgTitle={item.title}
+              imgDescrip={item.cardDescrip}
+              isHoverable
+              onClick={() => navigate(item.routes, { state: item.state })}
+            ></Card>
+          ))}
+        </div>
+      ) : (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+          }}
+        >
+          <Empty />
+        </div>
+      )}
       <div className="SeeAll-Btn-sm">
         <Button
           type="primary"

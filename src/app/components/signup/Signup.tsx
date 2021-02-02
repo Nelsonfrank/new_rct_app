@@ -50,7 +50,7 @@ const Signup: React.FC<RouteComponentProps> = (props: any) => {
       phone_number: data.phone_number,
       name: `${data.first_name} ${data.last_name}`,
     };
-    // console.log(payload);
+    console.log(payload);
     setLoading(true);
     const completeUserRegistration = async () => {
       const updateResponse = await CompleteRegistration(payload)
@@ -61,8 +61,8 @@ const Signup: React.FC<RouteComponentProps> = (props: any) => {
       if (updateResponse.status === 200) {
         Notification(true, 'Account Update Successfully');
         const phoneInfo = {
-          dial_code: data.dial_code,
-          phone_number: data.phone_number,
+          dial_code: props.location.state.data.dial_code,
+          phone_number: props.location.state.data.phone_number,
           checkBuyer: props.location.state.data.checkBuyer,
         };
         navigate('/app/verify-phone', { state: { data: phoneInfo } });
