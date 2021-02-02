@@ -4,7 +4,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Input } from 'antd';
 import { Divider, Button, Popover } from 'antd';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 import { useLocation } from '@reach/router';
 
 //Auth
@@ -37,8 +37,10 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = (
   }, [location]);
   const onSearch = (value: string) => console.log(value);
 
-  // const DividerComponent = ()=>
-
+  const handleLogout = () => {
+    logout();
+    navigate('/app/buyers');
+  };
   return (
     <>
       <div
@@ -71,7 +73,7 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = (
                 <div className="registry-container">
                   <span className="register--welcome">Welcome!</span>
                   <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Link to="/app/login">Login as Seller</Link>{' '}
+                    <Link to="/app/login">Login</Link>{' '}
                   </div>
                 </div>
               ) : (
@@ -84,7 +86,7 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = (
                           style={{ display: 'flex', flexDirection: 'column' }}
                         >
                           <Button type="link">Profile</Button>
-                          <Button type="link" onClick={logout}>
+                          <Button type="link" onClick={handleLogout}>
                             Logout
                           </Button>
                         </div>

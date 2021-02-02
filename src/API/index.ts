@@ -68,9 +68,9 @@ export const GetAllBuyers = (token: string) => {
  * @function
  * @name GiveTender
  */
-export const GiveTender = (token: string, payload: any, buyerId: any) => {
+export const GiveTender = (payload: any, token: string) => {
   return axios
-    .post(`/api/v1/buyer/give-tender/${buyerId}`, payload, {
+    .post(`/api/v1/buyer/give-tender`, payload, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

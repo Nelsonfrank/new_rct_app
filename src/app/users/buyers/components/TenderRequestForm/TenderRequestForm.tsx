@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
 // Component
 import { Input, Select, Button } from 'antd';
-import { RouteComponentProps } from '@reach/router';
+import { RouteComponentProps, navigate } from '@reach/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Notification from '../../../../components/notification';
 // API
 import { GetAllVariety, GiveTender } from '../../../../../API';
+
+import { Auth } from '../../../../../auth/AuthContext';
 //Styles
 import './TenderRequestForm.less';
 // export interface TenderRequestProps {}
@@ -23,7 +25,7 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
     reValidateMode: 'onChange',
   });
   const { Option } = Select;
-
+  const { userAccessToken, userInfo } = useContext(Auth);
   const [loading, setLoading] = useState(false);
   const [variety, setVariety] = useState<varietyProps>([]);
 
@@ -93,7 +95,20 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
         seller_id: sellersId,
       },
     };
-    console.log(payload);
+    setLoading(true);
+    const giveTenderRequest = async () => {
+      const response = await GiveTender(payload, userAccessToken);
+      setLoading(false);
+      if (response.status === 200) {
+        Notification(true, 'Tender Given Successfully');
+        navigate('/app/buyers');
+      } else {
+        Notification(false, 'Failed To Give Tender');
+      }
+      console.log(response);
+    };
+
+    giveTenderRequest();
   };
   return (
     <div>

@@ -263,7 +263,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
         setLoading(false);
       }
     };
-    // createSellerAccount();
+    createSellerAccount();
   };
 
   return (
