@@ -36,6 +36,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               title: data.name,
               cardDescrip: data.countryName,
               routes: 'sellers/profile',
+              state: { data: { platformId: data.id } },
             };
           })
           .filter((item: any) => {
@@ -50,6 +51,7 @@ const Home: React.FC<RouteComponentProps> = () => {
       }
     };
     getAllBuyer();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

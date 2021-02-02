@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { Select, Checkbox, Button } from 'antd';
 import ListItem from './components/list-item';
 import { navigate } from '@reach/router';
+import { Empty } from 'antd';
 
 // Styles
 import './List.less';
@@ -216,27 +217,42 @@ const List: React.FC<ListProps> = ({
           </Checkbox>
           <div style={{ height: 3, width: '100%', backgroundColor: 'grey' }} />
         </div>
-        {itemData.map((value) => (
-          <ListItem
-            key={value.id}
-            id={value.id}
-            image={value.image}
-            ownerName={value.ownerName}
-            description={value.description}
-            variety={value.variety}
-            pickupLocation={value.pickupLocation}
-            grade={value.grade}
-            stock={value.stock}
-            need={value.need}
-            addCheckedItem={addCheckedItem}
-            removeCheckedItem={removeCheckedItem}
-            isAllChecked={isAllChecked}
-            category={value.category}
-            user_location={value.user_location}
-            phone_number={value.phone_number}
-            platform_name={value.platform_name}
-          />
-        ))}
+        {itemData.length !== 0 ? (
+          <>
+            {itemData.map((value) => (
+              <ListItem
+                key={value.id}
+                id={value.id}
+                image={value.image}
+                ownerName={value.ownerName}
+                description={value.description}
+                variety={value.variety}
+                pickupLocation={value.pickupLocation}
+                grade={value.grade}
+                stock={value.stock}
+                need={value.need}
+                addCheckedItem={addCheckedItem}
+                removeCheckedItem={removeCheckedItem}
+                isAllChecked={isAllChecked}
+                category={value.category}
+                user_location={value.user_location}
+                phone_number={value.phone_number}
+                platform_name={value.platform_name}
+              />
+            ))}
+          </>
+        ) : (
+          <div
+            style={{
+              height: '700px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Empty />
+          </div>
+        )}
       </div>
     </div>
   );

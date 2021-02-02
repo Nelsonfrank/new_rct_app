@@ -109,10 +109,6 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
     getSellers();
   }, []);
 
-  function handleGradeChange(checkedValues: any) {
-    console.log('checked = ', checkedValues);
-  }
-
   function handleVarietyChange(checkedValues: any) {
     console.log('checked = ', checkedValues);
   }
