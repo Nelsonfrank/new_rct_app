@@ -137,6 +137,11 @@ export interface ListItemProps {
     pickupLocation?: string;
     stock?: string;
     need?: string;
+    category?: string;
+    user_location?: string;
+    platformLeader?: string;
+    phone_number?: string;
+    platform_name?: string;
   }[];
 }
 export interface ListProps extends ListItemProps {
@@ -199,7 +204,7 @@ const List: React.FC<ListProps> = ({
           route={routes}
         />
       </div>
-      <div>
+      <div style={{ width: '100%' }}>
         <div>
           <Checkbox
             // indeterminate={indeterminate}
@@ -226,6 +231,10 @@ const List: React.FC<ListProps> = ({
             addCheckedItem={addCheckedItem}
             removeCheckedItem={removeCheckedItem}
             isAllChecked={isAllChecked}
+            category={value.category}
+            user_location={value.user_location}
+            phone_number={value.phone_number}
+            platform_name={value.platform_name}
           />
         ))}
       </div>

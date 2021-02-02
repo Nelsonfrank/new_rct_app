@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import Header from '../../../components/header';
@@ -6,23 +6,54 @@ import CardSection from '../../../components/section-card-list';
 import Card from '../../../../components/card';
 import { navigate, RouteComponentProps } from '@reach/router';
 import { Modal, Checkbox } from 'antd';
+import { GetAllPlatform, BASEURL } from '../../../../../API';
+import Notification from '../../../../components/notification';
+import Platform1 from '../../../../../assets/images/slider-1.jpg';
+
 // placeholder data
-import {
-  ShopBySellersData,
-  TenderRequestsData,
-  ShopByPlatformsData,
-} from './BuyerSectionData';
+import { ShopBySellersData, TenderRequestsData } from './BuyerSectionData';
 //Styles
 import './Home.less';
 // export interface BuyerHomeProps {}
-
+type platformPropsType = {
+  id: number;
+  img: string;
+  title: string;
+  cardDescrip: string;
+  routes: string;
+}[];
 const BuyerHome: React.FC<RouteComponentProps> = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [platforms, setPlatforms] = useState<platformPropsType>();
 
   const handleOpenModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+  useEffect(() => {
+    const getAllPlatform = async () => {
+      const result = await GetAllPlatform().then((response) => response);
+      console.log(result);
+      if (result.status === 200) {
+        const data = result.data.data.platform.map((item: any) => {
+          return {
+            id: item.id,
+            title: item.platform_name,
+            platform_region: item.platform_region,
+            img: Platform1,
+            cardDescrip: item.number_of_members.toString() || '0',
+            routes: 'buyers/platform-subscriber-list',
+            state: { data: { platformId: item.id } },
+          };
+        });
+        const input = data.slice(0, 4);
+        setPlatforms(input);
+      } else {
+        Notification(false, 'Failed to fetch Platform');
+      }
+    };
+    getAllPlatform();
+  }, []);
   const options = [
     { label: 'Grade 1', value: '1' },
     { label: 'Grade 2', value: '2' },
@@ -95,7 +126,7 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
         <CardSection
           title="Shop By Platform"
           route="buyers/shop-by-platforms"
-          listItems={ShopByPlatformsData}
+          listItems={platforms}
         />
       </div>
       <Modal

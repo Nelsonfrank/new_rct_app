@@ -34,8 +34,8 @@ const VerifyPhone: React.FC<VerifyPhoneProps> = (props: any) => {
     otpcode: string;
   };
 
-  const createToken = async () => {
-    const result = await CreateToken(userNumber).then((response) => response);
+  const createToken = async (userInfo: any) => {
+    const result = await CreateToken(userInfo).then((response) => response);
     console.log(result);
     if (result.status === 201) {
       console.log(result);
@@ -45,13 +45,18 @@ const VerifyPhone: React.FC<VerifyPhoneProps> = (props: any) => {
   };
   useEffect(() => {
     register('otpcode', { required: true });
-    setUserNumber(props.location.state.data);
-    createToken();
-  }, [userNumber]);
+    const info = {
+      dial_code: props.location.state.data.dial_code,
+      phone_number: props.location.state.data.phone_number,
+    };
+    setUserNumber(info);
+    console.log(props.location.state.data);
+    createToken(info);
+  }, []);
 
   const requestOtp = () => {
     if (checkTimeExpired('2021-01-31T13:20:00+0400')) {
-      createToken();
+      createToken(userNumber);
     }
   };
   const handleChange = (values: any) => {
@@ -182,9 +187,10 @@ const VerifyPhone: React.FC<VerifyPhoneProps> = (props: any) => {
                 <span style={{ marginRight: 5 }} onClick={navigateBack}>
                   <p>Change Number</p>
                 </span>
-                <span>
-                  <div onClick={requestOtp}>Resend Code</div>
-                </span>
+
+                <div onClick={requestOtp}>
+                  <span>Resend Code</span>
+                </div>
               </div>
               <div className="verifyPhone_btn">
                 <Button

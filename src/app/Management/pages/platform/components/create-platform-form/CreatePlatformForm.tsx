@@ -99,7 +99,7 @@ const CreatePlatformForm: React.FC<RouteComponentProps> = (props: any) => {
       platform_region: data.platform_region,
       image_string: data.platform_img,
     };
-
+    sessionStorage.setItem('base_64', data.platform_img);
     const platformLeaderInfo = {
       dial_code: '+255',
       phone_number: data.phone_number,

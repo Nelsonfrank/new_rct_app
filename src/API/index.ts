@@ -2,6 +2,7 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'http://142.93.210.105:1122';
 
+export const BASEURL = `http://142.93.210.105:1122`;
 /**
  * Fetch count
  * @function
@@ -254,6 +255,13 @@ export const CreatePlatform = (
 export const GetAllPlatform = () => {
   return axios
     .get(`/api/v1/platform/offset/0`)
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+export const GetSellerByPlatformId = (platformId: string) => {
+  return axios
+    .get(`/api/v1/seller/platform/${platformId}/offset/0`)
     .then((response) => response)
     .catch((error) => error);
 };

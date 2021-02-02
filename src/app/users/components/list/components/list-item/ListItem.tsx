@@ -19,6 +19,11 @@ export interface ListItemProps {
   need?: string;
   profileRoute?: string;
   isAllChecked: boolean;
+  category?: string;
+  user_location?: string;
+  platformLeader?: string;
+  phone_number?: string;
+  platform_name?: string;
   addCheckedItem: (value: { ownerName: string; id: number }) => void;
   removeCheckedItem: (id: number) => void;
 }
@@ -37,6 +42,11 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
     isAllChecked,
     addCheckedItem,
     removeCheckedItem,
+    category,
+    user_location,
+    platformLeader,
+    phone_number,
+    platform_name,
   } = props;
 
   React.useEffect(() => {
@@ -62,7 +72,7 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
         key={id}
         checked={isChecked}
         value={id}
-        style={{ display: 'flex', margin: '1rem 0.125rem' }}
+        style={{ display: 'flex', margin: '1rem 0.125rem', width: '100%' }}
         onChange={toggleCheckBox}
       >
         <div className="listItemContainer">
@@ -116,6 +126,46 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
                         Buyers Need:{' '}
                       </span>{' '}
                       {need}
+                    </p>
+                  ) : null}
+                  {category ? (
+                    <p className="listDetailsParag listDetailsParagBold pickup_location">
+                      <span style={{ fontWeight: 600, marginRight: 2 }}>
+                        Category:{' '}
+                      </span>{' '}
+                      {category}
+                    </p>
+                  ) : null}
+                  {user_location ? (
+                    <p className="listDetailsParag listDetailsParagBold pickup_location">
+                      <span style={{ fontWeight: 600, marginRight: 2 }}>
+                        Location:{' '}
+                      </span>{' '}
+                      {user_location}
+                    </p>
+                  ) : null}
+                  {phone_number ? (
+                    <p className="listDetailsParag listDetailsParagBold pickup_location">
+                      <span style={{ fontWeight: 600, marginRight: 2 }}>
+                        Phone Number:{' '}
+                      </span>{' '}
+                      {phone_number}
+                    </p>
+                  ) : null}
+                  {platform_name ? (
+                    <p className="listDetailsParag listDetailsParagBold pickup_location">
+                      <span style={{ fontWeight: 600, marginRight: 2 }}>
+                        Platform Name:{' '}
+                      </span>{' '}
+                      {platform_name}
+                    </p>
+                  ) : null}
+                  {platformLeader ? (
+                    <p className="listDetailsParag listDetailsParagBold pickup_location">
+                      <span style={{ fontWeight: 600, marginRight: 2 }}>
+                        Platform Leader:{' '}
+                      </span>{' '}
+                      {platformLeader}
                     </p>
                   ) : null}
                 </div>

@@ -18,8 +18,8 @@ const Signup: React.FC<RouteComponentProps> = (props: any) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const phoneDetail = props.location.state.data;
-    setValue('dial_code', phoneDetail.dial_code);
-    setValue('phone_number', phoneDetail.phone_number);
+    setValue('dial_code', props.location.state.data.dial_code);
+    setValue('phone_number', props.location.state.data.phone_number);
     console.log(phoneDetail);
   }, []);
 
@@ -141,7 +141,8 @@ const Signup: React.FC<RouteComponentProps> = (props: any) => {
               >
                 <div style={{ marginTop: 10 }}>
                   <p>
-                    Update Phone Number?!. <Link to="/login"> Click Here</Link>
+                    Update Phone Number?!.{' '}
+                    <Link to="/app/login"> Click Here</Link>
                   </p>
                 </div>
                 <div>

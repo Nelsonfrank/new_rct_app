@@ -14,13 +14,16 @@ export interface SectionCardListProps {
   route?: string;
   users?: boolean;
   tenderRequest?: boolean;
-  listItems: {
-    id: number;
-    img: string;
-    title: string;
-    cardDescrip: string;
-    routes: string;
-  }[];
+  listItems:
+    | {
+        id: number;
+        img: string;
+        title: string;
+        cardDescrip: string;
+        routes: string;
+        state?: { data: { platform: string } };
+      }[]
+    | undefined;
   cardStyles?: React.CSSProperties;
   viewAllAction?: () => void;
 }
@@ -51,7 +54,7 @@ const SectionCardList: React.FC<SectionCardListProps> = (
                 imgTitle={item.title}
                 imgDescrip={item.cardDescrip}
                 isHoverable
-                onClick={() => navigate(item.routes)}
+                onClick={() => navigate(item.routes, { state: item.state })}
               ></Card>
             ))
           : null}
