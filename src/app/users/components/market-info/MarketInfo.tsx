@@ -5,20 +5,6 @@ import { RouteComponentProps } from '@reach/router';
 import { GetPriceRate } from '../../../../API';
 import moment from 'moment';
 import Notification from '../../../components/notification';
-const dataSource = [
-  {
-    key: '1',
-    serial: '1',
-    variety: 'Kyela',
-    price: '1,200/=',
-  },
-  {
-    key: '2',
-    serial: '2',
-    variety: 'Shinyanga',
-    price: '1,000/=',
-  },
-];
 
 const columns = [
   {

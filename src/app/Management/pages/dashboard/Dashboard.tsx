@@ -21,7 +21,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
     <div className="dashboard-container">
       <InfoCards />
       <div className="dashboard--section">
-        <Charts />
+        {/* <Charts /> */}
         <PriceRate style={{ width: '97%' }} />
       </div>
       <div className="dashboard--section">

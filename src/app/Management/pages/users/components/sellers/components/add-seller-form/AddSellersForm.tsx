@@ -184,7 +184,8 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
     phone_number: string;
     password: string;
     scale_status: string;
-    id_image: any;
+    category: string;
+    idImage: any;
     tbs_certificate_img: any;
   };
 
@@ -201,6 +202,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
         first_time: data.firstname,
         last_name: data.lastname,
         application_type: data.scale_status,
+        category: data.category,
         address: data.address,
         website: data.website,
         grade: '2',
@@ -211,11 +213,10 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
         variety_name: 'kyela',
       },
       certificate: data.tbs_certificate_img,
-      card: data.id_image,
+      card: data.idImage,
     };
 
     setLoading(true);
-    // console.log(userInfo);
     const createSellerAccount = async () => {
       const result = await AddSeller(
         value,
@@ -259,7 +260,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
         };
         refreshTokenCall();
       } else {
-        Notification(false, 'Fail to Create Seller Account');
+        Notification(false, 'Fail to Create Seller Account', result.message);
         setLoading(false);
       }
     };
