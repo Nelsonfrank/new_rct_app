@@ -107,6 +107,18 @@ export const GetAllUsers = () => {
 };
 
 /**
+ * Fetch list of all sellers By Variety
+ * @function
+ * @name GetSellersByVariety
+ */
+export const GetSellersByVariety = (payload: any) => {
+  return axios
+    .post(`/api/v1/seller/variety`, payload)
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
  * Create new seller
  * @param token
  * @function

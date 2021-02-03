@@ -64,6 +64,10 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
   const handleMoreDetails = () => {
     location.pathname.includes('tender-bids')
       ? navigate('profile', { state: { data: 'quote_tender' } })
+      : location.pathname.includes('buyers-list')
+      ? navigate('profile', { state: { data: 'tender-request' } })
+      : location.pathname.includes('tender-requests')
+      ? navigate('profile', { state: { data: 'chat' } })
       : navigate('profile');
   };
   return (

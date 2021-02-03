@@ -126,7 +126,10 @@ const VerifyPhone: React.FC<VerifyPhoneProps> = (props: any) => {
                   } else {
                     navigate('/');
                   }
-                } else if (roleList.includes('seller')) {
+                } else if (
+                  roleList.includes('seller') &&
+                  roleList.includes('reqular')
+                ) {
                   navigate('/app/sellers');
                 } else {
                   navigate('/');

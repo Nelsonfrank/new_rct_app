@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { Tabs, Tag, Button } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import UserInfo from './components/user-info';
-import RecentTender from './components/recent-tender';
 import UserAvatar from './components/user-avatar';
 import Avatar from '../../../../assets/images/2.png';
 import Card from '../../../components/card';
@@ -45,9 +44,6 @@ const UserProfile: React.FC<ProfileProps> = (props: any) => {
                     type={request}
                     // tenderDetails={}
                   />
-                </TabPane>
-                <TabPane tab="Recent Tender" key="2">
-                  {/* <RecentTender tenderItem={recentTenders} /> */}
                 </TabPane>
               </Tabs>
             </div>

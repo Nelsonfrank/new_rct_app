@@ -107,7 +107,13 @@ const UserInfo: React.FC<UserInfoProps> = (props: UserInfoProps) => {
               type="primary"
               onClick={() => navigate('tender-request-form')}
             >
-              {type === 'quote_tender' ? 'Send Quote' : 'Chat'}
+              {type === 'quote_tender'
+                ? 'Send Quote'
+                : type === 'tender-request'
+                ? 'Request Tender'
+                : type === 'chat'
+                ? 'Chat with Seller'
+                : 'Give Tender'}
             </Button>
           </div>
         </div>

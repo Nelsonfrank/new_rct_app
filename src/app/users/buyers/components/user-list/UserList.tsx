@@ -1,43 +1,34 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 // Components
 import List from '../../../components/list';
 import { RouteComponentProps } from '@reach/router';
-import {
-  FetchAllSellersRequest,
-  FetchAllSellersSuccess,
-  FetchAllSellersError,
-} from '../../../../../redux/buyer/action';
 
-import { GetAllUsers } from '../../../../../API';
+import { GetSellersByVariety } from '../../../../../API';
 
 // placeholder data
 import { ListDataPlaceholder } from './UserInfoData';
 
 // export interface UserListProps {}
 
-const UserList: React.FC<RouteComponentProps> = () => {
-  const data = useSelector((state) => state);
-  const dispatch = useDispatch();
-
+const UserList: React.FC<RouteComponentProps> = (props: any) => {
   useEffect(() => {
-    const FetchUserList = () => async (dispatch: any) => {
-      dispatch(FetchAllSellersRequest());
-      const value = await GetAllUsers()
-        .then((response) => {
-          dispatch(FetchAllSellersSuccess(response));
-          return response.data;
-        })
-        .catch((error) => {
-          dispatch(FetchAllSellersError(error));
-          console.log(error);
-        });
-      console.log(value);
+    const payload = {
+      variety_selection: {
+        ids: props.location.state.data.selectedVariety,
+      },
     };
-    dispatch(FetchUserList());
-  }, [dispatch]);
+    console.log(props.location.state.data.selectedVariety);
+    console.log(payload);
+    const getSellerByVariety = async () => {
+      const response = await GetSellersByVariety(payload).then(
+        (response) => response,
+      );
+      console.log(response);
+    };
+    getSellerByVariety();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  console.log(data);
   return (
     <div>
       <List

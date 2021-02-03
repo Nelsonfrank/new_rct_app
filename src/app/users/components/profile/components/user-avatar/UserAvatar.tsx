@@ -21,31 +21,6 @@ const UserAvatar: React.FC<UserAvatarProps> = (props: UserAvatarProps) => {
           className="profile-picture"
         />
       </div>
-      <div>
-        <div className="recent-work_container">
-          <div className="recent-work_heading">
-            <h2>Recent Work</h2>
-          </div>
-          <div className="recent-work">
-            {/* {recentTenders.map((item) => (
-              <div className="recent-work_item" key={item.id}>
-                <img
-                  src={item.tenderImg}
-                  alt="User Recent Work"
-                  className="recent-work_picture"
-                />
-              </div>
-            ))} */}
-          </div>
-          <div className="recent-work_linkContainer ">
-            <span>
-              <a href="#" className="recent-work_link">
-                See more
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

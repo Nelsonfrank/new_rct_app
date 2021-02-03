@@ -35,6 +35,7 @@ const PlatformList: React.FC<RouteComponentProps> = (props: any) => {
             user_location: item.location,
             phone_number: `0${item.phone_number}`,
             platform_name: item.platform_name,
+            routes: 'buyers/profile',
           };
         });
         setSellers(data);
