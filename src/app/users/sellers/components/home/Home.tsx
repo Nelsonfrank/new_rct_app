@@ -36,7 +36,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               title: data.name,
               cardDescrip: data.countryName,
               routes: 'sellers/profile',
-              state: { data: { platformId: data.id } },
+              state: { data: { action: 'tender-request', userId: data.id } },
             };
           })
           .filter((item: any) => {

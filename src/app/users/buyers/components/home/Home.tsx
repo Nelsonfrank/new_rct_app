@@ -80,6 +80,7 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
           title: item.full_name,
           cardDescrip: item.category,
           routes: 'buyers/profile',
+          // state: { data:  }
         };
       });
       const info = res.slice(0, 4);

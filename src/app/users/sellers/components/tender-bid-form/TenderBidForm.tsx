@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
 // Component
-import {
-  Input,
-  Select,
-  Button,
-  InputNumber,
-  Divider,
-  Radio,
-  Upload,
-} from 'antd';
+import { Input, Select, Button, Divider, Radio, Upload } from 'antd';
 import { RouteComponentProps } from '@reach/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { UploadOutlined } from '@ant-design/icons';
-import { GetAllVariety } from '../../../../../API';
+import { GetAllVariety, SendTenderRequest } from '../../../../../API';
 import Notification from '../../../../components/notification';
+
+import { Auth } from '../../../../../auth/AuthContext';
 //Styles
 import './TenderBidForm.less';
 
@@ -30,45 +24,44 @@ type varietyProps = {
 const TenderBid: React.FC<RouteComponentProps> = () => {
   const [variety, setVariety] = useState<varietyProps>([]);
   const [TBSFileList, setTBSFileState] = useState<any>([]);
+  const [hasBatchCertif, setHasBatchCertif] = useState(false);
 
+  const { userAccessToken } = useContext(Auth);
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
-    reValidateMode: 'onChange',
   });
 
-  useEffect(() => {
-    const getAllVariety = async () => {
-      const varietyResponse = await GetAllVariety().then(
-        (response) => response,
-      );
+  const getAllVariety = async () => {
+    const varietyResponse = await GetAllVariety().then((response) => response);
 
-      if (varietyResponse.status === 200) {
-        const data = varietyResponse.data.data.map((item: any) => {
-          return {
-            key: item.id,
-            name: item.variety_name,
-          };
-        });
-        setVariety(data);
-      } else {
-        Notification(false, 'Fail to Fetch Variety');
-      }
-    };
+    if (varietyResponse.status === 200) {
+      const data = varietyResponse.data.data.map((item: any) => {
+        return {
+          key: item.id,
+          name: item.variety_name,
+        };
+      });
+      setVariety(data);
+    } else {
+      Notification(false, 'Fail to Fetch Variety');
+    }
+  };
+  useEffect(() => {
     getAllVariety();
   }, []);
   useEffect(() => {
-    register('quantity');
-    register('variety');
-    register('grade');
-    register('tbs_certificate');
+    register('quantity', { required: true });
+    register('variety', { required: true });
+    register('grade', { required: true });
+    register('price', { required: true });
     register('batch_number');
     register('batch_img');
-    register('pickup_location');
+    register('pickup_location', { required: true });
     register('description');
   }, [register]);
 
   const handleQuantityChange = (event: any) => {
-    setValue('quantity', event);
+    setValue('quantity', event.target.value);
   };
 
   const handleVarietyChange = (event: any) => {
@@ -79,8 +72,12 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
     setValue('grade', event);
   };
 
-  const handleCertifChangee = (event: any) => {
-    setValue('certificate_no', event.target.value);
+  const handlePriceChange = (event: any) => {
+    setValue('price', event);
+  };
+
+  const handleCertifChange = (event: any) => {
+    setValue('batch_number', event.target.value);
   };
 
   const handlePickupLocation = (event: any) => {
@@ -106,7 +103,6 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
   };
 
   const handleBatchImageChange = (event: any) => {
-    console.log(event);
     const file = event.file;
     const reader = new FileReader();
     reader.onload = (e: any) => {
@@ -123,6 +119,9 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
     document.querySelectorAll('input')[0].click();
   };
 
+  const handleCheckBatch = (value: any) => {
+    setHasBatchCertif(value.target.value);
+  };
   type FormValues = {
     quantity: string;
     variety: string;
@@ -133,7 +132,44 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
     description: string;
   };
   const onSubmit: SubmitHandler<FormValues> = (data: any) => {
-    console.log(data);
+    const selectedBuyer = JSON.parse(
+      sessionStorage.getItem('selectedItems') || '[]',
+    );
+    const payload = {
+      quantity: data.quantity,
+      selling_price: '',
+      is_graded: 1,
+      grade: data.grade,
+      is_batch_certified: 1,
+      pickup_location: data.pickup_location,
+      extra_details: data.description,
+      variety: data.variety,
+      buyer_sellection: {
+        ids: selectedBuyer,
+      },
+
+      document_string: data.batch_img,
+    };
+    console.log(payload);
+
+    const sendTenderRequest = async () => {
+      const response = await SendTenderRequest(payload, userAccessToken).then(
+        (response) => response,
+      );
+
+      console.log(response);
+    };
+
+    sendTenderRequest();
+
+    setValue('quantity', '');
+    setValue('variety', '');
+    setValue('grade', '');
+    setValue('price', '');
+    setValue('batch_number', '');
+    setValue('batch_img', '');
+    setValue('pickup_location', '');
+    setValue('description', '');
   };
 
   return (
@@ -158,14 +194,15 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
         </div>
         <div className="Bid-quantity_input">
           <h3>Quantity Available</h3>
-          <InputNumber
+          <Input
             size="large"
-            placeholder="Quantity in Kg"
+            placeholder="Quantity in Kgs"
             style={{ width: '100%' }}
             onChange={handleQuantityChange}
+            addonAfter="kgs"
           />
           <span style={{ fontSize: '1rem', color: 'red' }}>
-            {errors.amount && 'Quantity is required'}
+            {errors.quantity && 'Quantity is required'}
           </span>
         </div>
         <div className="option-select_bid">
@@ -187,31 +224,43 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
           </span>
         </div>
         <div>
-          <h3>Is it graded?</h3>
-          <Radio.Group name="radiogroup" defaultValue={false}>
-            <Radio value={true}>Yes</Radio>
-            <Radio value={false}>No</Radio>
-          </Radio.Group>
-
+          <h3>Grade</h3>
           <div className="option-select_bid">
             <Select
               size="large"
               placeholder="grade"
               style={{ width: '100%' }}
-              onClick={handleGradeChange}
+              onChange={handleGradeChange}
             >
-              <Select.Option value="1">1</Select.Option>
-              <Select.Option value="2">2</Select.Option>
-              <Select.Option value="3">3</Select.Option>
+              <Select.Option value={'1'}>1</Select.Option>
+              <Select.Option value={'2'}>2</Select.Option>
+              <Select.Option value={'3'}>3</Select.Option>
             </Select>
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.grade && 'Grade is required'}
             </span>
           </div>
         </div>
+        <div className="Bid-quantity_input">
+          <h3>Price (Tzs/kg)</h3>
+          <Input
+            size="large"
+            placeholder="Price"
+            style={{ width: '100%' }}
+            onChange={handlePriceChange}
+            addonAfter="kgs"
+          />
+          <span style={{ fontSize: '1rem', color: 'red' }}>
+            {errors.price && 'Price is required'}
+          </span>
+        </div>
         <div className="option-select_bid">
           <h3>Is it Batch Certified?</h3>
-          <Radio.Group name="radiogroup" defaultValue={false}>
+          <Radio.Group
+            name="radiogroup"
+            value={hasBatchCertif}
+            onChange={handleCheckBatch}
+          >
             <Radio value={true}>Yes</Radio>
             <Radio value={false}>No</Radio>
           </Radio.Group>
@@ -220,10 +269,11 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
               size="large"
               placeholder="Add Batch Certified Number"
               style={{ width: '100%' }}
-              onChange={handleCertifChangee}
+              onChange={handleCertifChange}
+              disabled={!hasBatchCertif}
             />
             <span style={{ fontSize: '1rem', color: 'red' }}>
-              {errors.tbs_certificate && 'TBS Certif is required'}
+              {errors.batch_number && 'Batch Certif is required'}
             </span>
           </div>
 
@@ -234,6 +284,7 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
               listType="picture"
               style={{ width: '100%' }}
               onChange={handleBatchImageChange}
+              disabled={!hasBatchCertif}
             >
               <Button
                 icon={<UploadOutlined />}
@@ -244,7 +295,7 @@ const TenderBid: React.FC<RouteComponentProps> = () => {
               </Button>
             </Upload>
             <span style={{ fontSize: '1rem', color: 'red' }}>
-              {errors.batch_number && 'Batch Certificate is required'}
+              {errors.batch_img && 'Batch Certificate is required'}
             </span>
           </div>
         </div>

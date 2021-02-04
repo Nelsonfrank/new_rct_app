@@ -3,14 +3,12 @@ import React, { useState, useEffect } from 'react';
 // Components
 import { navigate, RouteComponentProps } from '@reach/router';
 import Card from '../../../../components/card';
-import { GetAllPlatform, BASEURL } from '../../../../../API';
+import { GetAllPlatform } from '../../../../../API';
 import Notification from '../../../../components/notification';
 import Platform1 from '../../../../../assets/images/slider-1.jpg';
 import { Empty } from 'antd';
 
 // placeholder data
-
-// export interface PlatformsProps {}
 
 const Platforms: React.FC<RouteComponentProps> = () => {
   const [platforms, setPlatforms] = useState([]);
@@ -42,7 +40,7 @@ const Platforms: React.FC<RouteComponentProps> = () => {
       <h1>Platforms</h1>
       <hr />
       {platforms.length !== 0 ? (
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', height: '700px' }}>
           {platforms.map((item: any) => (
             <Card
               key={item.id}

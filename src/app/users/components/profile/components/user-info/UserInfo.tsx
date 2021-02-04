@@ -16,6 +16,15 @@ export interface UserInfoProps {
 const UserInfo: React.FC<UserInfoProps> = (props: UserInfoProps) => {
   const { type } = props;
 
+  const handleActionButton = () => {
+    type === 'quote_tender'
+      ? console.log('Send Quote')
+      : type === 'tender-request'
+      ? navigate('tender-bid-form')
+      : type === 'chat'
+      ? console.log('Chat with Seller')
+      : console.log('Give Tender');
+  };
   return (
     <div>
       <div style={{ width: '80%' }}>
@@ -103,10 +112,7 @@ const UserInfo: React.FC<UserInfoProps> = (props: UserInfoProps) => {
           </div>
           <div>
             <h3 style={{ fontSize: '1.125rem', fontWeight: 600 }}>Action</h3>
-            <Button
-              type="primary"
-              onClick={() => navigate('tender-request-form')}
-            >
+            <Button type="primary" onClick={handleActionButton}>
               {type === 'quote_tender'
                 ? 'Send Quote'
                 : type === 'tender-request'

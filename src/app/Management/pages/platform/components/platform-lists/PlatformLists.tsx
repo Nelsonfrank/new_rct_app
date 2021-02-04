@@ -13,7 +13,7 @@ import {
 } from '../../../../../../API';
 import Notification from '../../../../../components/notification';
 import { Auth } from '../../../../../../auth/AuthContext';
-import moment from 'moment';
+
 // Props Types
 // export interface PlatformListProps {}
 

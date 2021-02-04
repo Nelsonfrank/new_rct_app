@@ -5,7 +5,7 @@ import { RouteComponentProps } from '@reach/router';
 // components
 import TenderTable from './components/Tender-table';
 import PriceRate from './components/price-rate';
-import Charts from './components/charts';
+// import Charts from './components/charts';
 import InfoCards from './components/info-cards';
 
 //Styles

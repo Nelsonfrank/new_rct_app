@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 // dependencies
 import { Input, Button } from 'antd';
@@ -25,7 +25,7 @@ const AddVarietyForm: React.FC<RouteComponentProps> = () => {
     mode: 'onBlur',
   });
 
-  const { adminAccessToken, userInfo } = useContext(Auth);
+  const { adminAccessToken } = useContext(Auth);
 
   useEffect(() => {
     const getPlatformById = async () => {

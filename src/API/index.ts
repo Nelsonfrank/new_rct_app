@@ -32,6 +32,20 @@ export const GetAllTenderRequest = (userToken: string) => {
 };
 
 /**
+ * Send Tender Request
+ * @function
+ * @name SendTenderRequest
+ */
+export const SendTenderRequest = (payload: any, sellerToken: any) => {
+  return axios
+    .post(`/api/v1/seller/tender`, payload, {
+      headers: {
+        Authorization: `Bearer ${sellerToken}`,
+      },
+    })
+    .then((response) => response);
+};
+/**
  * Fetch Tender Given
  * @function
  * @name TenderGiven

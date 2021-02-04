@@ -31,7 +31,7 @@ const BuyersList: React.FC<RouteComponentProps> = () => {
               user_location: data.countryName,
               phone_number: `0${data.phone_number}`,
               routes: 'sellers/profile',
-              state: { data: { platformId: data.id } },
+              state: { data: 'tender-request' },
             };
           })
           .filter((item: any) => {

@@ -68,9 +68,9 @@ const FilterSort = ({
             <h2 style={{ fontSize: 16, marginBottom: 1 }}>Filter:</h2>
           </div>
           <Select defaultValue="TZS" style={{ width: 120 }}>
-            <Option value="jack">Jack</Option>
-            <Option value="lucy">Lucy</Option>
-            <Option value="John">John</Option>
+            <Option value="TZS">TZS</Option>
+            <Option value="UGS">UGS</Option>
+            <Option value="KSH">KSH</Option>
           </Select>
         </div>
         <div style={{ margin: '0rem 0.5rem' }}>
@@ -215,7 +215,7 @@ const List: React.FC<ListProps> = ({
           </Checkbox>
           <div style={{ height: 3, width: '100%', backgroundColor: 'grey' }} />
         </div>
-        {itemData.length !== 0 ? (
+        {itemData.length !== 0 && (
           <>
             {itemData.map((value) => (
               <ListItem
@@ -239,17 +239,6 @@ const List: React.FC<ListProps> = ({
               />
             ))}
           </>
-        ) : (
-          <div
-            style={{
-              height: '700px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Empty />
-          </div>
         )}
       </div>
     </div>

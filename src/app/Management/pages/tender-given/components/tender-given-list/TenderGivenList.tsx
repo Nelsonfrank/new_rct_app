@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 //Components
 import { Table, Space, Divider, Tooltip } from 'antd';
