@@ -5,11 +5,12 @@ import { RightOutlined } from '@ant-design/icons';
 import { Button, Checkbox } from 'antd';
 // Styles
 import './ListItem.less';
-import { navigate, useLocation } from '@reach/router';
+import { navigate } from '@reach/router';
 
 export interface ListItemProps {
   id: number;
   image: string;
+  type: string;
   ownerName: string;
   description: string;
   variety?: string;
@@ -34,6 +35,7 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
     image,
     ownerName,
     description,
+    type,
     variety,
     grade,
     pickupLocation,
@@ -55,19 +57,20 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
 
   const [isChecked, setIsChecked] = React.useState(false);
 
-  const location = useLocation();
   const toggleCheckBox = () => {
     setIsChecked(!isChecked);
     isChecked ? removeCheckedItem(id) : addCheckedItem({ ownerName, id });
   };
 
   const handleMoreDetails = () => {
-    location.pathname.includes('tender-bids')
-      ? navigate('profile', { state: { data: 'quote_tender' } })
-      : location.pathname.includes('buyers-list')
-      ? navigate('profile', { state: { data: 'tender-request' } })
-      : location.pathname.includes('tender-requests')
-      ? navigate('profile', { state: { data: 'chat' } })
+    type === 'request-tender'
+      ? navigate('tender-request-form')
+      : type === 'Send Quote'
+      ? navigate('quote-form')
+      : type === 'Give Tender'
+      ? navigate('give-tender-form', { state: { data: { userId: id } } })
+      : type === 'Chat'
+      ? navigate('chats')
       : navigate('profile');
   };
   return (
@@ -88,7 +91,23 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
               <h3 className="listDetailsHeader" style={{ margin: '0rem' }}>
                 {ownerName}
               </h3>
+              {/* <div className="more">
+                <p className="listDetailsParag listDetailsParagBold pickup_location">
+                  <span style={{ fontWeight: 600, marginRight: 2 }}>
+                    Phone Number:{' '}
+                  </span>{' '}
+                  {phone_number}
+                </p>
+                <p className="listDetailsParag listDetailsParagBold pickup_location">
+                  <span style={{ fontWeight: 600, marginRight: 2 }}>
+                    Platform Name:{' '}
+                  </span>{' '}
+                  {platform_name}
+                </p>
+              </div> */}
+
               <p className="listDetailsParag dispay-parag">{description}</p>
+              <div className="listOptions"></div>
               <div className="listOptions">
                 <div className="listOptions_items">
                   {variety ? (
@@ -174,9 +193,39 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
                   ) : null}
                 </div>
                 <div className="moreDetailsBtn">
-                  <Button type="primary" onClick={handleMoreDetails}>
+                  {type === 'request-tender' ? (
+                    <Button type="primary" onClick={handleMoreDetails}>
+                      Request Tender
+                    </Button>
+                  ) : type === 'Send Quote' ? (
+                    <>
+                      <Button type="primary" onClick={handleMoreDetails}>
+                        Send Quote
+                      </Button>
+                      <Button
+                        danger
+                        style={{ marginLeft: '10px' }}
+                        onClick={handleMoreDetails}
+                      >
+                        Quit Tender
+                      </Button>
+                    </>
+                  ) : type === 'Chat with Seller' ? (
+                    <Button type="primary" onClick={handleMoreDetails}>
+                      Chat
+                    </Button>
+                  ) : type === 'Give Tender' ? (
+                    <Button type="primary" onClick={handleMoreDetails}>
+                      Give Tender
+                    </Button>
+                  ) : null}
+                  {/* <Button
+                    type="primary"
+                    style={{ marginLeft: '10px' }}
+                    onClick={handleMoreDetails}
+                  >
                     More Details
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>

@@ -10,6 +10,7 @@ import TenderRequests from './components/tender-requests';
 import TenderRequestForm from './components/TenderRequestForm';
 import MarketInfo from '../components/market-info';
 import BuyerProfile from './components/buyer-profile';
+import Chats from '../components/chat';
 // Auth
 import { AuthConsumer } from '../../../auth/AuthContext';
 // export interface BuyerRoutesProps {}
@@ -25,9 +26,10 @@ const BuyerRoutes: React.FC = () => {
             <Platform path="shop-by-platforms" />
             <PlatformList path="platform-subscriber-list" />
             <TenderRequests path="tender-requests" />
-            <TenderRequestForm path="tender-request-form" />
+            <TenderRequestForm path="give-tender-form" />
             <MarketInfo path="market-info" />
             <BuyerProfile path="profile" />
+            <Chats path="chats" />
           </Router>
         ) : (
           <Router primary={false}>
@@ -36,7 +38,7 @@ const BuyerRoutes: React.FC = () => {
             <Platform path="shop-by-platforms" />
             <PlatformList path="platform-subscriber-list" />
             <TenderRequests path="tender-requests" />
-            <TenderRequestForm path="tender-request-form" />
+            <TenderRequestForm path="give-tender-form" />
             <MarketInfo path="market-info" />
             <BuyerProfile path="profile" />
           </Router>

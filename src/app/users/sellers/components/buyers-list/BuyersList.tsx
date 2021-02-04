@@ -59,6 +59,7 @@ const BuyersList: React.FC<RouteComponentProps> = () => {
           btnTitle="Request Tender"
           routes="tender-bid-form"
           itemData={buyers}
+          type="request-tender"
         />
       </div>
     </>

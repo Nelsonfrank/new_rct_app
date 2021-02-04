@@ -5,12 +5,16 @@ import { navigate } from '@reach/router';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 
 // Props Types
+interface backButtonProps {
+  style?: React.CSSProperties;
+}
 
-const BackButton: React.FC = () => {
+const BackButton: React.FC<backButtonProps> = (props: any) => {
+  const { style } = props;
   return (
     <>
       <div>
-        <div style={{ marginLeft: '1.5rem', marginTop: '1rem' }}>
+        <div style={{ marginLeft: '-5rem', marginTop: '1rem', ...style }}>
           <Button type="text" onClick={() => navigate(-1)}>
             <ArrowLeftOutlined
               style={{ fontSize: '1.875rem', fontWeight: 600 }}

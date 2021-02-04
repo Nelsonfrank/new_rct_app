@@ -13,8 +13,9 @@ const TenderRequests: React.FC<RouteComponentProps> = () => {
     <>
       <List
         btnTitle="Give Tender"
-        routes="tender-request-form"
+        routes="give-tender-form"
         itemData={ListDataPlaceholder}
+        type="Chat with Seller"
       />
     </>
   );

@@ -133,6 +133,38 @@ export const GetSellersByVariety = (payload: any) => {
 };
 
 /**
+ * Get Variety By UserId
+ * @function
+ * @name GetVarietyBySellerId
+ */
+export const GetVarietyBySellerId = (token: any) => {
+  return axios
+    .get(`/api/v1/variety/seller`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
+ * Fetch list of all Tender Request By Seller
+ * @function
+ * @name GetTenderRequestBySeller
+ */
+export const GetTenderRequestBySeller = (token: any) => {
+  return axios
+    .get(`/api/v1/buyer/tender-request`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+/**
  * Create new seller
  * @param token
  * @function
@@ -234,6 +266,13 @@ export const GetSellerById = (sellerId: string) => {
 export const GetSellerByPlatform = (platformId: string) => {
   return axios
     .get(`/api/v1/seller/platform/${platformId}`)
+    .then((response) => response)
+    .catch((error) => error);
+};
+
+export const GetVarietyByPlatformId = (platformId: string) => {
+  return axios
+    .get(`/api/v1/variety/platform/${platformId}`)
     .then((response) => response)
     .catch((error) => error);
 };

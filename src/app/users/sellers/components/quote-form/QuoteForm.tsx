@@ -175,7 +175,7 @@ const QuoteForm: React.FC<RouteComponentProps> = () => {
           </div>
           <div className="Bid-action_btn">
             <Button size="large" type="primary" htmlType="submit">
-              Submit Qoute
+              Submit Quote
             </Button>
           </div>
         </div>

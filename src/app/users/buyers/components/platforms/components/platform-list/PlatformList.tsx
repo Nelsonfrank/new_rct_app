@@ -35,7 +35,7 @@ const PlatformList: React.FC<RouteComponentProps> = (props: any) => {
             user_location: item.location,
             phone_number: `0${item.phone_number}`,
             platform_name: item.platform_name,
-            routes: 'buyers/profile',
+            routes: 'buyers/give-tender-form',
           };
         });
         setSellers(data);
@@ -56,8 +56,9 @@ const PlatformList: React.FC<RouteComponentProps> = (props: any) => {
         >
           <List
             btnTitle="Give Tender"
-            routes="tender-request-form"
+            routes="give-tender-form"
             itemData={sellers}
+            type="Give Tender"
           />
         </div>
       ) : (

@@ -1,22 +1,25 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect, useContext } from 'react';
 
 // Components
 import Header from '../../../components/header';
 import CardSection from '../../../components/section-card-list';
 import Card from '../../../../components/card';
 import { navigate, RouteComponentProps } from '@reach/router';
-import { Modal, Checkbox } from 'antd';
+import { Modal, Radio } from 'antd';
 import {
   GetAllPlatform,
   GetAllUsers,
   GetAllVariety,
-  BASEURL,
+  GetTenderRequestBySeller,
 } from '../../../../../API';
+
+import { Auth } from '../../../../../auth/AuthContext';
+
 import Notification from '../../../../components/notification';
 import Platform1 from '../../../../../assets/images/slider-1.jpg';
 
 // placeholder data
-import { TenderRequestsData } from './BuyerSectionData';
 //Styles
 import './Home.less';
 // export interface BuyerHomeProps {}
@@ -42,7 +45,11 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
   const [platforms, setPlatforms] = useState<platformPropsType>([]);
   const [sellers, setSellers] = useState<platformPropsType>([]);
   const [variety, setVariety] = useState<varietyProps>([]);
-  const [selectedVariety, setSelectedVariety] = useState([]);
+  const [selectedVariety, setSelectedVariety] = useState<any>();
+  const [setSelectedVarietyId, setSetSelectedVarietyId] = useState('');
+  const [tenderRequest, setTenderRequest] = useState([]);
+
+  const { userAccessToken } = useContext(Auth);
   const handleOpenModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -79,14 +86,27 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
           img: Platform1,
           title: item.full_name,
           cardDescrip: item.category,
-          routes: 'buyers/profile',
-          // state: { data:  }
+          routes: 'buyers/shop-by-sellers',
+          state: {
+            data: {
+              sellerId: item.id,
+            },
+          },
         };
       });
       const info = res.slice(0, 4);
       setSellers(info);
     } else {
       Notification(false, 'Failed to fetch sellers', result.messages);
+    }
+  };
+
+  const getTenderRequestBySeller = async () => {
+    const response = await GetTenderRequestBySeller(userAccessToken).then(
+      (response) => response,
+    );
+    if (response.status === 200) {
+      setTenderRequest(response.data.data);
     }
   };
 
@@ -116,9 +136,18 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
         },
       },
     });
+
+    const varietySelected = variety.filter(
+      (item) => item.key === setSelectedVarietyId,
+    );
+    sessionStorage.setItem(
+      'shopBySellerVarity',
+      JSON.stringify(varietySelected),
+    );
   };
 
   useEffect(() => {
+    getTenderRequestBySeller();
     getAllVariety();
     getAllPlatform();
     getSellers();
@@ -127,12 +156,18 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
   function handleVarietyChange(checkedValues: any) {
     // console.log('checked = ', checkedValues);
 
-    const value = checkedValues.map((item: any) => {
-      return {
-        variety_id: item,
-      };
-    });
-    setSelectedVariety(value);
+    // const value = checkedValues.map((item: any) => {
+    const input = {
+      variety_selection: {
+        ids: [
+          {
+            variety_id: checkedValues.target.value,
+          },
+        ],
+      },
+    };
+    setSelectedVariety(input);
+    setSetSelectedVarietyId(checkedValues.target.value);
   }
   return (
     <>
@@ -183,7 +218,7 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
         <CardSection
           title="Recent Tender Request"
           route="buyers/tender-requests"
-          listItems={TenderRequestsData}
+          listItems={tenderRequest}
         />
         <CardSection
           title="Shop by Seller"
@@ -202,23 +237,37 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
         visible={isModalOpen}
         okText={'Next'}
         onOk={handleOkClick}
-        okButtonProps={{ disabled: selectedVariety.length === 0 }}
+        okButtonProps={{
+          disabled:
+            selectedVariety &&
+            selectedVariety.variety_selection &&
+            selectedVariety.variety_selection.ids.length !== 0
+              ? false
+              : true,
+        }}
         onCancel={() => setIsModalOpen(!isModalOpen)}
       >
         <h3>Choose Variety</h3>
         <div>
-          <Checkbox.Group onChange={handleVarietyChange}>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {variety.map((item) => (
-                <Checkbox key={item.key} value={item.key}>
-                  {item.name}{' '}
-                  <span style={{ color: 'grey', marginLeft: '20px' }}>
-                    | {item.platform_name}
-                  </span>
-                </Checkbox>
-              ))}
-            </div>
-          </Checkbox.Group>
+          <Radio.Group onChange={handleVarietyChange} size="large">
+            {variety.map((item) => (
+              <Radio
+                key={item.key}
+                value={item.key}
+                style={{ fontSize: '20px' }}
+              >
+                {item.name}{' '}
+                <span
+                  style={{
+                    color: 'grey',
+                    marginLeft: '20px',
+                  }}
+                >
+                  | {item.platform_name}
+                </span>
+              </Radio>
+            ))}
+          </Radio.Group>
         </div>
       </Modal>
     </>

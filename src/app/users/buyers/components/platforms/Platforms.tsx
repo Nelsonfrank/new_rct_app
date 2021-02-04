@@ -39,35 +39,36 @@ const Platforms: React.FC<RouteComponentProps> = () => {
     <div>
       <h1>Platforms</h1>
       <hr />
-      {platforms.length !== 0 ? (
-        <div style={{ display: 'flex', flexWrap: 'wrap', height: '700px' }}>
-          {platforms.map((item: any) => (
-            <Card
-              key={item.id}
-              imgTitle={item.title}
-              imgDescrip={item.platform_region}
-              img={item.img}
-              styles={{ maxWidth: '300px' }}
-              onClick={() =>
-                navigate(`${item.routes}`, {
-                  state: { data: { platformId: item.id } },
-                })
-              }
-            />
-          ))}
-        </div>
-      ) : (
-        <div
-          style={{
-            height: '700px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Empty />
-        </div>
-      )}
+      <div style={{ minHeight: '700px' }}>
+        {platforms.length !== 0 ? (
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {platforms.map((item: any) => (
+              <Card
+                key={item.id}
+                imgTitle={item.title}
+                imgDescrip={item.platform_region}
+                img={item.img}
+                styles={{ maxWidth: '300px' }}
+                onClick={() =>
+                  navigate(`${item.routes}`, {
+                    state: { data: { platformId: item.id } },
+                  })
+                }
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Empty />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

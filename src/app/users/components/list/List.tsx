@@ -27,14 +27,14 @@ const FilterSort = ({
 }: FilterSortProps) => {
   const { userInfo } = useContext(Auth);
   const giveTender = () => {
-    if (route === 'tender-request-form') {
+    if (route === 'give-tender-form') {
       if (userInfo && userInfo.phone_number) {
         navigate(route);
       } else {
         navigate('/app/login', { state: { data: 'buyer redirected' } });
         const destinationRoute = {
           currentRoute: '/app/buyers',
-          togoRoute: 'tender-request-form',
+          togoRoute: 'give-tender-form',
           userInfo: userInfo,
         };
         sessionStorage.setItem(
@@ -147,11 +147,13 @@ export interface ListProps extends ListItemProps {
   listType?: string;
   btnTitle?: string;
   routes: string;
+  type: string;
 }
 const List: React.FC<ListProps> = ({
   btnTitle,
   routes,
   itemData,
+  type,
 }: ListProps) => {
   const [checkedItems, setCheckedItems] = React.useState<
     { ownerName: string; id: number }[]
@@ -159,7 +161,7 @@ const List: React.FC<ListProps> = ({
   const [isAllChecked, setIsAllChecked] = React.useState(false);
 
   React.useEffect(() => {
-    checkedItems.length == 0 ? setIsAllChecked(false) : null;
+    checkedItems.length === 0 ? setIsAllChecked(false) : null;
   }, [checkedItems]);
 
   const addAllItems = () => {
@@ -168,8 +170,7 @@ const List: React.FC<ListProps> = ({
       ownerName: data.ownerName,
       id: data.id,
     }));
-    isAllChecked ? setCheckedItems(value) : setCheckedItems([]);
-    console.log(checkedItems);
+    isAllChecked ? setCheckedItems([]) : setCheckedItems(value);
   };
 
   const addCheckedItem = (value: { ownerName: string; id: number }) => {
@@ -215,12 +216,13 @@ const List: React.FC<ListProps> = ({
           </Checkbox>
           <div style={{ height: 3, width: '100%', backgroundColor: 'grey' }} />
         </div>
-        {itemData.length !== 0 && (
+        {itemData.length !== 0 ? (
           <>
             {itemData.map((value) => (
               <ListItem
                 key={value.id}
                 id={value.id}
+                type={type}
                 image={value.image}
                 ownerName={value.ownerName}
                 description={value.description}
@@ -239,6 +241,17 @@ const List: React.FC<ListProps> = ({
               />
             ))}
           </>
+        ) : (
+          <div
+            style={{
+              height: '700px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Empty />
+          </div>
         )}
       </div>
     </div>

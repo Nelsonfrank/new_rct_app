@@ -142,6 +142,11 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = (
             </div>
             <div className="option--item__lgscreen ">
               <p style={{ marginBottom: 0 }}>
+                <Link to="/app/buyers">Buy Rice</Link>
+              </p>
+            </div>
+            <div className="option--item__lgscreen ">
+              <p style={{ marginBottom: 0 }}>
                 <Link to="market-info">Market Today</Link>
               </p>
             </div>
@@ -166,6 +171,11 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = (
             <div className="option--item__lgscreen ">
               <p style={{ marginBottom: 0 }}>
                 <Link to="shop-by-platforms">Platforms</Link>
+              </p>
+            </div>
+            <div className="option--item__lgscreen ">
+              <p style={{ marginBottom: 0 }}>
+                <Link to="/app/sellers">Sell Rice</Link>
               </p>
             </div>
             <div className="option--item__lgscreen ">
