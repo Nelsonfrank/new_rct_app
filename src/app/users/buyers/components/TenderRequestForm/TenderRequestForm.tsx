@@ -6,9 +6,14 @@ import { RouteComponentProps, navigate } from '@reach/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Notification from '../../../../components/notification';
 // API
-import { GetAllVariety, GiveTender } from '../../../../../API';
+import {
+  GetAllVariety,
+  GiveTender,
+  GetVarietyBySellerId,
+} from '../../../../../API';
 
 import { Auth } from '../../../../../auth/AuthContext';
+import { Buyer } from '../../../../../context/buyers/BuyerContextType';
 //Styles
 import './TenderRequestForm.less';
 // export interface TenderRequestProps {}
@@ -19,42 +24,58 @@ type varietyProps = {
   region: string;
   added_by: string;
 }[];
-const TenderRequest: React.FC<RouteComponentProps> = () => {
+const TenderRequest: React.FC<RouteComponentProps> = (props: any) => {
   const { register, handleSubmit, setValue, errors } = useForm({
     mode: 'onBlur',
     reValidateMode: 'onChange',
   });
   const { Option } = Select;
-  const { userAccessToken, userInfo } = useContext(Auth);
+  const { userAccessToken } = useContext(Auth);
+  const { platformVariety, path } = useContext(Buyer);
   const [loading, setLoading] = useState(false);
   const [variety, setVariety] = useState<varietyProps>([]);
+  const [ShopBySeller, setShopBySeller] = useState<any>([]);
+
+  const getAllVariety = async () => {
+    const varietyResponse = await GetAllVariety().then((response) => response);
+
+    if (varietyResponse.status === 200) {
+      const data = varietyResponse.data.data.map((item: any) => {
+        return {
+          key: item.id,
+          name: item.variety_name,
+        };
+      });
+      setVariety(data);
+      // console.log(data);
+    } else {
+      Notification(false, 'Fail to Fetch Variety');
+    }
+  };
 
   useEffect(() => {
-    const getAllVariety = async () => {
-      const varietyResponse = await GetAllVariety().then(
-        (response) => response,
-      );
+    const shopBySellerVariety = JSON.parse(
+      sessionStorage.getItem('shopBySellerVarity') || '[]',
+    );
+    setShopBySeller(shopBySellerVariety);
+    shopBySellerVariety.length !== 0
+      ? () => {
+          setValue('variety', shopBySellerVariety[0].name);
+        }
+      : null;
+    // console.log(shopBySellerVariety);
+    // getVarietyByPlatformId();
 
-      if (varietyResponse.status === 200) {
-        const data = varietyResponse.data.data.map((item: any) => {
-          return {
-            key: item.id,
-            name: item.variety_name,
-          };
-        });
-        setVariety(data);
-        // console.log(data);
-      } else {
-        Notification(false, 'Fail to Fetch Variety');
-      }
-    };
-    getAllVariety();
+    platformVariety.length !== 0 && path === 'platform_list'
+      ? setVariety(platformVariety)
+      : getAllVariety();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     register('amount', { required: true });
     register('grade', { required: true });
-    register('variety', { required: true });
+    register('variety', { required: false });
     register('description');
   }, [register]);
 
@@ -86,15 +107,28 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
         id: item.id,
       };
     });
-    const payload = {
-      quantity: data.amount,
-      grade: data.grade,
-      pickup_location: data.description,
-      variety: data.variety,
-      seller_selection: {
-        seller_id: sellersId,
-      },
-    };
+    const payload =
+      ShopBySeller.length === 0
+        ? {
+            quantity: data.amount,
+            grade: data.grade,
+            pickup_location: data.description,
+            variety: data.variety,
+            seller_selection: {
+              seller_id: sellersId,
+            },
+          }
+        : {
+            quantity: data.amount,
+            grade: data.grade,
+            pickup_location: data.description,
+            variety: ShopBySeller[0].name,
+            seller_selection: {
+              seller_id: sellersId,
+            },
+          };
+
+    console.log(payload);
     setLoading(true);
     const giveTenderRequest = async () => {
       const response = await GiveTender(payload, userAccessToken);
@@ -161,6 +195,7 @@ const TenderRequest: React.FC<RouteComponentProps> = () => {
               defaultValue="variety"
               style={{ width: '100%' }}
               onChange={handleVarietyChange}
+              // disabled={}
             >
               <Option value="variety">Select Variety</Option>
               {variety.map((item) => (

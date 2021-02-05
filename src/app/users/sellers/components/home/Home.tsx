@@ -35,7 +35,7 @@ const Home: React.FC<RouteComponentProps> = () => {
               img: User1,
               title: data.name,
               cardDescrip: data.countryName,
-              routes: 'sellers/profile',
+              routes: 'sellers/request-tender-form',
               state: { data: { action: 'tender-request', userId: data.id } },
             };
           })

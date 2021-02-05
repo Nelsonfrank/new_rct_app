@@ -4,16 +4,14 @@ import './index.less';
 import reportWebVitals from './reportWebVitals';
 import App from './app';
 // import Chats from './app/users/components/chat';
-import { Provider } from 'react-redux';
-import store from './redux/configureStore';
+// import { Provider } from 'react-redux';
+// import store from './redux/configureStore';
 import AuthProvider from './auth/Auth';
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <App />
     </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root'),

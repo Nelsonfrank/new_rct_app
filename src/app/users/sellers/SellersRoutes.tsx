@@ -19,7 +19,7 @@ const SellersRoutes: React.FC = () => {
   return (
     <Router primary={false}>
       <Home path="/" />
-      <TenderBidForm path="give-tender-form" />
+      <TenderBidForm path="request-tender-form" />
       <BuyersList path="buyers-list" />
       <TenderBids path="tender-bids" />
       <UploadPictures path="upload-images" />

@@ -7,7 +7,7 @@ import Spinner from '../../../components/spinner';
 import { GetSellersByVariety } from '../../../../../API';
 import User5 from '../../../../../assets/images/12.png';
 
-import { Empty } from 'antd';
+// import { Empty } from 'antd';
 // placeholder data
 import Notification from '../../../../components/notification';
 // export interface UserListProps {}
@@ -52,7 +52,6 @@ const UserList: React.FC<RouteComponentProps> = (props: any) => {
             };
           },
         );
-
         setSellerInfo(data);
       } else {
         Notification(false, 'Failed to fetch Seller');
