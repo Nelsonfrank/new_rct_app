@@ -86,11 +86,10 @@ const BuyerHome: React.FC<RouteComponentProps> = () => {
           img: Platform1,
           title: item.full_name,
           cardDescrip: item.category,
-          routes: 'buyers/give-tender-form',
+          routes: 'buyers/shop-by-sellers',
+          item: item,
           state: {
-            data: {
-              sellerId: item.id,
-            },
+            data: item,
           },
         };
       });

@@ -28,20 +28,16 @@ const Home: React.FC<RouteComponentProps> = () => {
       );
       console.log(response);
       if (response.status === 200) {
-        const data = response.data.data
-          .map((data: any) => {
-            return {
-              id: data.id,
-              img: User1,
-              title: data.name,
-              cardDescrip: data.countryName,
-              routes: 'sellers/request-tender-form',
-              state: { data: { action: 'tender-request', userId: data.id } },
-            };
-          })
-          .filter((item: any) => {
-            return item.title !== null;
-          });
+        const data = response.data.data.map((data: any) => {
+          return {
+            id: data.id,
+            img: User1,
+            title: data.name,
+            cardDescrip: data.countryName,
+            routes: 'sellers/buyers-list',
+            state: { data: { action: 'tender-request', userId: data.id } },
+          };
+        });
         // console.log(data);
         const input = data.slice(0, 4);
 

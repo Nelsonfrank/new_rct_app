@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 // Components
 import SectionHeader from './components/section-header';
@@ -6,7 +6,7 @@ import Card from '../../../components/card';
 import { Button } from 'antd';
 import { navigate } from '@reach/router';
 import { Empty } from 'antd';
-
+import { Buyer } from '../../../../context/buyers/BuyerContextType';
 // Styles
 import './SectionCardList.less';
 
@@ -33,8 +33,15 @@ const SectionCardList: React.FC<SectionCardListProps> = (
 ) => {
   const { title, route = '', listItems, cardStyles, viewAllAction } = props;
 
+  const { saveSellerInfo } = useContext(Buyer);
   const handleViewAllClick = () => {
     viewAllAction ? viewAllAction() : navigate(route);
+  };
+
+  const handleSellerClick = (item: any) => {
+    navigate(item.routes, { state: item.state });
+    title === 'Shop by Seller' && saveSellerInfo(item, 'seller_info');
+    title === 'Rice Buyers' && saveSellerInfo(item, 'seller_info');
   };
   return (
     <>
@@ -54,7 +61,7 @@ const SectionCardList: React.FC<SectionCardListProps> = (
               imgTitle={item.title}
               imgDescrip={item.cardDescrip}
               isHoverable
-              onClick={() => navigate(item.routes, { state: item.state })}
+              onClick={() => handleSellerClick(item)}
             ></Card>
           ))}
         </div>

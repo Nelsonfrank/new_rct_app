@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 //Components
 import { RightOutlined } from '@ant-design/icons';
@@ -6,7 +6,7 @@ import { Button, Checkbox } from 'antd';
 // Styles
 import './ListItem.less';
 import { navigate } from '@reach/router';
-
+import { Auth } from '../../../../../../auth/AuthContext';
 export interface ListItemProps {
   id: number;
   image: string;
@@ -51,6 +51,8 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
     platform_name,
   } = props;
 
+  const { userInfo } = useContext(Auth);
+
   React.useEffect(() => {
     isAllChecked ? setIsChecked(true) : setIsChecked(false);
   }, [isAllChecked]);
@@ -62,15 +64,37 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
     isChecked ? removeCheckedItem(id) : addCheckedItem({ ownerName, id });
   };
 
-  const handleMoreDetails = () => {
+  const giveTender = (route: string, item: any) => {
+    if (type === 'Give Tender') {
+      if (userInfo && userInfo.phone_number) {
+        navigate(route);
+      } else {
+        navigate('/app/login', { state: { data: 'buyer redirected' } });
+        const destinationRoute = {
+          currentRoute: '/app/buyers',
+          togoRoute: 'give-tender-form',
+          userInfo: userInfo,
+        };
+        sessionStorage.setItem(
+          'destinationRoute',
+          JSON.stringify(destinationRoute),
+        );
+      }
+    } else {
+      navigate(route);
+    }
+    sessionStorage.setItem('selectedItems', JSON.stringify(item));
+  };
+
+  const handleMoreDetails = (item: any) => {
     type === 'request-tender'
-      ? navigate('tender-request-form')
+      ? giveTender('request-tender-form', item)
       : type === 'Send Quote'
-      ? navigate('quote-form')
+      ? giveTender('quote-form', item)
       : type === 'Give Tender'
-      ? navigate('give-tender-form', { state: { data: { userId: id } } })
+      ? giveTender('give-tender-form', item)
       : type === 'Chat'
-      ? navigate('chats')
+      ? giveTender('chats', item)
       : navigate('profile');
   };
   return (
@@ -194,42 +218,57 @@ const ListItem: React.FC<ListItemProps> = (props: ListItemProps) => {
                 </div>
                 <div className="moreDetailsBtn">
                   {type === 'request-tender' ? (
-                    <Button type="primary" onClick={handleMoreDetails}>
+                    <Button
+                      type="primary"
+                      onClick={() => handleMoreDetails(props)}
+                    >
                       Request Tender
                     </Button>
                   ) : type === 'Send Quote' ? (
                     <>
-                      <Button type="primary" onClick={handleMoreDetails}>
+                      <Button
+                        type="primary"
+                        onClick={() => handleMoreDetails(props)}
+                      >
                         Send Quote
                       </Button>
                       <Button
                         danger
                         style={{ marginLeft: '10px' }}
-                        onClick={handleMoreDetails}
+                        onClick={() => handleMoreDetails(props)}
                       >
                         Quit Tender
                       </Button>
                     </>
                   ) : type === 'Chat with Seller' ? (
-                    <Button type="primary" onClick={handleMoreDetails}>
+                    <Button
+                      type="primary"
+                      onClick={() => handleMoreDetails(props)}
+                    >
                       Chat
                     </Button>
                   ) : type === 'Give Tender' ? (
-                    <Button type="primary" onClick={handleMoreDetails}>
+                    <Button
+                      type="primary"
+                      onClick={() => handleMoreDetails(props)}
+                    >
                       Give Tender
                     </Button>
                   ) : null}
                   {/* <Button
                     type="primary"
                     style={{ marginLeft: '10px' }}
-                    onClick={handleMoreDetails}
+                    onClick={()=>handleMoreDetails(props)}
                   >
                     More Details
                   </Button> */}
                 </div>
               </div>
             </div>
-            <div className="listItemIconBtn" onClick={handleMoreDetails}>
+            <div
+              className="listItemIconBtn"
+              onClick={() => handleMoreDetails(props)}
+            >
               <RightOutlined className="listItemIcon" />
             </div>
           </div>

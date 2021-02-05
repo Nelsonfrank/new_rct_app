@@ -6,6 +6,7 @@ class BuyerContext extends Component {
   state = {
     path: '',
     platformVariety: [],
+    sellerInfo: {},
   };
 
   savePlatformVariety = (getValues, path) => {
@@ -14,9 +15,17 @@ class BuyerContext extends Component {
       path: path,
     });
   };
+
+  saveSellerInfo = (value, path) => {
+    this.setState({
+      sellerInfo: value,
+      path: path,
+    });
+  };
   render() {
     const authProviderValue = {
       ...this.state,
+      saveSellerInfo: this.saveSellerInfo,
       savePlatformVariety: this.savePlatformVariety,
     };
     return (
