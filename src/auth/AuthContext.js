@@ -4,7 +4,7 @@ const authContext = createContext({
   authenticated: false,
   userRole: '',
   userAccessToken: '',
-  adminRole: [],
+  adminRole: '',
   adminAccessToken: '',
   userInfo: {
     active: 1,

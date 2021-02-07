@@ -45,3 +45,7 @@ export function expireTimeCountDown(dateTimeString: string) {
     return 'expired';
   }
 }
+
+export const checkAdminUserRole = (roles: any) => {
+  return roles.some((element: { role: string }) => element.role === 'leader');
+};

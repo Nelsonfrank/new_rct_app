@@ -11,6 +11,7 @@ import {
   GetUserInformation,
 } from '../../../../API';
 import Notification from '../../../components/notification';
+import { checkAdminUserRole } from '../../../../utils';
 //Styles
 // import './ManagementSignin.less';
 
@@ -72,10 +73,9 @@ const ManagementSignin: React.FC<ManagementSignInProps> = (
               ).then((response) => response);
               console.log(result);
               if (result.status === 200) {
-                sessionStorage.setItem(
-                  'adminRole',
-                  JSON.stringify(result.data.data.roles),
-                );
+                checkAdminUserRole(result.data.data.roles)
+                  ? sessionStorage.setItem('adminRole', 'leader')
+                  : sessionStorage.setItem('adminRole', 'admin');
                 sessionStorage.setItem(
                   'UserInfo',
                   JSON.stringify(result.data.data.user),

@@ -5,6 +5,7 @@ class Auth extends Component {
   state = {
     authenticated: false,
     userRole: '',
+    adminRole: sessionStorage.getItem('adminRole'),
     userAccessToken: localStorage.getItem('accessToken'),
     adminAccessToken: sessionStorage.getItem('accessToken'),
     userInfo:
@@ -45,7 +46,7 @@ class Auth extends Component {
   handleAuthDashboard = () => {
     this.setState({
       authenticated: true,
-      adminRole: JSON.parse(sessionStorage.getItem('adminRole')),
+      adminRole: sessionStorage.getItem('adminRole'),
       adminAccessToken: sessionStorage.getItem('accessToken'),
       userInfo: JSON.parse(sessionStorage.getItem('UserInfo')),
     });
