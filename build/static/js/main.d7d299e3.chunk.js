@@ -62,8 +62,8 @@
                   a(e), n(e), i(e), c(e), r(e);
                 });
           }),
-        l = a(9),
-        d = a(8),
+        l = a(8),
+        d = a(9),
         u = a.n(d),
         m = a(12),
         j = a(10),
@@ -77,7 +77,7 @@
         y = a.p + 'static/media/Slide-3.078ba1b5.webp',
         v = a.p + 'static/media/Slide-4.ad1fc390.jpg',
         _ = a.p + 'static/media/Slide-4.789de0e6.webp',
-        N =
+        S =
           (a(242),
           {
             infinite: !0,
@@ -88,14 +88,14 @@
             pauseOnFocus: !0,
             className: 'ArrowContainer',
           }),
-        S = function () {
+        N = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsx)('div', {
               style: { margin: '1rem 0rem' },
               children: Object(n.jsxs)(
                 h.a,
                 Object(p.a)(
-                  Object(p.a)({}, N),
+                  Object(p.a)({}, S),
                   {},
                   {
                     children: [
@@ -316,8 +316,8 @@
           savePlatformVariety: function (e, t) {},
           saveSellerInfo: function (e, t) {},
         }),
-        B = A.Provider,
-        q = (A.Consumer, A),
+        q = A.Provider,
+        B = (A.Consumer, A),
         M =
           (a(277),
           function (e) {
@@ -327,7 +327,7 @@
               r = e.listItems,
               o = e.cardStyles,
               s = e.viewAllAction,
-              d = Object(i.useContext)(q).saveSellerInfo;
+              d = Object(i.useContext)(B).saveSellerInfo;
             return Object(n.jsxs)(n.Fragment, {
               children: [
                 Object(n.jsx)(k, {
@@ -384,8 +384,8 @@
               ],
             });
           }),
-        P = a(463),
-        R = a(150),
+        R = a(463),
+        P = a(150),
         L = a(24),
         D = a.n(L);
       D.a.defaults.baseURL = 'http://142.93.210.105:1122';
@@ -634,7 +634,7 @@
           authenticated: !1,
           userRole: '',
           userAccessToken: '',
-          adminRole: [],
+          adminRole: '',
           adminAccessToken: '',
           userInfo: {
             active: 1,
@@ -682,16 +682,16 @@
               y = x[1],
               v = Object(i.useState)(),
               _ = Object(j.a)(v, 2),
-              N = _[0],
+              S = _[0],
               T = _[1],
               k = Object(i.useState)(''),
               C = Object(j.a)(k, 2),
               w = C[0],
               z = C[1],
               A = Object(i.useState)([]),
-              B = Object(j.a)(A, 2),
-              q = B[0],
-              L = B[1],
+              q = Object(j.a)(A, 2),
+              B = q[0],
+              L = q[1],
               F = Object(i.useContext)(ue).userAccessToken,
               G = (function () {
                 var e = Object(m.a)(
@@ -864,7 +864,7 @@
               }, []),
               Object(n.jsxs)(n.Fragment, {
                 children: [
-                  Object(n.jsx)(S, {}),
+                  Object(n.jsx)(N, {}),
                   Object(n.jsxs)('div', {
                     className: 'buyer--card_group',
                     children: [
@@ -910,7 +910,7 @@
                       Object(n.jsx)(M, {
                         title: 'Recent Tender Request',
                         route: 'buyers/tender-requests',
-                        listItems: q,
+                        listItems: B,
                       }),
                       Object(n.jsx)(M, {
                         title: 'Shop by Seller',
@@ -926,14 +926,14 @@
                       }),
                     ],
                   }),
-                  Object(n.jsxs)(P.a, {
+                  Object(n.jsxs)(R.a, {
                     title: 'Shop By Seller',
                     centered: !0,
                     visible: a,
                     okText: 'Next',
                     onOk: function () {
                       Object(l.d)('buyers/shop-by-sellers', {
-                        state: { data: { selectedVariety: N } },
+                        state: { data: { selectedVariety: S } },
                       });
                       var e = g.filter(function (e) {
                         return e.key === w;
@@ -945,9 +945,9 @@
                     },
                     okButtonProps: {
                       disabled:
-                        !N ||
-                        !N.variety_selection ||
-                        0 === N.variety_selection.ids.length,
+                        !S ||
+                        !S.variety_selection ||
+                        0 === S.variety_selection.ids.length,
                     },
                     onCancel: function () {
                       return c(!a);
@@ -955,7 +955,7 @@
                     children: [
                       Object(n.jsx)('h3', { children: 'Choose Variety' }),
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(R.a.Group, {
+                        children: Object(n.jsx)(P.a.Group, {
                           onChange: function (e) {
                             var t = {
                               variety_selection: {
@@ -967,7 +967,7 @@
                           size: 'large',
                           children: g.map(function (e) {
                             return Object(n.jsxs)(
-                              R.a,
+                              P.a,
                               {
                                 value: e.key,
                                 style: { fontSize: '20px' },
@@ -1019,20 +1019,20 @@
               y = e.platformLeader,
               v = e.phone_number,
               _ = e.platform_name,
-              N = Object(i.useContext)(ue).userInfo;
+              S = Object(i.useContext)(ue).userInfo;
             c.a.useEffect(
               function () {
                 w(!!b);
               },
               [b],
             );
-            var S = c.a.useState(!1),
-              k = Object(j.a)(S, 2),
+            var N = c.a.useState(!1),
+              k = Object(j.a)(N, 2),
               C = k[0],
               w = k[1],
               I = function (e, t) {
                 if ('Give Tender' === s)
-                  if (N && N.phone_number) Object(l.d)(e);
+                  if (S && S.phone_number) Object(l.d)(e);
                   else {
                     Object(l.d)('/app/login', {
                       state: { data: 'buyer redirected' },
@@ -1040,7 +1040,7 @@
                     var a = {
                       currentRoute: '/app/buyers',
                       togoRoute: 'give-tender-form',
-                      userInfo: N,
+                      userInfo: S,
                     };
                     sessionStorage.setItem(
                       'destinationRoute',
@@ -1506,7 +1506,7 @@
           });
         },
         _e = fe.a.Option,
-        Ne = function (e) {
+        Se = function (e) {
           var t = e.btnTitle,
             a = e.routes,
             i = e.itemData,
@@ -1627,13 +1627,13 @@
             ],
           });
         },
-        Se = a.p + 'static/media/12.f788e43e.png',
+        Ne = a.p + 'static/media/12.f788e43e.png',
         Te = function (e) {
           var t = Object(i.useState)([]),
             a = Object(j.a)(t, 2),
             c = a[0],
             r = a[1],
-            o = Object(i.useContext)(q),
+            o = Object(i.useContext)(B),
             s = o.sellerInfo,
             l = o.path,
             d = (function () {
@@ -1665,7 +1665,7 @@
                               ? ((n = a.data.data.map(function (e) {
                                   return {
                                     id: e.id,
-                                    image: Se,
+                                    image: Ne,
                                     category: e.category,
                                     ownerName: e.full_name,
                                     user_location: e.location,
@@ -1694,7 +1694,7 @@
                 ? (function () {
                     var e = {
                       id: s.item.id,
-                      image: Se,
+                      image: Ne,
                       category: s.item.category,
                       ownerName: s.item.full_name,
                       user_location: s.item.location,
@@ -1707,7 +1707,7 @@
             }, []),
             Object(n.jsx)('div', {
               style: { minHeight: '700px' },
-              children: Object(n.jsx)(Ne, {
+              children: Object(n.jsx)(Se, {
                 btnTitle: 'Give Tender',
                 routes: 'give-tender-form',
                 itemData: c,
@@ -1812,7 +1812,7 @@
             a = Object(j.a)(t, 2),
             c = a[0],
             r = a[1],
-            o = Object(i.useContext)(q).savePlatformVariety,
+            o = Object(i.useContext)(B).savePlatformVariety,
             s = (function () {
               var e = Object(m.a)(
                 u.a.mark(function e(t) {
@@ -1901,7 +1901,7 @@
                 0 !== c.length
                   ? Object(n.jsx)('div', {
                       style: { minHeight: '700px' },
-                      children: Object(n.jsx)(Ne, {
+                      children: Object(n.jsx)(Se, {
                         btnTitle: 'Give Tender',
                         routes: 'give-tender-form',
                         itemData: c,
@@ -1979,7 +1979,7 @@
         ],
         Ie = function () {
           return Object(n.jsx)(n.Fragment, {
-            children: Object(n.jsx)(Ne, {
+            children: Object(n.jsx)(Se, {
               btnTitle: 'Give Tender',
               routes: 'give-tender-form',
               itemData: we,
@@ -1989,7 +1989,7 @@
         },
         ze = a(464),
         Ae = a(45),
-        Be =
+        qe =
           (a(321),
           function (e) {
             var t = Object(Ae.a)({
@@ -2002,7 +2002,7 @@
               o = t.errors,
               s = fe.a.Option,
               d = Object(i.useContext)(ue).userAccessToken,
-              p = Object(i.useContext)(q),
+              p = Object(i.useContext)(B),
               h = p.platformVariety,
               b = p.path,
               f = Object(i.useState)(!1),
@@ -2012,9 +2012,9 @@
               y = Object(i.useState)([]),
               v = Object(j.a)(y, 2),
               _ = v[0],
-              N = v[1],
-              S = Object(i.useState)([]),
-              k = Object(j.a)(S, 2),
+              S = v[1],
+              N = Object(i.useState)([]),
+              k = Object(j.a)(N, 2),
               C = k[0],
               w = k[1],
               I = (function () {
@@ -2036,7 +2036,7 @@
                               ? ((a = t.data.data.map(function (e) {
                                   return { key: e.id, name: e.variety_name };
                                 })),
-                                N(a))
+                                S(a))
                               : je(!1, 'Fail to Fetch Variety');
                           case 4:
                           case 'end':
@@ -2055,7 +2055,7 @@
               );
               w(e),
                 e.length,
-                0 !== h.length && 'platform_list' === b ? N(h) : I();
+                0 !== h.length && 'platform_list' === b ? S(h) : I();
             }, []),
               Object(i.useEffect)(
                 function () {
@@ -2239,10 +2239,10 @@
               ],
             });
           }),
-        qe = a(459),
+        Be = a(459),
         Me = a(57),
-        Pe = a.n(Me),
-        Re = [
+        Re = a.n(Me),
+        Pe = [
           {
             title: 'Variety',
             dataIndex: 'variety',
@@ -2313,7 +2313,7 @@
                                     variety: e.variety,
                                     price: e.price_rate,
                                     region: e.region,
-                                    effectiveDate: Pe()(e.date).format(
+                                    effectiveDate: Re()(e.date).format(
                                       'Do MMMM YYYY',
                                     ),
                                   };
@@ -2335,7 +2335,7 @@
             Object(n.jsx)(n.Fragment, {
               children: Object(n.jsx)('div', {
                 style: { height: '700px' },
-                children: Object(n.jsx)(qe.a, { dataSource: a, columns: Re }),
+                children: Object(n.jsx)(Be.a, { dataSource: a, columns: Pe }),
               }),
             })
           );
@@ -3090,7 +3090,7 @@
                       Object(n.jsx)(ke, { path: 'shop-by-platforms' }),
                       Object(n.jsx)(Ce, { path: 'platform-subscriber-list' }),
                       Object(n.jsx)(Ie, { path: 'tender-requests' }),
-                      Object(n.jsx)(Be, { path: 'give-tender-form' }),
+                      Object(n.jsx)(qe, { path: 'give-tender-form' }),
                       Object(n.jsx)(Le, { path: 'market-info' }),
                       Object(n.jsx)(Je, { path: 'profile' }),
                       Object(n.jsx)(Xe, { path: 'chats' }),
@@ -3104,7 +3104,7 @@
                       Object(n.jsx)(ke, { path: 'shop-by-platforms' }),
                       Object(n.jsx)(Ce, { path: 'platform-subscriber-list' }),
                       Object(n.jsx)(Ie, { path: 'tender-requests' }),
-                      Object(n.jsx)(Be, { path: 'give-tender-form' }),
+                      Object(n.jsx)(qe, { path: 'give-tender-form' }),
                       Object(n.jsx)(Le, { path: 'market-info' }),
                       Object(n.jsx)(Je, { path: 'profile' }),
                     ],
@@ -3716,7 +3716,7 @@
                       savePlatformVariety: this.savePlatformVariety,
                     },
                   );
-                  return Object(n.jsx)(B, {
+                  return Object(n.jsx)(q, {
                     value: e,
                     children: this.props.children,
                   });
@@ -3827,7 +3827,7 @@
               }, []),
               Object(n.jsxs)(n.Fragment, {
                 children: [
-                  Object(n.jsx)(S, {}),
+                  Object(n.jsx)(N, {}),
                   Object(n.jsxs)('div', {
                     className: 'seller--card_group',
                     children: [
@@ -3891,7 +3891,7 @@
             a = t[0],
             c = t[1],
             r = Object(i.useContext)(ue).userAccessToken,
-            o = Object(i.useContext)(q),
+            o = Object(i.useContext)(B),
             s = o.sellerInfo,
             l = o.path,
             d = (function () {
@@ -3960,7 +3960,7 @@
             Object(n.jsx)(n.Fragment, {
               children: Object(n.jsx)('div', {
                 style: { minHeight: '700px' },
-                children: Object(n.jsx)(Ne, {
+                children: Object(n.jsx)(Se, {
                   btnTitle: 'Request Tender',
                   routes: 'request-tender-form',
                   itemData: a,
@@ -4024,7 +4024,7 @@
         ],
         xt = function () {
           return Object(n.jsx)(n.Fragment, {
-            children: Object(n.jsx)(Ne, {
+            children: Object(n.jsx)(Se, {
               routes: 'tender-bid-form',
               itemData: Ot,
               type: 'Send Quote',
@@ -4054,7 +4054,7 @@
               y = x.handleSubmit,
               v = x.setValue,
               _ = x.errors,
-              N = (function () {
+              S = (function () {
                 var e = Object(m.a)(
                   u.a.mark(function e() {
                     var t, a;
@@ -4087,7 +4087,7 @@
                 };
               })();
             Object(i.useEffect)(function () {
-              N();
+              S();
             }, []),
               Object(i.useEffect)(
                 function () {
@@ -4102,7 +4102,7 @@
                 },
                 [g],
               );
-            var S = {
+            var N = {
               name: 'file',
               onRemove: function (e) {
                 var t = s.indexOf(e),
@@ -4297,15 +4297,15 @@
                         Object(n.jsx)('h3', {
                           children: 'Is it Batch Certified?',
                         }),
-                        Object(n.jsxs)(R.a.Group, {
+                        Object(n.jsxs)(P.a.Group, {
                           name: 'radiogroup',
                           value: b,
                           onChange: function (e) {
                             f(e.target.value);
                           },
                           children: [
-                            Object(n.jsx)(R.a, { value: !0, children: 'Yes' }),
-                            Object(n.jsx)(R.a, { value: !1, children: 'No' }),
+                            Object(n.jsx)(P.a, { value: !0, children: 'Yes' }),
+                            Object(n.jsx)(P.a, { value: !1, children: 'No' }),
                           ],
                         }),
                         Object(n.jsxs)('div', {
@@ -4335,7 +4335,7 @@
                             Object(n.jsx)(
                               gt.a,
                               Object(p.a)(
-                                Object(p.a)({}, S),
+                                Object(p.a)({}, N),
                                 {},
                                 {
                                   listType: 'picture',
@@ -4417,7 +4417,7 @@
             });
           }),
         _t = a(472),
-        Nt =
+        St =
           (a(424),
           function () {
             var e = Object(i.useState)(''),
@@ -4465,7 +4465,7 @@
                                 ],
                               }),
                       }),
-                      Object(n.jsx)(P.a, {
+                      Object(n.jsx)(R.a, {
                         visible: o,
                         title: u,
                         footer: null,
@@ -4497,7 +4497,7 @@
               }),
             });
           }),
-        St = function (e) {
+        Nt = function (e) {
           var t = Object(i.useState)([]),
             a = Object(j.a)(t, 2),
             c = (a[0], a[1], Object(i.useState)()),
@@ -4723,8 +4723,8 @@
               Object(n.jsx)(vt, { path: 'request-tender-form' }),
               Object(n.jsx)(ft, { path: 'buyers-list' }),
               Object(n.jsx)(xt, { path: 'tender-bids' }),
-              Object(n.jsx)(Nt, { path: 'upload-images' }),
-              Object(n.jsx)(St, { path: 'profile' }),
+              Object(n.jsx)(St, { path: 'upload-images' }),
+              Object(n.jsx)(Nt, { path: 'profile' }),
               Object(n.jsx)(Tt, { path: 'quote-form' }),
               Object(n.jsx)(Le, { path: 'market-info' }),
               Object(n.jsx)(Xe, { path: 'chats' }),
@@ -5275,15 +5275,15 @@
             y = Object(j.a)(g, 2),
             v = y[0],
             _ = y[1],
-            N = Object(Ae.a)(),
-            S = N.register,
-            k = N.handleSubmit,
-            C = N.setValue;
+            S = Object(Ae.a)(),
+            N = S.register,
+            k = S.handleSubmit,
+            C = S.setValue;
           Object(i.useEffect)(
             function () {
               e.location.state.data && _(e.location.state.data),
-                S('dial_code'),
-                S('phone_number'),
+                N('dial_code'),
+                N('phone_number'),
                 (function (e, t) {
                   var a = e.filter(function (e) {
                       return e.dial_code === t;
@@ -5292,7 +5292,7 @@
                   h(n);
                 })(It, c);
             },
-            [S, c, e.location.state.data],
+            [N, c, e.location.state.data],
           );
           return Object(n.jsx)('div', {
             children: Object(n.jsx)('div', {
@@ -5472,8 +5472,8 @@
             }),
           });
         },
-        Bt = a(219),
-        qt =
+        qt = a(219),
+        Bt =
           (a(429),
           function (e) {
             var t = c.a.useState({}),
@@ -5838,7 +5838,7 @@
                             children: 'Verify Mobile Number',
                           }),
                         }),
-                        Object(n.jsx)(Bt.a, {
+                        Object(n.jsx)(qt.a, {
                           customInput: ze.a,
                           placeholder: 'Enter Code',
                           onValueChange: function (e) {
@@ -5873,7 +5873,7 @@
                                 var e;
                                 (e = '2021-01-31T13:20:00+0400'),
                                   console.log(e),
-                                  Pe()().isSameOrBefore(e) && v(r);
+                                  Re()().isSameOrBefore(e) && v(r);
                               },
                               children: Object(n.jsx)('span', {
                                 children: 'Resend Code',
@@ -5920,7 +5920,7 @@
                       Object(n.jsx)(Ct, { path: 'sellers/*' }),
                       Object(n.jsx)(At, { path: '/login' }),
                       Object(n.jsx)(wt, { path: '/signup' }),
-                      Object(n.jsx)(qt, {
+                      Object(n.jsx)(Bt, {
                         path: '/verify-phone',
                         handleAuth: a,
                       }),
@@ -5929,8 +5929,8 @@
             },
           });
         },
-        Pt = a(457),
-        Rt =
+        Rt = a(457),
+        Pt =
           (a(430),
           function (e) {
             var t = e.handleShowNavBar,
@@ -6155,183 +6155,316 @@
         Ht = a(480),
         Ut = a(481),
         Jt = a.p + 'static/media/logo.503ecd68.png',
-        Wt = (a(431), Pt.a.Sider),
-        Yt = Lt.a.SubMenu,
-        Qt = function (e) {
+        Wt = {
+          admin: {
+            static: [
+              'variety:listing',
+              'price-rate: listing',
+              'price-rate: create',
+              'price-rate: delete',
+              'price-rate: edit',
+              'seller: create',
+              'seller: disable',
+              'seller: delete',
+              'seller: edit',
+              'seller: MoreInfo',
+              'buyer: listing',
+              'buyer: disable',
+              'buyer: delete',
+              'leader: listing',
+              'leader: delete',
+              'platform: create',
+              'platform: edit',
+              'platform: delete',
+              'tender-given: listing',
+              'tender-given: disable',
+              'tender-given: delete',
+              'tender-given: view',
+              'tender-request: listing',
+              'tender-request: view',
+              'tender-request: delete',
+              'all: full-access',
+            ],
+          },
+          leader: {
+            static: [
+              'variety:listing',
+              'variety:create',
+              'variety:edit',
+              'seller: listing',
+              'seller: create',
+              'seller:edit',
+              'seller:delete',
+            ],
+          },
+          seller: {
+            static: ['user:listing', 'cashout:listing', 'finance:module'],
+          },
+          buyer: {
+            static: [
+              'customer:listing',
+              'customer:followup',
+              'customer:viewQuestions',
+            ],
+          },
+        },
+        Yt = function (e) {
+          return (function (e, t, a, n) {
+            var i = e[t];
+            if (!i) return !1;
+            var c = i.static;
+            if (c && c.includes(a)) return !0;
+            var r = i.dynamic;
+            if (r) {
+              var o = r[a];
+              return !!o && o(n);
+            }
+            return !1;
+          })(Wt, e.role, e.perform, e.data)
+            ? e.yes()
+            : e.no();
+        };
+      Yt.defaultProps = {
+        yes: function () {
+          return null;
+        },
+        no: function () {
+          return null;
+        },
+      };
+      var Qt = Yt,
+        Xt = (a(431), Rt.a.Sider),
+        $t = Lt.a.SubMenu,
+        ea = function (e) {
           var t = Object(i.useState)(!1),
             a = Object(j.a)(t, 2),
             c = a[0],
             r = a[1],
             o = e.className,
             s = e.isCollapsable,
-            d = e.isCollapsed;
-          return Object(n.jsxs)(Wt, {
-            collapsible: s,
-            collapsed: s ? c : void 0,
-            onCollapse: s
-              ? function () {
-                  r(!c), d(!c);
-                }
-              : void 0,
-            className: o,
-            style: {
-              overflow: 'auto',
-              minHeight: '100vh',
-              position: 'fixed',
-              left: 0,
-              zIndex: 200,
-            },
-            children: [
-              Object(n.jsx)('div', {
-                className: 'logo',
-                children: Object(n.jsx)('img', {
-                  src: Jt,
-                  alt: 'Logo',
-                  className: ''.concat(
-                    c ? 'logo--image' : 'logo--image_collapsed',
-                  ),
+            d = e.isCollapsed,
+            u = function () {
+              r(!c), d(!c);
+            };
+          return Object(n.jsx)(de, {
+            children: function (e) {
+              var t = e.adminRole;
+              return Object(n.jsx)(n.Fragment, {
+                children: Object(n.jsxs)(Xt, {
+                  collapsible: s,
+                  collapsed: s ? c : void 0,
+                  onCollapse: s ? u : void 0,
+                  className: o,
+                  style: {
+                    overflow: 'auto',
+                    minHeight: '100vh',
+                    position: 'fixed',
+                    left: 0,
+                    zIndex: 200,
+                  },
+                  children: [
+                    Object(n.jsx)('div', {
+                      className: 'logo',
+                      children: Object(n.jsx)('img', {
+                        src: Jt,
+                        alt: 'Logo',
+                        className: ''.concat(
+                          c ? 'logo--image' : 'logo--image_collapsed',
+                        ),
+                      }),
+                    }),
+                    Object(n.jsx)(Qt, {
+                      role: t,
+                      perform: 'all: full-access',
+                      yes: function () {
+                        return Object(n.jsxs)(Lt.a, {
+                          className: 'sider--menu',
+                          theme: 'dark',
+                          defaultSelectedKeys: ['1'],
+                          mode: 'inline',
+                          children: [
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Dt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'dashboard',
+                                  children: 'Dashboard',
+                                }),
+                              },
+                              '1',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Ft.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'variety',
+                                  children: ' Varieties',
+                                }),
+                              },
+                              '2',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Gt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'price-rate',
+                                  children: 'Price Rate',
+                                }),
+                              },
+                              '3',
+                            ),
+                            Object(n.jsxs)(
+                              $t,
+                              {
+                                icon: Object(n.jsx)(Zt.a, {}),
+                                title: 'Users',
+                                children: [
+                                  Object(n.jsx)(
+                                    Lt.a.Item,
+                                    {
+                                      children: Object(n.jsx)(l.a, {
+                                        to: 'users/sellers',
+                                        children: 'Sellers',
+                                      }),
+                                    },
+                                    '4',
+                                  ),
+                                  Object(n.jsx)(
+                                    Lt.a.Item,
+                                    {
+                                      children: Object(n.jsx)(l.a, {
+                                        to: 'users/buyers',
+                                        children: 'Buyers',
+                                      }),
+                                    },
+                                    '5',
+                                  ),
+                                  Object(n.jsx)(
+                                    Lt.a.Item,
+                                    {
+                                      children: Object(n.jsx)(l.a, {
+                                        to: 'users/leaders',
+                                        children: 'Leaders',
+                                      }),
+                                    },
+                                    '6',
+                                  ),
+                                ],
+                              },
+                              'sub1',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Kt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'platforms',
+                                  children: 'Platforms',
+                                }),
+                              },
+                              '7',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Et.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'tender-request',
+                                  children: 'Tender Request',
+                                }),
+                              },
+                              '8',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Vt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'tender-given',
+                                  children: 'Tender Given',
+                                }),
+                              },
+                              '9',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Ht.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'banner',
+                                  children: 'Bunners',
+                                }),
+                              },
+                              '11',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Ut.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'logs',
+                                  children: 'Logs',
+                                }),
+                              },
+                              '13',
+                            ),
+                          ],
+                        });
+                      },
+                      no: function () {
+                        return Object(n.jsxs)(Lt.a, {
+                          className: 'sider--menu',
+                          theme: 'dark',
+                          defaultSelectedKeys: ['1'],
+                          mode: 'inline',
+                          children: [
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Dt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'dashboard',
+                                  children: 'Dashboard',
+                                }),
+                              },
+                              '1',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Ft.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'variety',
+                                  children: ' Varieties',
+                                }),
+                              },
+                              '2',
+                            ),
+                            Object(n.jsx)(
+                              Lt.a.Item,
+                              {
+                                icon: Object(n.jsx)(Zt.a, {}),
+                                children: Object(n.jsx)(l.a, {
+                                  to: 'users/sellers',
+                                  children: 'Sellers',
+                                }),
+                              },
+                              '3',
+                            ),
+                          ],
+                        });
+                      },
+                    }),
+                  ],
                 }),
-              }),
-              Object(n.jsxs)(Lt.a, {
-                className: 'sider--menu',
-                theme: 'dark',
-                defaultSelectedKeys: ['1'],
-                mode: 'inline',
-                children: [
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Dt.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'dashboard',
-                        children: 'Dashboard',
-                      }),
-                    },
-                    '1',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Ft.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'variety',
-                        children: ' Varieties',
-                      }),
-                    },
-                    '2',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Gt.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'price-rate',
-                        children: 'Price Rate',
-                      }),
-                    },
-                    '3',
-                  ),
-                  Object(n.jsxs)(
-                    Yt,
-                    {
-                      icon: Object(n.jsx)(Zt.a, {}),
-                      title: 'Users',
-                      children: [
-                        Object(n.jsx)(
-                          Lt.a.Item,
-                          {
-                            children: Object(n.jsx)(l.a, {
-                              to: 'users/sellers',
-                              children: 'Sellers',
-                            }),
-                          },
-                          '4',
-                        ),
-                        Object(n.jsx)(
-                          Lt.a.Item,
-                          {
-                            children: Object(n.jsx)(l.a, {
-                              to: 'users/buyers',
-                              children: 'Buyers',
-                            }),
-                          },
-                          '5',
-                        ),
-                        Object(n.jsx)(
-                          Lt.a.Item,
-                          {
-                            children: Object(n.jsx)(l.a, {
-                              to: 'users/leaders',
-                              children: 'Leaders',
-                            }),
-                          },
-                          '6',
-                        ),
-                      ],
-                    },
-                    'sub1',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Kt.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'platforms',
-                        children: 'Platforms',
-                      }),
-                    },
-                    '7',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Et.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'tender-request',
-                        children: 'Tender Request',
-                      }),
-                    },
-                    '8',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Vt.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'tender-given',
-                        children: 'Tender Given',
-                      }),
-                    },
-                    '9',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Ht.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'banner',
-                        children: 'Bunners',
-                      }),
-                    },
-                    '11',
-                  ),
-                  Object(n.jsx)(
-                    Lt.a.Item,
-                    {
-                      icon: Object(n.jsx)(Ut.a, {}),
-                      children: Object(n.jsx)(l.a, {
-                        to: 'logs',
-                        children: 'Logs',
-                      }),
-                    },
-                    '13',
-                  ),
-                ],
-              }),
-            ],
+              });
+            },
           });
         },
-        Xt =
+        ta =
           (a(432),
           function (e) {
             var t = e.children,
@@ -6344,17 +6477,17 @@
               d = l[0],
               u = l[1];
             return Object(n.jsx)(n.Fragment, {
-              children: Object(n.jsxs)(Pt.a, {
+              children: Object(n.jsxs)(Rt.a, {
                 style: { width: '100%' },
                 children: [
-                  Object(n.jsx)(Qt, {
+                  Object(n.jsx)(ea, {
                     isCollapsable: !0,
                     className: 'sideBar',
                     isCollapsed: function (e) {
                       o(e);
                     },
                   }),
-                  Object(n.jsxs)(Pt.a, {
+                  Object(n.jsxs)(Rt.a, {
                     className: 'site-layout',
                     style: {
                       width: '100%',
@@ -6362,7 +6495,7 @@
                       flexDirection: 'column',
                     },
                     children: [
-                      Object(n.jsx)(Rt, {
+                      Object(n.jsx)(Pt, {
                         handleShowNavBar: function () {
                           u(!d);
                         },
@@ -6384,7 +6517,7 @@
               }),
             });
           }),
-        $t = [
+        aa = [
           {
             key: '1',
             seller: 'Mike Johnson',
@@ -6421,9 +6554,9 @@
             location: 'Dar es salaam',
           },
         ],
-        ea = function () {
-          return Object(n.jsx)(qe.a, {
-            dataSource: $t,
+        na = function () {
+          return Object(n.jsx)(Be.a, {
+            dataSource: aa,
             columns: [
               {
                 title: 'Seller',
@@ -6467,7 +6600,7 @@
             pagination: !1,
           });
         },
-        ta = [
+        ia = [
           {
             key: '1',
             buyer: 'Mike Johnson',
@@ -6504,9 +6637,9 @@
             destination: 'Dar es salaam',
           },
         ],
-        aa = function () {
-          return Object(n.jsx)(qe.a, {
-            dataSource: ta,
+        ca = function () {
+          return Object(n.jsx)(Be.a, {
+            dataSource: ia,
             columns: [
               { title: 'Buyer', dataIndex: 'buyer', key: 'buyer' },
               {
@@ -6543,35 +6676,35 @@
             pagination: !1,
           });
         },
-        na = De.a.TabPane,
-        ia = function () {
+        ra = De.a.TabPane,
+        oa = function () {
           return Object(n.jsx)(I, {
             styles: { width: '97%' },
             children: Object(n.jsxs)(De.a, {
               defaultActiveKey: '1',
               children: [
                 Object(n.jsx)(
-                  na,
+                  ra,
                   {
                     tab: 'Tender Request',
                     children: Object(n.jsx)(I, {
                       styles: { width: '100%', overflowY: 'auto' },
                       actionBtn: 'View More',
                       actionBtnRoute: 'dashboard/tender-request',
-                      children: Object(n.jsx)(ea, {}),
+                      children: Object(n.jsx)(na, {}),
                     }),
                   },
                   '1',
                 ),
                 Object(n.jsx)(
-                  na,
+                  ra,
                   {
                     tab: 'Tender Given',
                     children: Object(n.jsx)(I, {
                       styles: { width: '100%', overflowY: 'auto' },
                       actionBtn: 'View More',
                       actionBtnRoute: 'dashboard/tender-given',
-                      children: Object(n.jsx)(aa, {}),
+                      children: Object(n.jsx)(ca, {}),
                     }),
                   },
                   '2',
@@ -6580,7 +6713,7 @@
             }),
           });
         },
-        ca = function (e) {
+        sa = function (e) {
           var t = e.style,
             a = Object(i.useState)([]),
             c = Object(j.a)(a, 2),
@@ -6609,7 +6742,7 @@
                                   variety: e.variety,
                                   price: e.price_rate,
                                   region: e.region,
-                                  effectiveDate: Pe()(e.date).format(
+                                  effectiveDate: Re()(e.date).format(
                                     'Do MMMM YYYY',
                                   ),
                                 };
@@ -6639,7 +6772,7 @@
                     children: 'Today Price Rate(Tzs/Kg)',
                   }),
                 }),
-                Object(n.jsx)(qe.a, {
+                Object(n.jsx)(Be.a, {
                   dataSource: r,
                   columns: [
                     { title: 'S/N', dataIndex: 'id', key: 'id' },
@@ -6683,7 +6816,7 @@
             }),
           });
         },
-        ra = function () {
+        la = function () {
           var e = Object(i.useState)({}),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -6770,33 +6903,33 @@
             })
           );
         },
-        oa =
+        da =
           (a(433),
           function () {
             return Object(n.jsxs)('div', {
               className: 'dashboard-container',
               children: [
-                Object(n.jsx)(ra, {}),
+                Object(n.jsx)(la, {}),
                 Object(n.jsx)('div', {
                   className: 'dashboard--section',
-                  children: Object(n.jsx)(ca, { style: { width: '97%' } }),
+                  children: Object(n.jsx)(sa, { style: { width: '97%' } }),
                 }),
                 Object(n.jsx)('div', {
                   className: 'dashboard--section',
-                  children: Object(n.jsx)(ia, {}),
+                  children: Object(n.jsx)(oa, {}),
                 }),
               ],
             });
           }),
-        sa = a(466),
-        la = a(75),
-        da = a(458),
-        ua = a(482),
-        ma = a(483),
-        ja = a(484),
-        pa = a(485),
-        ha = qe.a.Column,
-        ba = function () {
+        ua = a(466),
+        ma = a(75),
+        ja = a(458),
+        pa = a(482),
+        ha = a(483),
+        ba = a(484),
+        fa = a(485),
+        Oa = Be.a.Column,
+        xa = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -6930,27 +7063,27 @@
                 c(e);
               },
             };
-          return Object(n.jsxs)(qe.a, {
+          return Object(n.jsxs)(Be.a, {
             dataSource: s,
             rowSelection: y,
             children: [
               Object(n.jsx)(
-                ha,
+                Oa,
                 { title: 'First Name', dataIndex: 'firstName' },
                 'firstName',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 { title: 'Last Name', dataIndex: 'lastName' },
                 'lastName',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 { title: 'Phone Number', dataIndex: 'phone' },
                 'phone',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 {
                   title: 'Platform',
                   dataIndex: 'platform',
@@ -6961,12 +7094,12 @@
                 'platform',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 { title: 'Platform Leader', dataIndex: 'leader' },
                 'leader',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 {
                   title: 'Location',
                   dataIndex: 'location',
@@ -6977,7 +7110,7 @@
                 'location',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 {
                   title: 'Tags',
                   dataIndex: 'tags',
@@ -6996,13 +7129,13 @@
                 'tags',
               ),
               Object(n.jsx)(
-                ha,
+                Oa,
                 {
                   title: 'Action',
                   dataIndex: 'keys',
                   render: function (e) {
                     return Object(n.jsx)(n.Fragment, {
-                      children: Object(n.jsxs)(sa.b, {
+                      children: Object(n.jsxs)(ua.b, {
                         split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                         children: [
                           Object(n.jsx)('div', {
@@ -7014,9 +7147,9 @@
                                 });
                               })(e);
                             },
-                            children: Object(n.jsx)(la.a, {
+                            children: Object(n.jsx)(ma.a, {
                               title: 'Edit',
-                              children: Object(n.jsx)(ua.a, {
+                              children: Object(n.jsx)(pa.a, {
                                 style: { fontSize: '1.25rem' },
                               }),
                             }),
@@ -7025,45 +7158,45 @@
                             onClick: function () {
                               return Object(l.d)('view');
                             },
-                            children: Object(n.jsx)(la.a, {
+                            children: Object(n.jsx)(ma.a, {
                               title: 'View More',
-                              children: Object(n.jsx)(ma.a, {
+                              children: Object(n.jsx)(ha.a, {
                                 style: { fontSize: '1.25rem' },
                               }),
                             }),
                           }),
                           Object(n.jsx)('div', {
-                            children: Object(n.jsx)(da.a, {
+                            children: Object(n.jsx)(ja.a, {
                               title: 'Disable Seller\uff1f',
                               okText: 'Yes',
                               cancelText: 'No',
                               onConfirm: function () {
                                 return O(e);
                               },
-                              children: Object(n.jsx)(la.a, {
+                              children: Object(n.jsx)(ma.a, {
                                 title: 'Disable Seller',
                                 visible: h,
                                 trigger: 'hover',
-                                children: Object(n.jsx)(ja.a, {
+                                children: Object(n.jsx)(ba.a, {
                                   style: { fontSize: '1.25rem' },
                                 }),
                               }),
                             }),
                           }),
                           Object(n.jsx)('div', {
-                            children: Object(n.jsx)(da.a, {
+                            children: Object(n.jsx)(ja.a, {
                               title: 'Delete Seller?',
                               okText: 'Yes',
                               cancelText: 'No',
                               onConfirm: function () {
                                 return f(e);
                               },
-                              children: Object(n.jsx)(la.a, {
+                              children: Object(n.jsx)(ma.a, {
                                 title: 'Delete Buyer',
                                 color: 'red',
                                 visible: h,
                                 trigger: 'hover',
-                                children: Object(n.jsx)(pa.a, {
+                                children: Object(n.jsx)(fa.a, {
                                   style: {
                                     fontSize: '1.25rem',
                                     color: '#ff0000',
@@ -7082,7 +7215,7 @@
             ],
           });
         },
-        fa = function () {
+        ga = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsxs)(I, {
               title: 'Sellers',
@@ -7104,12 +7237,12 @@
                   }),
                 }),
                 Object(n.jsx)(tt.a, {}),
-                Object(n.jsx)(ba, {}),
+                Object(n.jsx)(xa, {}),
               ],
             }),
           });
         },
-        Oa = function () {
+        ya = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -7215,26 +7348,26 @@
                 key: 'action',
                 render: function () {
                   return Object(n.jsx)(n.Fragment, {
-                    children: Object(n.jsxs)(sa.b, {
+                    children: Object(n.jsxs)(ua.b, {
                       split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                       children: [
                         Object(n.jsx)('div', {
                           onClick: function () {
                             return l(!s);
                           },
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Disable Buyer',
-                            children: Object(n.jsx)(ja.a, {
+                            children: Object(n.jsx)(ba.a, {
                               style: { fontSize: '1.25rem' },
                               disabled: s,
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Delete Buyer',
                             color: 'red',
-                            children: Object(n.jsx)(pa.a, {
+                            children: Object(n.jsx)(fa.a, {
                               style: { fontSize: '1.25rem', color: '#ff0000' },
                             }),
                           }),
@@ -7245,22 +7378,22 @@
                 },
               },
             ];
-          return Object(n.jsx)(qe.a, {
+          return Object(n.jsx)(Be.a, {
             rowSelection: O,
             dataSource: h,
             columns: x,
           });
         },
-        xa = function () {
+        va = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsxs)(I, {
               title: 'Buyers',
               styles: { minHeight: '90vh', overflowY: 'auto' },
-              children: [Object(n.jsx)(tt.a, {}), Object(n.jsx)(Oa, {})],
+              children: [Object(n.jsx)(tt.a, {}), Object(n.jsx)(ya, {})],
             }),
           });
         },
-        ga = function () {
+        _a = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -7473,30 +7606,30 @@
               key: 'action',
               render: function () {
                 return Object(n.jsx)(n.Fragment, {
-                  children: Object(n.jsxs)(sa.b, {
+                  children: Object(n.jsxs)(ua.b, {
                     split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                     children: [
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Edit',
-                          children: Object(n.jsx)(ua.a, {
+                          children: Object(n.jsx)(pa.a, {
                             style: { fontSize: '1.25rem' },
                           }),
                         }),
                       }),
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Disable Leader',
-                          children: Object(n.jsx)(ja.a, {
+                          children: Object(n.jsx)(ba.a, {
                             style: { fontSize: '1.25rem' },
                           }),
                         }),
                       }),
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Delete Leader',
                           color: 'red',
-                          children: Object(n.jsx)(pa.a, {
+                          children: Object(n.jsx)(fa.a, {
                             style: { fontSize: '1.25rem', color: '#ff0000' },
                           }),
                         }),
@@ -7507,18 +7640,18 @@
               },
             },
           ];
-          return Object(n.jsx)(qe.a, { dataSource: a, columns: o });
+          return Object(n.jsx)(Be.a, { dataSource: a, columns: o });
         },
-        ya = function () {
+        Sa = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsxs)(I, {
               title: 'Leaders',
               styles: { minHeight: '90vh', overflowY: 'auto' },
-              children: [Object(n.jsx)(tt.a, {}), Object(n.jsx)(ga, {})],
+              children: [Object(n.jsx)(tt.a, {}), Object(n.jsx)(_a, {})],
             }),
           });
         },
-        va = [
+        Na = [
           { name: 'Afghanistan', dial_code: '+93', code: 'AF' },
           { name: 'Aland Islands', dial_code: '+358', code: 'AX' },
           { name: 'Albania', dial_code: '+355', code: 'AL' },
@@ -7821,8 +7954,8 @@
           { name: 'Zambia', dial_code: '+260', code: 'ZM' },
           { name: 'Zimbabwe', dial_code: '+263', code: 'ZW' },
         ],
-        _a = (a(434), fe.a.Option),
-        Na = function () {
+        Ta = (a(434), fe.a.Option),
+        ka = function () {
           var e = Object(i.useState)(!1),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -7840,17 +7973,18 @@
             y = g[0],
             v = g[1],
             _ = Object(i.useState)([]),
-            N = Object(j.a)(_, 2),
-            S = N[0],
-            k = N[1],
+            S = Object(j.a)(_, 2),
+            N = S[0],
+            k = S[1],
             C = Object(Ae.a)({ mode: 'onBlur' }),
             w = C.register,
             I = C.handleSubmit,
             z = C.setValue,
             A = C.errors,
+            q = C.clearErrors,
             B = Object(i.useContext)(ue),
-            q = B.adminAccessToken,
-            M = B.userInfo;
+            M = B.adminAccessToken,
+            R = B.userInfo;
           Object(i.useEffect)(function () {
             (function () {
               var e = Object(m.a)(
@@ -7899,7 +8033,7 @@
               },
               [a, w],
             );
-          var P = {
+          var L = {
               name: 'file',
               onRemove: function (e) {
                 var t = s.indexOf(e),
@@ -7911,7 +8045,7 @@
               },
               idFileList: s,
             },
-            L = {
+            D = {
               name: 'file',
               onRemove: function (e) {
                 var t = f.indexOf(e),
@@ -7923,8 +8057,11 @@
               },
               TBSFileList: f,
             },
-            D = function () {
+            F = function () {
               document.querySelectorAll('input')[0].click();
+            },
+            G = function (e) {
+              q(e);
             };
           return Object(n.jsxs)('div', {
             style: { minHeight: '90vh', marginTop: '2rem' },
@@ -7972,7 +8109,7 @@
                                 case 0:
                                   return (
                                     (a.next = 2),
-                                    E(t, e.platform, q).then(function (e) {
+                                    E(t, e.platform, M).then(function (e) {
                                       return e;
                                     })
                                   );
@@ -8036,7 +8173,7 @@
                                                                             (e.next = 2),
                                                                             E(
                                                                               t,
-                                                                              M.id,
+                                                                              R.id,
                                                                               a
                                                                                 .data
                                                                                 .data
@@ -8123,6 +8260,9 @@
                             onChange: function (e) {
                               z('firstname', e.target.value);
                             },
+                            onFocus: function () {
+                              return G('firstname');
+                            },
                           }),
                           Object(n.jsx)('span', {
                             style: { fontSize: '1rem', color: 'red' },
@@ -8138,6 +8278,9 @@
                             size: 'large',
                             onChange: function (e) {
                               z('lastname', e.target.value);
+                            },
+                            onFocus: function () {
+                              return G('lastname');
                             },
                           }),
                           Object(n.jsx)('span', {
@@ -8157,9 +8300,9 @@
                       placeholder: 'Select Country',
                       value: 'Tanzania',
                       disabled: !0,
-                      children: va.map(function (e) {
+                      children: Na.map(function (e) {
                         return Object(n.jsx)(
-                          _a,
+                          Ta,
                           { value: e.code, children: e.name },
                           e.code,
                         );
@@ -8178,9 +8321,12 @@
                           onChange: function (e) {
                             z('platform', e);
                           },
-                          children: S.map(function (e) {
+                          onFocus: function () {
+                            return G('platform');
+                          },
+                          children: N.map(function (e) {
                             return Object(n.jsx)(
-                              _a,
+                              Ta,
                               { value: e.id, children: e.platform_name },
                               e.id,
                             );
@@ -8204,6 +8350,9 @@
                         onChange: function (e) {
                           z('phone_number', e.target.value);
                         },
+                        onFocus: function () {
+                          return G('phone_number');
+                        },
                       }),
                       Object(n.jsx)('span', {
                         style: { fontSize: '1rem', color: 'red' },
@@ -8221,20 +8370,23 @@
                         onChange: function (e) {
                           z('experience', e);
                         },
+                        onFocus: function () {
+                          return G('experience');
+                        },
                         children: [
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: '0-5',
                             children: '0 - 5 years',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: '6-10',
                             children: '6 - 10 years',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: '11-20',
                             children: '11 - 20 years',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: '21+',
                             children: '21 years - above',
                           }),
@@ -8256,16 +8408,19 @@
                         onChange: function (e) {
                           z('category', e);
                         },
+                        onFocus: function () {
+                          return G('category');
+                        },
                         children: [
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'individual',
                             children: 'Individual',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'association',
                             children: 'Association',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'company',
                             children: 'Company',
                           }),
@@ -8288,16 +8443,19 @@
                         onChange: function (e) {
                           z('scale_status', e);
                         },
+                        onFocus: function () {
+                          return G('scale_status');
+                        },
                         children: [
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'small',
                             children: 'Small',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'medium',
                             children: 'Medium',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'large',
                             children: 'Large',
                           }),
@@ -8317,6 +8475,9 @@
                         size: 'large',
                         onChange: function (e) {
                           z('address', e.target.value);
+                        },
+                        onFocus: function () {
+                          return G('address');
                         },
                       }),
                       Object(n.jsx)('span', {
@@ -8342,15 +8503,15 @@
                         style: { marginLeft: '0.5rem', marginBottom: '0rem' },
                         children: 'TBS Certified?',
                       }),
-                      Object(n.jsxs)(R.a.Group, {
+                      Object(n.jsxs)(P.a.Group, {
                         size: 'large',
                         onChange: function () {
                           return c(!a);
                         },
                         value: a,
                         children: [
-                          Object(n.jsx)(R.a, { value: !0, children: 'Yes' }),
-                          Object(n.jsx)(R.a, { value: !1, children: 'No' }),
+                          Object(n.jsx)(P.a, { value: !0, children: 'Yes' }),
+                          Object(n.jsx)(P.a, { value: !1, children: 'No' }),
                         ],
                       }),
                     ],
@@ -8368,6 +8529,9 @@
                             onChange: function (e) {
                               z('tbs_certificate_num', e.target.value);
                             },
+                            onFocus: function () {
+                              return G('tbs_certificate_num');
+                            },
                           }),
                           Object(n.jsx)('span', {
                             style: { fontSize: '1rem', color: 'red' },
@@ -8383,7 +8547,7 @@
                           Object(n.jsx)(
                             gt.a,
                             Object(p.a)(
-                              Object(p.a)({}, L),
+                              Object(p.a)({}, D),
                               {},
                               {
                                 style: { width: '100%' },
@@ -8402,7 +8566,7 @@
                                   icon: Object(n.jsx)(yt.a, {}),
                                   size: 'large',
                                   disabled: !a,
-                                  onChange: D,
+                                  onChange: F,
                                   children: 'Attach TBS Certificate Image',
                                 }),
                               },
@@ -8428,16 +8592,19 @@
                         onChange: function (e) {
                           z('id_type', e);
                         },
+                        onFocus: function () {
+                          return G('id_type');
+                        },
                         children: [
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'voter',
                             children: 'Voter Id',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'nida',
                             children: 'National Id',
                           }),
-                          Object(n.jsx)(_a, {
+                          Object(n.jsx)(Ta, {
                             value: 'driving-license',
                             children: 'Driving License Id',
                           }),
@@ -8462,6 +8629,9 @@
                             onChange: function (e) {
                               z('id_num', e.target.value);
                             },
+                            onFocus: function () {
+                              return G('id_num');
+                            },
                           }),
                           Object(n.jsx)('span', {
                             style: { fontSize: '1rem', color: 'red' },
@@ -8474,7 +8644,7 @@
                         children: Object(n.jsx)(
                           gt.a,
                           Object(p.a)(
-                            Object(p.a)({}, P),
+                            Object(p.a)({}, L),
                             {},
                             {
                               style: { width: '100%' },
@@ -8495,7 +8665,7 @@
                               children: Object(n.jsx)(T.a, {
                                 icon: Object(n.jsx)(yt.a, {}),
                                 size: 'large',
-                                onClick: D,
+                                onClick: F,
                                 children: 'Attach Identification Image',
                               }),
                             },
@@ -8519,8 +8689,8 @@
             ],
           });
         },
-        Sa = a(486),
-        Ta = function () {
+        Ca = a(486),
+        wa = function () {
           return Object(n.jsxs)(I, {
             title: 'Seller Information',
             backButton: !0,
@@ -8659,7 +8829,7 @@
                         },
                         children: Object(n.jsx)(T.a, {
                           type: 'text',
-                          children: Object(n.jsx)(Sa.a, {
+                          children: Object(n.jsx)(Ca.a, {
                             style: { fontSize: '1.875rem', fontWeight: 700 },
                           }),
                         }),
@@ -8680,7 +8850,7 @@
                         },
                         children: Object(n.jsx)(T.a, {
                           type: 'text',
-                          children: Object(n.jsx)(Sa.a, {
+                          children: Object(n.jsx)(Ca.a, {
                             style: { fontSize: '1.875rem', fontWeight: 700 },
                           }),
                         }),
@@ -8692,18 +8862,18 @@
             ],
           });
         },
-        ka = function () {
+        Ia = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)(fa, { path: 'sellers' }),
-              Object(n.jsx)(xa, { path: 'buyers' }),
-              Object(n.jsx)(ya, { path: 'leaders' }),
-              Object(n.jsx)(Na, { path: 'add-sellers-form' }),
-              Object(n.jsx)(Ta, { path: 'view' }),
+              Object(n.jsx)(ga, { path: 'sellers' }),
+              Object(n.jsx)(va, { path: 'buyers' }),
+              Object(n.jsx)(Sa, { path: 'leaders' }),
+              Object(n.jsx)(ka, { path: 'add-sellers-form' }),
+              Object(n.jsx)(wa, { path: 'view' }),
             ],
           });
         },
-        Ca = function () {
+        za = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -8861,7 +9031,7 @@
               key: 'id',
               render: function (e) {
                 return Object(n.jsx)(n.Fragment, {
-                  children: Object(n.jsxs)(sa.b, {
+                  children: Object(n.jsxs)(ua.b, {
                     split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                     children: [
                       Object(n.jsx)('div', {
@@ -8873,24 +9043,24 @@
                             });
                           })(e);
                         },
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Edit',
-                          children: Object(n.jsx)(ua.a, {
+                          children: Object(n.jsx)(pa.a, {
                             style: { fontSize: '1.25rem' },
                           }),
                         }),
                       }),
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(da.a, {
+                        children: Object(n.jsx)(ja.a, {
                           title: 'Delete Platfrom?',
                           okText: 'Yes',
                           cancelText: 'No',
                           onConfirm: function () {
                             return b(e);
                           },
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Delete Request',
-                            children: Object(n.jsx)(pa.a, {
+                            children: Object(n.jsx)(fa.a, {
                               style: { fontSize: '1.25rem', color: '#ff0000' },
                             }),
                           }),
@@ -8922,7 +9092,7 @@
                 }),
               }),
               Object(n.jsx)(tt.a, {}),
-              Object(n.jsx)(qe.a, {
+              Object(n.jsx)(Be.a, {
                 rowSelection: h,
                 dataSource: s,
                 columns: O,
@@ -8930,7 +9100,7 @@
             ],
           });
         },
-        wa =
+        Aa =
           (a(435),
           [
             {
@@ -9451,8 +9621,8 @@
               population_proper: '',
             },
           ]),
-        Ia = fe.a.Option,
-        za = function (e) {
+        qa = fe.a.Option,
+        Ba = function (e) {
           var t = Object(i.useContext)(ue).adminAccessToken,
             a = Object(i.useState)(''),
             c = Object(j.a)(a, 2),
@@ -9469,8 +9639,8 @@
             y = Object(Ae.a)({ mode: 'onChange' }),
             v = y.register,
             _ = y.handleSubmit,
-            N = y.setValue,
-            S = y.errors;
+            S = y.setValue,
+            N = y.errors;
           Object(i.useEffect)(function () {
             console.log(e.location.state);
           }, []),
@@ -9763,13 +9933,13 @@
                         placeholder: 'Platform Name',
                         size: 'large',
                         onChange: function (e) {
-                          N('platform_name', e.target.value);
+                          S('platform_name', e.target.value);
                         },
                       }),
                       Object(n.jsx)('span', {
                         style: { fontSize: '1rem', color: 'red' },
                         children:
-                          S.platform_name && 'Platform Name is required',
+                          N.platform_name && 'Platform Name is required',
                       }),
                     ],
                   }),
@@ -9803,14 +9973,14 @@
                             onChange: function (e) {
                               return (
                                 o((t = e)),
-                                N('platform_region', t),
+                                S('platform_region', t),
                                 void console.log(r)
                               );
                               var t;
                             },
-                            children: wa.map(function (e) {
+                            children: Aa.map(function (e) {
                               return Object(n.jsx)(
-                                Ia,
+                                qa,
                                 { value: e.admin_name, children: e.admin_name },
                                 e.city,
                               );
@@ -9818,7 +9988,7 @@
                           }),
                           Object(n.jsx)('span', {
                             style: { fontSize: '1rem', color: 'red' },
-                            children: S.platform_region && 'Region is required',
+                            children: N.platform_region && 'Region is required',
                           }),
                         ],
                       }),
@@ -9837,7 +10007,7 @@
                             console.log(t);
                             var a = new FileReader();
                             (a.onload = function (e) {
-                              N('platform_img', e.target.result);
+                              S('platform_img', e.target.result);
                             }),
                               t && t.type.match('image.*')
                                 ? a.readAsDataURL(t)
@@ -9872,13 +10042,13 @@
                                     placeholder: 'First Name',
                                     size: 'large',
                                     onChange: function (e) {
-                                      N('first_name', e.target.value);
+                                      S('first_name', e.target.value);
                                     },
                                   }),
                                   Object(n.jsx)('span', {
                                     style: { fontSize: '1rem', color: 'red' },
                                     children:
-                                      S.first_name && 'First name is required',
+                                      N.first_name && 'First name is required',
                                   }),
                                 ],
                               }),
@@ -9889,13 +10059,13 @@
                                     placeholder: 'Surname',
                                     size: 'large',
                                     onChange: function (e) {
-                                      N('surname', e.target.value);
+                                      S('surname', e.target.value);
                                     },
                                   }),
                                   Object(n.jsx)('span', {
                                     style: { fontSize: '1rem', color: 'red' },
                                     children:
-                                      S.surname && 'Surname is required',
+                                      N.surname && 'Surname is required',
                                   }),
                                 ],
                               }),
@@ -9913,14 +10083,14 @@
                                   maxLength: 9,
                                   size: 'large',
                                   onChange: function (e) {
-                                    N('phone_number', e.target.value);
+                                    S('phone_number', e.target.value);
                                   },
                                   style: { width: '100%' },
                                 }),
                                 Object(n.jsx)('span', {
                                   style: { fontSize: '1rem', color: 'red' },
                                   children:
-                                    S.phone_number &&
+                                    N.phone_number &&
                                     'Phone number is required',
                                 }),
                               ],
@@ -9949,26 +10119,26 @@
             ],
           });
         },
-        Aa = function () {
+        Ma = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)(Ca, { path: '/' }),
-              Object(n.jsx)(za, { path: 'add-platform-form' }),
+              Object(n.jsx)(za, { path: '/' }),
+              Object(n.jsx)(Ba, { path: 'add-platform-form' }),
             ],
           });
         },
-        Ba =
+        Ra =
           (a(436),
           function () {
             return Object(n.jsx)(n.Fragment, {
               children: Object(n.jsx)('div', {
-                children: Object(n.jsx)(Aa, {}),
+                children: Object(n.jsx)(Ma, {}),
               }),
             });
           }),
-        qa = a(465),
-        Ma = a(460),
-        Pa = [
+        Pa = a(465),
+        La = a(460),
+        Da = [
           {
             city: 'Dar es Salaam',
             lat: '-6.8000',
@@ -10487,7 +10657,7 @@
             population_proper: '',
           },
         ],
-        Ra =
+        Fa =
           (a(437),
           function () {
             var e = fe.a.Option,
@@ -10624,7 +10794,7 @@
                               onChange: function (e) {
                                 p('region', e);
                               },
-                              children: Pa.map(function (t) {
+                              children: Da.map(function (t) {
                                 return Object(n.jsx)(
                                   e,
                                   { value: t.city, children: t.city },
@@ -10674,7 +10844,7 @@
                         Object(n.jsxs)('div', {
                           className: 'price-rate-input',
                           children: [
-                            Object(n.jsx)(qa.a, {
+                            Object(n.jsx)(Pa.a, {
                               size: 'large',
                               placeholder: 'Price (TZS/Kg)',
                               style: { width: '100%' },
@@ -10700,7 +10870,7 @@
                                   defaultValue: 'Price Effect Date  (From)',
                                   size: 'large',
                                 }),
-                                Object(n.jsx)(Ma.a, {
+                                Object(n.jsx)(La.a, {
                                   style: { width: '70%' },
                                   size: 'large',
                                   onChange: function (e) {
@@ -10741,8 +10911,8 @@
               ],
             });
           }),
-        La = a(487),
-        Da =
+        Ga = a(487),
+        Za =
           (a(446),
           [
             {
@@ -10791,13 +10961,13 @@
               key: 'action',
               render: function () {
                 return Object(n.jsx)(n.Fragment, {
-                  children: Object(n.jsxs)(sa.b, {
+                  children: Object(n.jsxs)(ua.b, {
                     split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                     children: [
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Update',
-                          children: Object(n.jsx)(ua.a, {
+                          children: Object(n.jsx)(pa.a, {
                             style: { fontSize: '1.25rem' },
                           }),
                         }),
@@ -10806,17 +10976,17 @@
                         onClick: function () {
                           return Object(l.d)('price-rate/price-history');
                         },
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Price History',
-                          children: Object(n.jsx)(La.a, {
+                          children: Object(n.jsx)(Ga.a, {
                             style: { fontSize: '1.25rem' },
                           }),
                         }),
                       }),
                       Object(n.jsx)('div', {
-                        children: Object(n.jsx)(la.a, {
+                        children: Object(n.jsx)(ma.a, {
                           title: 'Delete Tender',
-                          children: Object(n.jsx)(pa.a, {
+                          children: Object(n.jsx)(fa.a, {
                             style: { fontSize: '1.25rem', color: '#ff0000' },
                           }),
                         }),
@@ -10827,7 +10997,7 @@
               },
             },
           ]),
-        Fa = function () {
+        Ka = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -10855,7 +11025,7 @@
                                   variety: e.variety,
                                   price: e.price_rate,
                                   region: e.region,
-                                  effectiveDate: Pe()(e.date).format(
+                                  effectiveDate: Re()(e.date).format(
                                     'Do MMMM YYYY',
                                   ),
                                 };
@@ -10895,12 +11065,12 @@
                   }),
                 }),
                 Object(n.jsx)(tt.a, {}),
-                Object(n.jsx)(qe.a, { dataSource: a, columns: Da }),
+                Object(n.jsx)(Be.a, { dataSource: a, columns: Za }),
               ],
             }),
           });
         },
-        Ga = [
+        Ea = [
           {
             key: '1',
             variety: 'Super Kyela',
@@ -10934,7 +11104,7 @@
             endDate: 'N/A',
           },
         ],
-        Za = [
+        Va = [
           {
             title: 'Region',
             dataIndex: 'region',
@@ -10986,7 +11156,7 @@
             },
           },
         ],
-        Ka = function () {
+        Ha = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsxs)(I, {
               title: 'Price History',
@@ -10994,24 +11164,24 @@
               styles: { minHeight: '90vh', overflowY: 'auto' },
               children: [
                 Object(n.jsx)(tt.a, {}),
-                Object(n.jsx)(qe.a, { dataSource: Ga, columns: Za }),
+                Object(n.jsx)(Be.a, { dataSource: Ea, columns: Va }),
               ],
             }),
           });
         },
-        Ea = function () {
+        Ua = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)(Fa, { path: '/' }),
-              Object(n.jsx)(Ra, { path: 'price-rate-form' }),
-              Object(n.jsx)(Ka, { path: 'price-history' }),
+              Object(n.jsx)(Ka, { path: '/' }),
+              Object(n.jsx)(Fa, { path: 'price-rate-form' }),
+              Object(n.jsx)(Ha, { path: 'price-history' }),
             ],
           });
         },
-        Va = function () {
-          return Object(n.jsx)(n.Fragment, { children: Object(n.jsx)(Ea, {}) });
+        Ja = function () {
+          return Object(n.jsx)(n.Fragment, { children: Object(n.jsx)(Ua, {}) });
         },
-        Ha =
+        Wa =
           (a(447),
           [
             {
@@ -11029,7 +11199,7 @@
               time: 'Dec 10th, 11:00am',
             },
           ]),
-        Ua = [
+        Ya = [
           {
             title: 'Action',
             dataIndex: 'action',
@@ -11071,7 +11241,7 @@
             },
           },
         ],
-        Ja = function () {
+        Qa = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -11088,9 +11258,9 @@
               styles: { minHeight: '90vh', overflowY: 'auto' },
               children: [
                 Object(n.jsx)(tt.a, {}),
-                Object(n.jsx)(qe.a, {
-                  dataSource: Ha,
-                  columns: Ua,
+                Object(n.jsx)(Be.a, {
+                  dataSource: Wa,
+                  columns: Ya,
                   rowSelection: r,
                 }),
                 ';',
@@ -11098,7 +11268,7 @@
             }),
           });
         },
-        Wa = function () {
+        Xa = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -11191,22 +11361,22 @@
                 key: 'action',
                 render: function () {
                   return Object(n.jsx)(n.Fragment, {
-                    children: Object(n.jsxs)(sa.b, {
+                    children: Object(n.jsxs)(ua.b, {
                       split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                       children: [
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Disable Buyer',
-                            children: Object(n.jsx)(ja.a, {
+                            children: Object(n.jsx)(ba.a, {
                               style: { fontSize: '1.25rem' },
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Delete Buyer',
                             color: 'red',
-                            children: Object(n.jsx)(pa.a, {
+                            children: Object(n.jsx)(fa.a, {
                               style: { fontSize: '1.25rem', color: '#ff0000' },
                             }),
                           }),
@@ -11217,35 +11387,62 @@
                 },
               },
             ];
-          return Object(n.jsxs)(I, {
-            title: 'Varieties',
-            styles: { minHeight: '90vh', overflowY: 'auto' },
-            children: [
-              Object(n.jsx)('div', {
-                style: {
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                  paddingRight: '4rem',
-                },
-                children: Object(n.jsxs)(T.a, {
-                  type: 'primary',
-                  size: 'large',
-                  onClick: function () {
-                    return Object(l.d)('variety/add-variety-form');
+          return Object(n.jsx)(de, {
+            children: function (e) {
+              var t = e.adminRole;
+              return Object(n.jsx)(n.Fragment, {
+                children: Object(n.jsx)(Qt, {
+                  role: t,
+                  perform: 'variety:create',
+                  yes: function () {
+                    return Object(n.jsxs)(I, {
+                      title: 'Varieties',
+                      styles: { minHeight: '90vh', overflowY: 'auto' },
+                      children: [
+                        Object(n.jsx)('div', {
+                          style: {
+                            display: 'flex',
+                            justifyContent: 'flex-end',
+                            paddingRight: '4rem',
+                          },
+                          children: Object(n.jsxs)(T.a, {
+                            type: 'primary',
+                            size: 'large',
+                            onClick: function () {
+                              return Object(l.d)('variety/add-variety-form');
+                            },
+                            children: [' ', 'Add Variety'],
+                          }),
+                        }),
+                        Object(n.jsx)(tt.a, {}),
+                        Object(n.jsx)(Be.a, {
+                          rowSelection: p,
+                          dataSource: s,
+                          columns: h,
+                        }),
+                      ],
+                    });
                   },
-                  children: [' ', 'Add Variety'],
+                  no: function () {
+                    return Object(n.jsxs)(I, {
+                      title: 'Varieties',
+                      styles: { minHeight: '90vh', overflowY: 'auto' },
+                      children: [
+                        Object(n.jsx)(tt.a, {}),
+                        Object(n.jsx)(Be.a, {
+                          rowSelection: p,
+                          dataSource: s,
+                          columns: h,
+                        }),
+                      ],
+                    });
+                  },
                 }),
-              }),
-              Object(n.jsx)(tt.a, {}),
-              Object(n.jsx)(qe.a, {
-                rowSelection: p,
-                dataSource: s,
-                columns: h,
-              }),
-            ],
+              });
+            },
           });
         },
-        Ya =
+        $a =
           (a(448),
           function () {
             var e = Object(Ae.a)({ mode: 'onBlur' }),
@@ -11410,18 +11607,18 @@
               ],
             });
           }),
-        Qa = function () {
+        en = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)(Wa, { path: '/' }),
-              Object(n.jsx)(Ya, { path: 'add-variety-form' }),
+              Object(n.jsx)(Xa, { path: '/' }),
+              Object(n.jsx)($a, { path: 'add-variety-form' }),
             ],
           });
         },
-        Xa = function () {
-          return Object(n.jsx)(n.Fragment, { children: Object(n.jsx)(Qa, {}) });
+        tn = function () {
+          return Object(n.jsx)(n.Fragment, { children: Object(n.jsx)(en, {}) });
         },
-        $a = function () {
+        an = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -11560,32 +11757,32 @@
                 key: 'action',
                 render: function () {
                   return Object(n.jsx)(n.Fragment, {
-                    children: Object(n.jsxs)(sa.b, {
+                    children: Object(n.jsxs)(ua.b, {
                       split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                       children: [
                         Object(n.jsx)('div', {
                           onClick: function () {
                             return Object(l.d)('tender-request/view');
                           },
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'View More',
-                            children: Object(n.jsx)(ma.a, {
+                            children: Object(n.jsx)(ha.a, {
                               style: { fontSize: '1.25rem' },
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Disable Request',
-                            children: Object(n.jsx)(ja.a, {
+                            children: Object(n.jsx)(ba.a, {
                               style: { fontSize: '1.25rem' },
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Delete Request',
-                            children: Object(n.jsx)(pa.a, {
+                            children: Object(n.jsx)(fa.a, {
                               style: { fontSize: '1.25rem', color: '#ff0000' },
                             }),
                           }),
@@ -11601,7 +11798,7 @@
             styles: { minHeight: '90vh', overflowY: 'auto' },
             children: [
               Object(n.jsx)(tt.a, {}),
-              Object(n.jsx)(qe.a, {
+              Object(n.jsx)(Be.a, {
                 rowSelection: h,
                 dataSource: s,
                 columns: f,
@@ -11609,7 +11806,7 @@
             ],
           });
         },
-        en =
+        nn =
           (a(449),
           function () {
             return Object(n.jsx)(C.a, {
@@ -11630,7 +11827,7 @@
               }),
             });
           }),
-        tn = function () {
+        cn = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsxs)(I, {
               title: 'Tender Request View',
@@ -11913,12 +12110,12 @@
                     Object(n.jsxs)('div', {
                       className: 'image-container',
                       children: [
-                        Object(n.jsx)(en, {}),
-                        Object(n.jsx)(en, {}),
-                        Object(n.jsx)(en, {}),
-                        Object(n.jsx)(en, {}),
-                        Object(n.jsx)(en, {}),
-                        Object(n.jsx)(en, {}),
+                        Object(n.jsx)(nn, {}),
+                        Object(n.jsx)(nn, {}),
+                        Object(n.jsx)(nn, {}),
+                        Object(n.jsx)(nn, {}),
+                        Object(n.jsx)(nn, {}),
+                        Object(n.jsx)(nn, {}),
                       ],
                     }),
                   ],
@@ -11927,15 +12124,15 @@
             }),
           });
         },
-        an = function () {
+        rn = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)($a, { path: '/' }),
-              Object(n.jsx)(tn, { path: 'view' }),
+              Object(n.jsx)(an, { path: '/' }),
+              Object(n.jsx)(cn, { path: 'view' }),
             ],
           });
         },
-        nn = function () {
+        on = function () {
           var e = Object(i.useState)([]),
             t = Object(j.a)(e, 2),
             a = t[0],
@@ -11993,32 +12190,32 @@
                 key: 'action',
                 render: function () {
                   return Object(n.jsx)(n.Fragment, {
-                    children: Object(n.jsxs)(sa.b, {
+                    children: Object(n.jsxs)(ua.b, {
                       split: Object(n.jsx)(tt.a, { type: 'vertical' }),
                       children: [
                         Object(n.jsx)('div', {
                           onClick: function () {
                             return Object(l.d)('tender-given/view');
                           },
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'View More',
-                            children: Object(n.jsx)(ma.a, {
+                            children: Object(n.jsx)(ha.a, {
                               style: { fontSize: '1.25rem' },
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Disable Tender',
-                            children: Object(n.jsx)(ja.a, {
+                            children: Object(n.jsx)(ba.a, {
                               style: { fontSize: '1.25rem' },
                             }),
                           }),
                         }),
                         Object(n.jsx)('div', {
-                          children: Object(n.jsx)(la.a, {
+                          children: Object(n.jsx)(ma.a, {
                             title: 'Delete Tender',
-                            children: Object(n.jsx)(pa.a, {
+                            children: Object(n.jsx)(fa.a, {
                               style: { fontSize: '1.25rem', color: '#ff0000' },
                             }),
                           }),
@@ -12034,7 +12231,7 @@
             styles: { minHeight: '90vh', overflowY: 'auto' },
             children: [
               Object(n.jsx)(tt.a, {}),
-              Object(n.jsx)(qe.a, {
+              Object(n.jsx)(Be.a, {
                 rowSelection: r,
                 dataSource: [],
                 columns: o,
@@ -12042,7 +12239,7 @@
             ],
           });
         },
-        cn =
+        sn =
           (a(450),
           function () {
             return Object(n.jsxs)(I, {
@@ -12237,15 +12434,15 @@
               ],
             });
           }),
-        rn = function () {
+        ln = function () {
           return Object(n.jsxs)(l.c, {
             children: [
-              Object(n.jsx)(nn, { path: '/' }),
-              Object(n.jsx)(cn, { path: 'view' }),
+              Object(n.jsx)(on, { path: '/' }),
+              Object(n.jsx)(sn, { path: 'view' }),
             ],
           });
         },
-        on = function (e) {
+        dn = function (e) {
           var t = e.handleAuth,
             a = Object(i.useState)(!1),
             r = Object(j.a)(a, 2),
@@ -12395,15 +12592,24 @@
                                                                                   ),
                                                                                   200 ===
                                                                                   a.status
-                                                                                    ? (sessionStorage.setItem(
-                                                                                        'adminRole',
-                                                                                        JSON.stringify(
-                                                                                          a
-                                                                                            .data
-                                                                                            .data
-                                                                                            .roles,
-                                                                                        ),
-                                                                                      ),
+                                                                                    ? (a.data.data.roles.some(
+                                                                                        function (
+                                                                                          e,
+                                                                                        ) {
+                                                                                          return (
+                                                                                            'leader' ===
+                                                                                            e.role
+                                                                                          );
+                                                                                        },
+                                                                                      )
+                                                                                        ? sessionStorage.setItem(
+                                                                                            'adminRole',
+                                                                                            'leader',
+                                                                                          )
+                                                                                        : sessionStorage.setItem(
+                                                                                            'adminRole',
+                                                                                            'admin',
+                                                                                          ),
                                                                                       sessionStorage.setItem(
                                                                                         'UserInfo',
                                                                                         JSON.stringify(
@@ -12554,7 +12760,7 @@
             }),
           });
         },
-        sn = function () {
+        un = function () {
           return Object(n.jsxs)(I, {
             title: 'Banners',
             styles: { minHeight: '90vh', overflowY: 'auto' },
@@ -12575,31 +12781,31 @@
             ],
           });
         },
-        ln = function () {
+        mn = function () {
           return Object(n.jsx)(de, {
             children: function (e) {
               var t = e.adminAccessToken,
                 a = e.handleAuthDashboard;
               return t
                 ? Object(n.jsx)(l.c, {
-                    children: Object(n.jsxs)(Xt, {
+                    children: Object(n.jsxs)(ta, {
                       path: '/',
                       children: [
-                        Object(n.jsx)(oa, { path: 'dashboard' }),
-                        Object(n.jsx)(oa, { default: !0 }),
-                        Object(n.jsx)(ka, { path: 'users/*' }),
-                        Object(n.jsx)(Ba, { path: 'platforms/*' }),
-                        Object(n.jsx)(Va, { path: 'price-rate/*' }),
-                        Object(n.jsx)(an, { path: 'tender-request/*' }),
-                        Object(n.jsx)(rn, { path: 'tender-given/*' }),
-                        Object(n.jsx)(Xa, { path: 'variety/*' }),
-                        Object(n.jsx)(Ja, { path: 'logs' }),
-                        Object(n.jsx)(sn, { path: 'banner' }),
+                        Object(n.jsx)(da, { path: 'dashboard' }),
+                        Object(n.jsx)(da, { default: !0 }),
+                        Object(n.jsx)(Ia, { path: 'users/*' }),
+                        Object(n.jsx)(Ra, { path: 'platforms/*' }),
+                        Object(n.jsx)(Ja, { path: 'price-rate/*' }),
+                        Object(n.jsx)(rn, { path: 'tender-request/*' }),
+                        Object(n.jsx)(ln, { path: 'tender-given/*' }),
+                        Object(n.jsx)(tn, { path: 'variety/*' }),
+                        Object(n.jsx)(Qa, { path: 'logs' }),
+                        Object(n.jsx)(un, { path: 'banner' }),
                       ],
                     }),
                   })
                 : Object(n.jsx)(l.c, {
-                    children: Object(n.jsx)(on, {
+                    children: Object(n.jsx)(dn, {
                       path: 'signin',
                       handleAuth: a,
                     }),
@@ -12607,14 +12813,14 @@
             },
           });
         },
-        dn =
+        jn =
           (a(451),
           function () {
             return Object(n.jsx)(n.Fragment, {
-              children: Object(n.jsx)(ln, { path: '/' }),
+              children: Object(n.jsx)(mn, { path: '/' }),
             });
           }),
-        un = function (e) {
+        pn = function (e) {
           var t = Object(l.e)(),
             a = e.children;
           return (
@@ -12627,29 +12833,29 @@
             Object(n.jsx)(n.Fragment, { children: a })
           );
         },
-        mn = function () {
+        hn = function () {
           return Object(n.jsx)(n.Fragment, {
             children: Object(n.jsx)(l.c, {
               primary: !1,
-              children: Object(n.jsxs)(un, {
+              children: Object(n.jsxs)(pn, {
                 path: '/',
                 children: [
                   Object(n.jsx)(l.b, { from: '/', to: '/app/buyers' }),
                   Object(n.jsx)(Mt, { path: 'app/*' }),
-                  Object(n.jsx)(dn, { path: 'management/*' }),
+                  Object(n.jsx)(jn, { path: 'management/*' }),
                 ],
               }),
             }),
           });
         };
       a(452);
-      var jn = function () {
+      var bn = function () {
           return Object(n.jsx)('div', {
             className: 'app',
-            children: Object(n.jsx)(mn, {}),
+            children: Object(n.jsx)(hn, {}),
           });
         },
-        pn = (function (e) {
+        fn = (function (e) {
           Object(dt.a)(a, e);
           var t = Object(ut.a)(a);
           function a() {
@@ -12661,6 +12867,7 @@
               ((e = t.call.apply(t, [this].concat(i))).state = {
                 authenticated: !1,
                 userRole: '',
+                adminRole: sessionStorage.getItem('adminRole'),
                 userAccessToken: localStorage.getItem('accessToken'),
                 adminAccessToken: sessionStorage.getItem('accessToken'),
                 userInfo:
@@ -12698,7 +12905,7 @@
               (e.handleAuthDashboard = function () {
                 e.setState({
                   authenticated: !0,
-                  adminRole: JSON.parse(sessionStorage.getItem('adminRole')),
+                  adminRole: sessionStorage.getItem('adminRole'),
                   adminAccessToken: sessionStorage.getItem('accessToken'),
                   userInfo: JSON.parse(sessionStorage.getItem('UserInfo')),
                 });
@@ -12733,7 +12940,7 @@
         })(i.Component);
       o.a.render(
         Object(n.jsx)(c.a.StrictMode, {
-          children: Object(n.jsx)(pn, { children: Object(n.jsx)(jn, {}) }),
+          children: Object(n.jsx)(fn, { children: Object(n.jsx)(bn, {}) }),
         }),
         document.getElementById('root'),
       ),
@@ -12742,4 +12949,4 @@
   },
   [[453, 1, 2]],
 ]);
-//# sourceMappingURL=main.8402d640.chunk.js.map
+//# sourceMappingURL=main.d7d299e3.chunk.js.map
