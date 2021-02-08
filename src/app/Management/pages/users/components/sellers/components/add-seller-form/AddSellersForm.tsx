@@ -30,7 +30,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
   const [allPlatform, setAllPlatform] = useState([]);
   // const [platform, setPlatformId] = useState('');
 
-  const { register, handleSubmit, setValue, errors } = useForm({
+  const { register, handleSubmit, setValue, errors, clearErrors } = useForm({
     mode: 'onBlur',
   });
   const { adminAccessToken, userInfo } = useContext(Auth);
@@ -267,6 +267,9 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
     createSellerAccount();
   };
 
+  const handleClearError = (name: string) => {
+    clearErrors(name);
+  };
   return (
     <div style={{ minHeight: '90vh', marginTop: '2rem' }}>
       <div className="form-header">
@@ -283,6 +286,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               placeholder="First Name"
               size="large"
               onChange={handleFirstNameChange}
+              onFocus={() => handleClearError('firstname')}
             />
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.firstname && 'First name is required'}
@@ -293,6 +297,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               placeholder="Last Name"
               size="large"
               onChange={handleLastNameChange}
+              onFocus={() => handleClearError('lastname')}
             />
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.lastname && 'Last name is required'}
@@ -322,6 +327,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               size="large"
               placeholder="Platform"
               onChange={handlePlatformSelectChange}
+              onFocus={() => handleClearError('platform')}
             >
               {allPlatform.map((item: any) => (
                 <Option key={item.id} value={item.id}>
@@ -342,6 +348,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             size="large"
             // ref={register({ pattern: /^\d+$/, max: 9 })}
             onChange={handlePhoneNumberChange}
+            onFocus={() => handleClearError('phone_number')}
           />
           <span style={{ fontSize: '1rem', color: 'red' }}>
             {errors.phone_number && 'Phone Number is required'}
@@ -354,6 +361,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             placeholder="Experience"
             // ref={register({ required: true })}
             onChange={handleExperinceSelectChange}
+            onFocus={() => handleClearError('experience')}
           >
             <Option value="0-5">0 - 5 years</Option>
             <Option value="6-10">6 - 10 years</Option>
@@ -370,6 +378,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             size="large"
             placeholder="Applicant Category"
             onChange={handleCategorySelectChange}
+            onFocus={() => handleClearError('category')}
           >
             <Option value="individual">Individual</Option>
             <Option value="association">Association</Option>
@@ -385,6 +394,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             size="large"
             placeholder="Scale Status"
             onChange={handleScaleStatusChange}
+            onFocus={() => handleClearError('scale_status')}
           >
             <Option value="small">Small</Option>
             <Option value="medium">Medium</Option>
@@ -399,6 +409,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             placeholder="P.O Box Address"
             size="large"
             onChange={handleAdressInput}
+            onFocus={() => handleClearError('address')}
           />
           <span style={{ fontSize: '1rem', color: 'red' }}>
             {errors.address && 'Address is required'}
@@ -431,6 +442,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               size="large"
               disabled={!isTbsCertified}
               onChange={handleTBSCertifNumChange}
+              onFocus={() => handleClearError('tbs_certificate_num')}
             />
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.tbs_certificate_num && 'Certificate Number is required'}
@@ -463,6 +475,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
             size="large"
             placeholder="Select Your Identification"
             onChange={handleIdTypeChange}
+            onFocus={() => handleClearError('id_type')}
           >
             <Option value="voter">Voter Id</Option>
             <Option value="nida">National Id</Option>
@@ -478,6 +491,7 @@ const AddSellersForm: React.FC<RouteComponentProps> = () => {
               placeholder="Add Id Number"
               size="large"
               onChange={handleIdNumChange}
+              onFocus={() => handleClearError('id_num')}
             />
             <span style={{ fontSize: '1rem', color: 'red' }}>
               {errors.id_num && 'Id Number is required'}
