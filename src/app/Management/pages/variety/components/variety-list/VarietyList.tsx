@@ -7,6 +7,8 @@ import { StopOutlined, DeleteOutlined } from '@ant-design/icons';
 import { RouteComponentProps, navigate } from '@reach/router';
 import Card from '../../../../../components/card';
 import Notification from '../../../../../components/notification';
+import { AuthConsumer } from '../../../../../../auth/AuthContext';
+import Can from '../../../../../components/can';
 //API
 import { GetAllVariety } from '../../.././../../../API';
 // Props Types
@@ -114,30 +116,58 @@ const VarietyList: React.FC<RouteComponentProps> = () => {
     },
   ];
   return (
-    <Card title="Varieties" styles={{ minHeight: '90vh', overflowY: 'auto' }}>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          paddingRight: '4rem',
-        }}
-      >
-        <Button
-          type="primary"
-          size="large"
-          onClick={() => navigate('variety/add-variety-form')}
-        >
-          {' '}
-          Add Variety
-        </Button>
-      </div>
-      <Divider />
-      <Table
-        rowSelection={rowSelection}
-        dataSource={variety}
-        columns={columns}
-      />
-    </Card>
+    <AuthConsumer>
+      {({ adminRole }) => (
+        <>
+          <Can
+            role={adminRole}
+            perform="variety:create"
+            yes={() => (
+              <Card
+                title="Varieties"
+                styles={{ minHeight: '90vh', overflowY: 'auto' }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    paddingRight: '4rem',
+                  }}
+                >
+                  <Button
+                    type="primary"
+                    size="large"
+                    onClick={() => navigate('variety/add-variety-form')}
+                  >
+                    {' '}
+                    Add Variety
+                  </Button>
+                </div>
+                <Divider />
+                <Table
+                  rowSelection={rowSelection}
+                  dataSource={variety}
+                  columns={columns}
+                />
+              </Card>
+            )}
+            no={() => (
+              <Card
+                title="Varieties"
+                styles={{ minHeight: '90vh', overflowY: 'auto' }}
+              >
+                <Divider />
+                <Table
+                  rowSelection={rowSelection}
+                  dataSource={variety}
+                  columns={columns}
+                />
+              </Card>
+            )}
+          />
+        </>
+      )}
+    </AuthConsumer>
   );
 };
 

@@ -19,7 +19,8 @@ import {
 import { Link } from '@reach/router';
 //Logo
 import Logo from '../../../../../../assets/images/logo.png';
-
+import Can from '../../../../../components/can';
+import { AuthConsumer } from '../../../../../../auth/AuthContext';
 //Styles
 import './Sider.less';
 
@@ -42,75 +43,107 @@ const Navigation: React.FC<NavigationProps> = (props: NavigationProps) => {
   };
 
   return (
-    <Sider
-      collapsible={isCollapsable}
-      collapsed={isCollapsable ? collapsed : undefined}
-      onCollapse={isCollapsable ? onCollapse : undefined}
-      className={className}
-      style={{
-        overflow: 'auto',
-        minHeight: '100vh',
-        position: 'fixed',
-        left: 0,
-        zIndex: 200,
-      }}
-    >
-      <div className="logo">
-        <img
-          src={Logo}
-          alt="Logo"
-          className={`${collapsed ? 'logo--image' : 'logo--image_collapsed'}`}
-        />
-      </div>
-      <Menu
-        className="sider--menu"
-        theme="dark"
-        defaultSelectedKeys={['1']}
-        mode="inline"
-      >
-        <Menu.Item key="1" icon={<PieChartOutlined />}>
-          <Link to="dashboard">Dashboard</Link>
-        </Menu.Item>
-        <Menu.Item key="2" icon={<DesktopOutlined />}>
-          <Link to="variety"> Varieties</Link>
-        </Menu.Item>
-        <Menu.Item key="3" icon={<AccountBookOutlined />}>
-          <Link to="price-rate">Price Rate</Link>
-        </Menu.Item>
-        <SubMenu key="sub1" icon={<TeamOutlined />} title="Users">
-          <Menu.Item key="4">
-            <Link to="users/sellers">Sellers</Link>
-          </Menu.Item>
-          <Menu.Item key="5">
-            <Link to="users/buyers">Buyers</Link>
-          </Menu.Item>
-          <Menu.Item key="6">
-            <Link to="users/leaders">Leaders</Link>
-          </Menu.Item>
-        </SubMenu>
-        <Menu.Item key="7" icon={<BlockOutlined />}>
-          <Link to="platforms">Platforms</Link>
-        </Menu.Item>
-        <Menu.Item key="8" icon={<UpSquareOutlined />}>
-          <Link to="tender-request">Tender Request</Link>
-        </Menu.Item>
-        <Menu.Item key="9" icon={<AppstoreAddOutlined />}>
-          <Link to="tender-given">Tender Given</Link>
-        </Menu.Item>
-        {/* <Menu.Item key="10" icon={<ControlOutlined />}>
+    <AuthConsumer>
+      {({ adminRole }) => (
+        <>
+          <Sider
+            collapsible={isCollapsable}
+            collapsed={isCollapsable ? collapsed : undefined}
+            onCollapse={isCollapsable ? onCollapse : undefined}
+            className={className}
+            style={{
+              overflow: 'auto',
+              minHeight: '100vh',
+              position: 'fixed',
+              left: 0,
+              zIndex: 200,
+            }}
+          >
+            <div className="logo">
+              <img
+                src={Logo}
+                alt="Logo"
+                className={`${
+                  collapsed ? 'logo--image' : 'logo--image_collapsed'
+                }`}
+              />
+            </div>
+            <Can
+              role={adminRole}
+              perform="all: full-access"
+              yes={() => (
+                <Menu
+                  className="sider--menu"
+                  theme="dark"
+                  defaultSelectedKeys={['1']}
+                  mode="inline"
+                >
+                  <Menu.Item key="1" icon={<PieChartOutlined />}>
+                    <Link to="dashboard">Dashboard</Link>
+                  </Menu.Item>
+                  <Menu.Item key="2" icon={<DesktopOutlined />}>
+                    <Link to="variety"> Varieties</Link>
+                  </Menu.Item>
+                  <Menu.Item key="3" icon={<AccountBookOutlined />}>
+                    <Link to="price-rate">Price Rate</Link>
+                  </Menu.Item>
+                  <SubMenu key="sub1" icon={<TeamOutlined />} title="Users">
+                    <Menu.Item key="4">
+                      <Link to="users/sellers">Sellers</Link>
+                    </Menu.Item>
+                    <Menu.Item key="5">
+                      <Link to="users/buyers">Buyers</Link>
+                    </Menu.Item>
+                    <Menu.Item key="6">
+                      <Link to="users/leaders">Leaders</Link>
+                    </Menu.Item>
+                  </SubMenu>
+                  <Menu.Item key="7" icon={<BlockOutlined />}>
+                    <Link to="platforms">Platforms</Link>
+                  </Menu.Item>
+                  <Menu.Item key="8" icon={<UpSquareOutlined />}>
+                    <Link to="tender-request">Tender Request</Link>
+                  </Menu.Item>
+                  <Menu.Item key="9" icon={<AppstoreAddOutlined />}>
+                    <Link to="tender-given">Tender Given</Link>
+                  </Menu.Item>
+                  {/* <Menu.Item key="10" icon={<ControlOutlined />}>
           <Link to="dashboard">Admins</Link>
         </Menu.Item> */}
-        <Menu.Item key="11" icon={<PlayCircleOutlined />}>
-          <Link to="banner">Bunners</Link>
-        </Menu.Item>
-        {/*  <Menu.Item key="12" icon={<MessageOutlined />}>
+                  <Menu.Item key="11" icon={<PlayCircleOutlined />}>
+                    <Link to="banner">Bunners</Link>
+                  </Menu.Item>
+                  {/*  <Menu.Item key="12" icon={<MessageOutlined />}>
           <Link to="dashboard">Feedback</Link>
         </Menu.Item> */}
-        <Menu.Item key="13" icon={<FileOutlined />}>
-          <Link to="logs">Logs</Link>
-        </Menu.Item>
-      </Menu>
-    </Sider>
+                  <Menu.Item key="13" icon={<FileOutlined />}>
+                    <Link to="logs">Logs</Link>
+                  </Menu.Item>
+                </Menu>
+              )}
+              no={() => (
+                <Menu
+                  className="sider--menu"
+                  theme="dark"
+                  defaultSelectedKeys={['1']}
+                  mode="inline"
+                >
+                  <Menu.Item key="1" icon={<PieChartOutlined />}>
+                    <Link to="dashboard">Dashboard</Link>
+                  </Menu.Item>
+                  <Menu.Item key="2" icon={<DesktopOutlined />}>
+                    <Link to="variety"> Varieties</Link>
+                  </Menu.Item>
+                  <Menu.Item key="3" icon={<TeamOutlined />}>
+                    <Link to="users/sellers">Sellers</Link>
+                  </Menu.Item>
+                </Menu>
+              )}
+            />
+          </Sider>
+        </>
+      )}
+    </AuthConsumer>
   );
 };
 
